@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56CA9390FAB0932D68D33909 /* libPods-WCWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CE32B237C836950FA6B3C /* libPods-WCWork.a */; };
+		D65953961F7CBE6200705749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953941F7CBE6200705749 /* Main.storyboard */; };
+		D65953981F7CBE6200705749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65953971F7CBE6200705749 /* Images.xcassets */; };
+		D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953991F7CBE6200705749 /* LaunchScreen.storyboard */; };
+		D65953A91F7CD4F700705749 /* WCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953A81F7CD4F700705749 /* WCHomeViewController.m */; };
+		D65953AD1F7CD52400705749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953AA1F7CD52400705749 /* main.m */; };
+		D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953AC1F7CD52400705749 /* WCAppDelegate.m */; };
+		D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B21F7CD6F000705749 /* WCTabBarViewController.m */; };
+		D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B51F7CEA0900705749 /* WCNavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.release.xcconfig"; sourceTree = "<group>"; };
+		51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.debug.xcconfig"; sourceTree = "<group>"; };
+		D65953881F7CBE6200705749 /* WCWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65953951F7CBE6200705749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D65953971F7CBE6200705749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D659539A1F7CBE6200705749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D659539C1F7CBE6200705749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D65953A71F7CD4F700705749 /* WCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHomeViewController.h; sourceTree = "<group>"; };
+		D65953A81F7CD4F700705749 /* WCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHomeViewController.m; sourceTree = "<group>"; };
+		D65953AA1F7CD52400705749 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D65953AB1F7CD52400705749 /* WCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAppDelegate.h; sourceTree = "<group>"; };
+		D65953AC1F7CD52400705749 /* WCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAppDelegate.m; sourceTree = "<group>"; };
+		D65953B11F7CD6F000705749 /* WCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTabBarViewController.h; sourceTree = "<group>"; };
+		D65953B21F7CD6F000705749 /* WCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTabBarViewController.m; sourceTree = "<group>"; };
+		D65953B41F7CEA0900705749 /* WCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNavigationController.h; sourceTree = "<group>"; };
+		D65953B51F7CEA0900705749 /* WCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNavigationController.m; sourceTree = "<group>"; };
+		F81CE32B237C836950FA6B3C /* libPods-WCWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D65953851F7CBE6200705749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56CA9390FAB0932D68D33909 /* libPods-WCWork.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3219E601D9B6E1A7EE5FB245 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81CE32B237C836950FA6B3C /* libPods-WCWork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60A6A6C7570A5343C1F74028 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */,
+				382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D659537F1F7CBE6200705749 = {
+			isa = PBXGroup;
+			children = (
+				D659538A1F7CBE6200705749 /* WCWork */,
+				D65953891F7CBE6200705749 /* Products */,
+				60A6A6C7570A5343C1F74028 /* Pods */,
+				3219E601D9B6E1A7EE5FB245 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D65953891F7CBE6200705749 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D65953881F7CBE6200705749 /* WCWork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D659538A1F7CBE6200705749 /* WCWork */ = {
+			isa = PBXGroup;
+			children = (
+				D65953AF1F7CD66800705749 /* TabNav */,
+				D65953A41F7CD3A400705749 /* Home */,
+				D65953A21F7CD3A400705749 /* AddressBook */,
+				D65953A31F7CD3A400705749 /* Function */,
+				D65953A51F7CD3A400705749 /* Me */,
+				D65953A61F7CD3A400705749 /* Other */,
+				D659538B1F7CBE6200705749 /* Supporting Files */,
+			);
+			path = WCWork;
+			sourceTree = "<group>";
+		};
+		D659538B1F7CBE6200705749 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D65953941F7CBE6200705749 /* Main.storyboard */,
+				D65953971F7CBE6200705749 /* Images.xcassets */,
+				D659539C1F7CBE6200705749 /* Info.plist */,
+				D65953991F7CBE6200705749 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D65953A21F7CD3A400705749 /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddressBook;
+			sourceTree = "<group>";
+		};
+		D65953A31F7CD3A400705749 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		D65953A41F7CD3A400705749 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D65953A71F7CD4F700705749 /* WCHomeViewController.h */,
+				D65953A81F7CD4F700705749 /* WCHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D65953A51F7CD3A400705749 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		D65953A61F7CD3A400705749 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D65953AA1F7CD52400705749 /* main.m */,
+				D65953AB1F7CD52400705749 /* WCAppDelegate.h */,
+				D65953AC1F7CD52400705749 /* WCAppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D65953AF1F7CD66800705749 /* TabNav */ = {
+			isa = PBXGroup;
+			children = (
+				D65953B01F7CD6B500705749 /* Controller */,
+			);
+			path = TabNav;
+			sourceTree = "<group>";
+		};
+		D65953B01F7CD6B500705749 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D65953B11F7CD6F000705749 /* WCTabBarViewController.h */,
+				D65953B21F7CD6F000705749 /* WCTabBarViewController.m */,
+				D65953B41F7CEA0900705749 /* WCNavigationController.h */,
+				D65953B51F7CEA0900705749 /* WCNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D65953871F7CBE6200705749 /* WCWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D659539F1F7CBE6200705749 /* Build configuration list for PBXNativeTarget "WCWork" */;
+			buildPhases = (
+				95CA174E157F01F0C8273E4B /* [CP] Check Pods Manifest.lock */,
+				D65953841F7CBE6200705749 /* Sources */,
+				D65953851F7CBE6200705749 /* Frameworks */,
+				D65953861F7CBE6200705749 /* Resources */,
+				3495188886AE11BC520F777E /* [CP] Embed Pods Frameworks */,
+				7E28A186220117F8F536138E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WCWork;
+			productName = WCWork;
+			productReference = D65953881F7CBE6200705749 /* WCWork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D65953801F7CBE6200705749 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WC;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = hongyan;
+				TargetAttributes = {
+					D65953871F7CBE6200705749 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 8Y6S2469TB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D65953831F7CBE6200705749 /* Build configuration list for PBXProject "WCWork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D659537F1F7CBE6200705749;
+			productRefGroup = D65953891F7CBE6200705749 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D65953871F7CBE6200705749 /* WCWork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D65953861F7CBE6200705749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */,
+				D65953981F7CBE6200705749 /* Images.xcassets in Resources */,
+				D65953961F7CBE6200705749 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3495188886AE11BC520F777E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCWork/Pods-WCWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E28A186220117F8F536138E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCWork/Pods-WCWork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95CA174E157F01F0C8273E4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D65953841F7CBE6200705749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */,
+				D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */,
+				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
+				D65953AD1F7CD52400705749 /* main.m in Sources */,
+				D65953A91F7CD4F700705749 /* WCHomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D65953941F7CBE6200705749 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D65953951F7CBE6200705749 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D65953991F7CBE6200705749 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D659539A1F7CBE6200705749 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D659539D1F7CBE6200705749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D659539E1F7CBE6200705749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D65953A01F7CBE6200705749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Y6S2469TB;
+				INFOPLIST_FILE = WCWork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D65953A11F7CBE6200705749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Y6S2469TB;
+				INFOPLIST_FILE = WCWork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D65953831F7CBE6200705749 /* Build configuration list for PBXProject "WCWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D659539D1F7CBE6200705749 /* Debug */,
+				D659539E1F7CBE6200705749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D659539F1F7CBE6200705749 /* Build configuration list for PBXNativeTarget "WCWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D65953A01F7CBE6200705749 /* Debug */,
+				D65953A11F7CBE6200705749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D65953801F7CBE6200705749 /* Project object */;
+}
