@@ -21,6 +21,9 @@
 /* Begin PBXFileReference section */
 		382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.release.xcconfig"; sourceTree = "<group>"; };
 		51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.debug.xcconfig"; sourceTree = "<group>"; };
+		D61F0E431F7D3B170080273B /* WCWork.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCWork.pch; sourceTree = "<group>"; };
+		D61F0E471F7D3BFF0080273B /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
+		D61F0E491F7D3C630080273B /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		D65953881F7CBE6200705749 /* WCWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65953951F7CBE6200705749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D65953971F7CBE6200705749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -67,6 +70,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D61F0E451F7D3BD50080273B /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				D61F0E481F7D3C4D0080273B /* Macros */,
+				D61F0E461F7D3BD50080273B /* Headers */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		D61F0E461F7D3BD50080273B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				D61F0E471F7D3BFF0080273B /* Headers.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		D61F0E481F7D3C4D0080273B /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				D61F0E491F7D3C630080273B /* Macros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
 		D659537F1F7CBE6200705749 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +134,7 @@
 				D65953971F7CBE6200705749 /* Images.xcassets */,
 				D659539C1F7CBE6200705749 /* Info.plist */,
 				D65953991F7CBE6200705749 /* LaunchScreen.storyboard */,
+				D61F0E431F7D3B170080273B /* WCWork.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +172,7 @@
 		D65953A61F7CD3A400705749 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				D61F0E451F7D3BD50080273B /* Expand */,
 				D65953AA1F7CD52400705749 /* main.m */,
 				D65953AB1F7CD52400705749 /* WCAppDelegate.h */,
 				D65953AC1F7CD52400705749 /* WCAppDelegate.m */,
@@ -419,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Y6S2469TB;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
 				INFOPLIST_FILE = WCWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
@@ -432,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Y6S2469TB;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
 				INFOPLIST_FILE = WCWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;

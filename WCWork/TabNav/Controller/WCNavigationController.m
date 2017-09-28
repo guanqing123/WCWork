@@ -43,8 +43,8 @@
     
     //设置标题文字颜色
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    attrs[NSForegroundColorAttributeName] = navBarTitleColor;
+    attrs[NSFontAttributeName] = navBarTitleFont;
     [navBar setTitleTextAttributes:attrs];
     
     //设置回退箭头的颜色

@@ -1,0 +1,25 @@
+//
+//  WCWork.pch
+//  WCWork
+//
+//  Created by information on 2017/9/28.
+//  Copyright © 2017年 hongyan. All rights reserved.
+//
+
+#ifndef WCWork_pch
+#define WCWork_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//里面的所有内容只能用到.m文件中或者.mm
+#ifdef __OBJC__
+/************__OBJC__BEGIN**********/
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "Headers.h"
+/************__OBJC__END************/
+#endif
+
+#endif /* WCWork_pch */

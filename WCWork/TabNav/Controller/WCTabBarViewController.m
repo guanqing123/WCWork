@@ -24,7 +24,6 @@
     
     // 初始化所有的子控制器
     [self setupAllChildViewControllers];
-    
 }
 
 
@@ -37,6 +36,9 @@
     WCHomeViewController *home = [[WCHomeViewController alloc] init];
     [self setupChildViewController:home title:@"首页" imageName:@"tab1" selectedImageName:@"tab1-1"];
     self.home = home;
+    
+    WCHomeViewController *home2 = [[WCHomeViewController alloc] init];
+    [self setupChildViewController:home2 title:@"首页" imageName:@"tab1" selectedImageName:@"tab1-1"];
 }
 
 
@@ -57,6 +59,15 @@
     // 设置选中的图标
     UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
     childVc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    // 设置字体样式
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[NSForegroundColorAttributeName] = tabBarTitleColorNomal;
+    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
+    // 设置选中的字体样式
+    NSMutableDictionary *selectedTextAttrs = [NSMutableDictionary dictionary];
+    selectedTextAttrs[NSForegroundColorAttributeName] = tabBarTitleColorSelected;
+    [childVc.tabBarItem setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
     
     // 2.包装一个导航控制器
     WCNavigationController *nav = [[WCNavigationController alloc] initWithRootViewController:childVc];
