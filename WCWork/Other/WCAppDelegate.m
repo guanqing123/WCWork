@@ -7,8 +7,11 @@
 //
 
 #import "WCAppDelegate.h"
+#import "WCTabBarViewController.h"
 
 @interface WCAppDelegate ()
+
+@property (nonatomic, strong)  WCTabBarViewController *tabBarVc;
 
 @end
 
@@ -25,6 +28,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    WCTabBarViewController *tabBarVc = [[WCTabBarViewController alloc] init];
+    self.tabBarVc = tabBarVc;
+    self.window.rootViewController = tabBarVc;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

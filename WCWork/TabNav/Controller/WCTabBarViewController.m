@@ -7,6 +7,7 @@
 //
 
 #import "WCTabBarViewController.h"
+#import "WCNavigationController.h"
 #import "WCHomeViewController.h"
 
 @interface WCTabBarViewController ()
@@ -34,7 +35,7 @@
 {
     //1.首页
     WCHomeViewController *home = [[WCHomeViewController alloc] init];
-    [self setupChildViewController:home title:@"" imageName:@"tab1" selectedImageName:@"tab1-1"];
+    [self setupChildViewController:home title:@"首页" imageName:@"tab1" selectedImageName:@"tab1-1"];
     self.home = home;
 }
 
@@ -58,7 +59,8 @@
     childVc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 2.包装一个导航控制器
-    
+    WCNavigationController *nav = [[WCNavigationController alloc] initWithRootViewController:childVc];
+    [self addChildViewController:nav];
 }
 
 @end
