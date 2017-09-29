@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		56CA9390FAB0932D68D33909 /* libPods-WCWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CE32B237C836950FA6B3C /* libPods-WCWork.a */; };
 		D61D42341F7DD04900B73FF1 /* WCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */; };
+		D61D42381F7DD1EF00B73FF1 /* WCAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42371F7DD1EF00B73FF1 /* WCAddressBookViewController.m */; };
+		D61D423C1F7DD2CD00B73FF1 /* WCFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D423B1F7DD2CD00B73FF1 /* WCFunctionViewController.m */; };
+		D61D42431F7DDC6200B73FF1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42421F7DDC6200B73FF1 /* BaseViewController.m */; };
+		D61D424C1F7DDC8400B73FF1 /* SettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42451F7DDC8400B73FF1 /* SettingArrowItem.m */; };
+		D61D424D1F7DDC8400B73FF1 /* SettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42471F7DDC8400B73FF1 /* SettingGroup.m */; };
+		D61D424E1F7DDC8400B73FF1 /* SettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42491F7DDC8400B73FF1 /* SettingItem.m */; };
+		D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D424B1F7DDC8400B73FF1 /* SettingSwitchItem.m */; };
+		D61D42521F7DDCB600B73FF1 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42511F7DDCB600B73FF1 /* SettingCell.m */; };
 		D65953961F7CBE6200705749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953941F7CBE6200705749 /* Main.storyboard */; };
 		D65953981F7CBE6200705749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65953971F7CBE6200705749 /* Images.xcassets */; };
 		D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953991F7CBE6200705749 /* LaunchScreen.storyboard */; };
-		D65953A91F7CD4F700705749 /* WCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953A81F7CD4F700705749 /* WCHomeViewController.m */; };
 		D65953AD1F7CD52400705749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953AA1F7CD52400705749 /* main.m */; };
 		D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953AC1F7CD52400705749 /* WCAppDelegate.m */; };
 		D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B21F7CD6F000705749 /* WCTabBarViewController.m */; };
@@ -24,6 +31,22 @@
 		51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.debug.xcconfig"; sourceTree = "<group>"; };
 		D61D42321F7DD04900B73FF1 /* WCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHomeViewController.h; sourceTree = "<group>"; };
 		D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHomeViewController.m; sourceTree = "<group>"; };
+		D61D42361F7DD1EF00B73FF1 /* WCAddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAddressBookViewController.h; sourceTree = "<group>"; };
+		D61D42371F7DD1EF00B73FF1 /* WCAddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookViewController.m; sourceTree = "<group>"; };
+		D61D423A1F7DD2CD00B73FF1 /* WCFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFunctionViewController.h; sourceTree = "<group>"; };
+		D61D423B1F7DD2CD00B73FF1 /* WCFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFunctionViewController.m; sourceTree = "<group>"; };
+		D61D42411F7DDC6200B73FF1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D61D42421F7DDC6200B73FF1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D61D42441F7DDC8400B73FF1 /* SettingArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingArrowItem.h; sourceTree = "<group>"; };
+		D61D42451F7DDC8400B73FF1 /* SettingArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingArrowItem.m; sourceTree = "<group>"; };
+		D61D42461F7DDC8400B73FF1 /* SettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingGroup.h; sourceTree = "<group>"; };
+		D61D42471F7DDC8400B73FF1 /* SettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingGroup.m; sourceTree = "<group>"; };
+		D61D42481F7DDC8400B73FF1 /* SettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingItem.h; sourceTree = "<group>"; };
+		D61D42491F7DDC8400B73FF1 /* SettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingItem.m; sourceTree = "<group>"; };
+		D61D424A1F7DDC8400B73FF1 /* SettingSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSwitchItem.h; sourceTree = "<group>"; };
+		D61D424B1F7DDC8400B73FF1 /* SettingSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSwitchItem.m; sourceTree = "<group>"; };
+		D61D42501F7DDCB600B73FF1 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		D61D42511F7DDCB600B73FF1 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
 		D61F0E431F7D3B170080273B /* WCWork.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCWork.pch; sourceTree = "<group>"; };
 		D61F0E471F7D3BFF0080273B /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		D61F0E491F7D3C630080273B /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -32,8 +55,6 @@
 		D65953971F7CBE6200705749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D659539A1F7CBE6200705749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D659539C1F7CBE6200705749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D65953A71F7CD4F700705749 /* WCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHomeViewController.h; sourceTree = "<group>"; };
-		D65953A81F7CD4F700705749 /* WCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHomeViewController.m; sourceTree = "<group>"; };
 		D65953AA1F7CD52400705749 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D65953AB1F7CD52400705749 /* WCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAppDelegate.h; sourceTree = "<group>"; };
 		D65953AC1F7CD52400705749 /* WCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +101,67 @@
 				D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61D42351F7DD16B00B73FF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D61D42361F7DD1EF00B73FF1 /* WCAddressBookViewController.h */,
+				D61D42371F7DD1EF00B73FF1 /* WCAddressBookViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61D42391F7DD26200B73FF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D61D423A1F7DD2CD00B73FF1 /* WCFunctionViewController.h */,
+				D61D423B1F7DD2CD00B73FF1 /* WCFunctionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61D423D1F7DD56E00B73FF1 /* MJKJ */ = {
+			isa = PBXGroup;
+			children = (
+				D61D423F1F7DDBC100B73FF1 /* Model */,
+				D61D42401F7DDBC100B73FF1 /* View */,
+				D61D423E1F7DDBC100B73FF1 /* Controller */,
+			);
+			path = MJKJ;
+			sourceTree = "<group>";
+		};
+		D61D423E1F7DDBC100B73FF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D61D42411F7DDC6200B73FF1 /* BaseViewController.h */,
+				D61D42421F7DDC6200B73FF1 /* BaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61D423F1F7DDBC100B73FF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D61D42441F7DDC8400B73FF1 /* SettingArrowItem.h */,
+				D61D42451F7DDC8400B73FF1 /* SettingArrowItem.m */,
+				D61D42461F7DDC8400B73FF1 /* SettingGroup.h */,
+				D61D42471F7DDC8400B73FF1 /* SettingGroup.m */,
+				D61D42481F7DDC8400B73FF1 /* SettingItem.h */,
+				D61D42491F7DDC8400B73FF1 /* SettingItem.m */,
+				D61D424A1F7DDC8400B73FF1 /* SettingSwitchItem.h */,
+				D61D424B1F7DDC8400B73FF1 /* SettingSwitchItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D61D42401F7DDBC100B73FF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D61D42501F7DDCB600B73FF1 /* SettingCell.h */,
+				D61D42511F7DDCB600B73FF1 /* SettingCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D61F0E451F7D3BD50080273B /* Expand */ = {
@@ -154,6 +236,7 @@
 		D65953A21F7CD3A400705749 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				D61D42351F7DD16B00B73FF1 /* Controller */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -161,6 +244,7 @@
 		D65953A31F7CD3A400705749 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				D61D42391F7DD26200B73FF1 /* Controller */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -169,8 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				D61D42311F7DD03700B73FF1 /* Controller */,
-				D65953A71F7CD4F700705749 /* WCHomeViewController.h */,
-				D65953A81F7CD4F700705749 /* WCHomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -178,6 +260,7 @@
 		D65953A51F7CD3A400705749 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				D61D423D1F7DD56E00B73FF1 /* MJKJ */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -336,12 +419,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61D424C1F7DDC8400B73FF1 /* SettingArrowItem.m in Sources */,
 				D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */,
+				D61D42431F7DDC6200B73FF1 /* BaseViewController.m in Sources */,
 				D61D42341F7DD04900B73FF1 /* WCHomeViewController.m in Sources */,
+				D61D424D1F7DDC8400B73FF1 /* SettingGroup.m in Sources */,
+				D61D424E1F7DDC8400B73FF1 /* SettingItem.m in Sources */,
+				D61D42381F7DD1EF00B73FF1 /* WCAddressBookViewController.m in Sources */,
+				D61D423C1F7DD2CD00B73FF1 /* WCFunctionViewController.m in Sources */,
 				D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */,
+				D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */,
+				D61D42521F7DDCB600B73FF1 /* SettingCell.m in Sources */,
 				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
 				D65953AD1F7CD52400705749 /* main.m in Sources */,
-				D65953A91F7CD4F700705749 /* WCHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
