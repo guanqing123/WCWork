@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56CA9390FAB0932D68D33909 /* libPods-WCWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CE32B237C836950FA6B3C /* libPods-WCWork.a */; };
+		D61D42341F7DD04900B73FF1 /* WCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */; };
 		D65953961F7CBE6200705749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953941F7CBE6200705749 /* Main.storyboard */; };
 		D65953981F7CBE6200705749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65953971F7CBE6200705749 /* Images.xcassets */; };
 		D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953991F7CBE6200705749 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.release.xcconfig"; sourceTree = "<group>"; };
 		51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.debug.xcconfig"; sourceTree = "<group>"; };
+		D61D42321F7DD04900B73FF1 /* WCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHomeViewController.h; sourceTree = "<group>"; };
+		D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHomeViewController.m; sourceTree = "<group>"; };
 		D61F0E431F7D3B170080273B /* WCWork.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCWork.pch; sourceTree = "<group>"; };
 		D61F0E471F7D3BFF0080273B /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		D61F0E491F7D3C630080273B /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -68,6 +71,15 @@
 				382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D61D42311F7DD03700B73FF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D61D42321F7DD04900B73FF1 /* WCHomeViewController.h */,
+				D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D61F0E451F7D3BD50080273B /* Expand */ = {
@@ -156,6 +168,7 @@
 		D65953A41F7CD3A400705749 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D61D42311F7DD03700B73FF1 /* Controller */,
 				D65953A71F7CD4F700705749 /* WCHomeViewController.h */,
 				D65953A81F7CD4F700705749 /* WCHomeViewController.m */,
 			);
@@ -324,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */,
+				D61D42341F7DD04900B73FF1 /* WCHomeViewController.m in Sources */,
 				D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */,
 				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
 				D65953AD1F7CD52400705749 /* main.m in Sources */,
