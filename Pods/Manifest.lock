@@ -4,14 +4,17 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SwipeTableView (0.2.6)
 
 DEPENDENCIES:
   - SDCycleScrollView (~> 1.66)
+  - SwipeTableView
 
 SPEC CHECKSUMS:
   SDCycleScrollView: d0fd5fe40a80918371fd8939214eb3be81033d83
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SwipeTableView: 67d8a2e6e18bd38c188fd4fabda0b278eaa08d2f
 
-PODFILE CHECKSUM: 2ca8d0a76235ed4f45a96a00d8b6381ba31565aa
+PODFILE CHECKSUM: 90f2bc856c6d4bd8d55f950c530a95fb2f2a0c3b
 
 COCOAPODS: 1.2.1

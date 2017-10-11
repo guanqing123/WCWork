@@ -9,10 +9,16 @@
 #import "WCTabBarViewController.h"
 #import "WCNavigationController.h"
 #import "WCHomeViewController.h"
+#import "WCAddressBookViewController.h"
+#import "WCFunctionViewController.h"
+#import "WCMeViewController.h"
 
 @interface WCTabBarViewController ()
 
 @property (nonatomic, strong)  WCHomeViewController *home;
+@property (nonatomic, strong)  WCAddressBookViewController *addressBook;
+@property (nonatomic, strong)  WCFunctionViewController *function;
+@property (nonatomic, strong)  WCMeViewController *me;
 
 @end
 
@@ -32,13 +38,25 @@
  */
 - (void)setupAllChildViewControllers
 {
-    //1.首页
+    // 1.首页
     WCHomeViewController *home = [[WCHomeViewController alloc] init];
     [self setupChildViewController:home title:@"首页" imageName:@"tab1" selectedImageName:@"tab1-1"];
     self.home = home;
     
-    WCHomeViewController *home2 = [[WCHomeViewController alloc] init];
-    [self setupChildViewController:home2 title:@"首页" imageName:@"tab1" selectedImageName:@"tab1-1"];
+    // 2.通讯录
+    WCAddressBookViewController *addressBook = [[WCAddressBookViewController alloc] init];
+    [self setupChildViewController:addressBook title:@"通讯录" imageName:@"tab2" selectedImageName:@"tab2-2"];
+    self.addressBook = addressBook;
+    
+    // 3.功能
+    WCFunctionViewController *function = [[WCFunctionViewController alloc] init];
+    [self setupChildViewController:function title:@"功能" imageName:@"tab3" selectedImageName:@"tab3-3"];
+    self.function = function;
+    
+    // 4.我的
+    WCMeViewController  *me = [[WCMeViewController alloc] init];
+    [self setupChildViewController:me title:@"我的" imageName:@"tab4" selectedImageName:@"tab4-4"];
+    self.me = me;
 }
 
 
@@ -61,9 +79,9 @@
     childVc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置字体样式
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    /*NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = tabBarTitleColorNomal;
-    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
+    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];*/
     // 设置选中的字体样式
     NSMutableDictionary *selectedTextAttrs = [NSMutableDictionary dictionary];
     selectedTextAttrs[NSForegroundColorAttributeName] = tabBarTitleColorSelected;
