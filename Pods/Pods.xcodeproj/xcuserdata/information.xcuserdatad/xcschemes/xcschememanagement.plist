@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-WCWork.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2AD0099A60667D568890869A1F83BFBC</key>
+		<key>57D0A32C91E1F9ED093A179310F37B39</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33FE4C11A9C929B7ED18CD51178433E5</key>
+		<key>8B6FEC1C0C93884A0A1A2CC3303FACF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>367F7C58C22781B73D3394795E97D1B3</key>
+		<key>90DF417F8645732060F66EFF6278E489</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79542C20CBBE7FF6631218FD1A49E600</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6A979BAC31D1C68014C8BBA3135B046</key>
 		<dict>
 			<key>primary</key>
 			<true/>

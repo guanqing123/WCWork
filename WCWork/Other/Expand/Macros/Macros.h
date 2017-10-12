@@ -2,7 +2,7 @@
 //  Macros.h
 //  WCWork
 //
-//  Created by information on 2017/9/28.
+//  Created by information on 2017/9/28. desc 宏
 //  Copyright © 2017年 hongyan. All rights reserved.
 //
 
@@ -33,5 +33,12 @@
 #else   //发布阶段
 #define WCLog(...)
 #endif
+
+
+//鸿雁销客
+#define XKURL @"http://218.75.78.166:9101/app/api"
+
+//首页滚动条
+#define slider @"HYXK00019"
 
 #endif /* Macros_h */

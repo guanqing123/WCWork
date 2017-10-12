@@ -8,21 +8,21 @@
 
 #import "WCHomeViewController.h"
 #import "CustomSegmentControl.h"
+#import "WCHomeTool.h"
+#import "WCSlideshowHeadView.h"
 
-@interface WCHomeViewController () <UITableViewDataSource,UITableViewDelegate>
-
-///<SwipeTableViewDelegate,SwipeTableViewDataSource>
-
-@property (nonatomic, strong)  CustomSegmentControl *segmentBar;
+@interface WCHomeViewController () <UITableViewDataSource,UITableViewDelegate,WCSlideshowHeadViewDelegate>
 
 @property (nonatomic, strong)  UITableView *tableView;
-
+@property (nonatomic, strong)  CustomSegmentControl *segmentBar;
 @property (nonatomic, strong)  NSMutableArray *dynamicArray;
+@property (nonatomic, strong)  WCSlideshowHeadView *headerView;
 
 @end
 
 @implementation WCHomeViewController
 
+#pragma mark -lifeStyle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -30,10 +30,29 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.delegate = self;
     tableView.dataSource = self;
+    tableView.showsVerticalScrollIndicator = NO;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView = tableView;
+    self.tableView.tableHeaderView = self.headerView;
     [self.view addSubview:tableView];
     
     [self changeSwipeViewIndex:self.segmentBar];
+    
+    [self setUpData];
+    
+}
+
+#pragma mark - slide headerView
+- (WCSlideshowHeadView *)headerView {
+    if (!_headerView) {
+        _headerView = [WCSlideshowHeadView headerView];
+        _headerView.delegate = self;
+    }
+    return _headerView;
+}
+
+- (void)slideShowHeaderViewDidClickRefreshBtn:(WCSlideshowHeadView *)headerView {
+    [self setUpSliderData];
 }
 
 #pragma mark - dynamicArray
@@ -70,7 +89,6 @@
 }
 
 #pragma mark - tableView delegate
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return 0.0f;
@@ -126,6 +144,37 @@
             break;
     }
     [self.tableView reloadData];
+}
+
+#pragma mark - setUpData
+- (void)setUpData {
+    // 1.加载滚动页
+    [self setUpSliderData];
+    
+    // 2.加载常用
+    [self setUpCommonUseFunction];
+}
+
+
+- (void)setUpSliderData {
+    [self.headerView loading];
+    WCSliderParam *param = [WCSliderParam param:slider];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [WCHomeTool homeSliderWithParam:param success:^(NSArray *sliderResult) {
+            NSMutableArray *resultArray = [NSMutableArray array];
+            [sliderResult enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                WCSliderResult *result = obj;
+                [resultArray addObject:result.path];
+            }];
+            [self.headerView show:resultArray];
+        } failure:^(NSError *error) {
+            [self.headerView failure];
+        }];
+    });
+}
+
+- (void)setUpCommonUseFunction {
+    
 }
 
 @end

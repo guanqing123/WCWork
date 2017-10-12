@@ -6,5 +6,6 @@ pod 'SDCycleScrollView','~> 1.66'
 pod 'SwipeTableView'
 
 pod 'AFNetworking', '~> 3.0'
+pod 'MJExtension'
 
 end
