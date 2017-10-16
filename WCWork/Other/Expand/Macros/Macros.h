@@ -20,6 +20,10 @@
 
 //主题色
 #define WCThemeColor RGB(0, 157, 133)
+
+//cell line color
+#define cellLineColor RGB(238,238,238)
+
 //navBar字体
 #define navBarTitleColor [UIColor whiteColor]
 #define navBarTitleFont  [UIFont systemFontOfSize:15]
@@ -38,7 +42,11 @@
 //鸿雁销客
 #define XKURL @"http://218.75.78.166:9101/app/api"
 
+#define WCURL @"http://sge.cn:9109/app/api"
+
 //首页滚动条
 #define slider @"HYXK00019"
+//公司行情
+#define dynamic @"HYXK00003"
 
 #endif /* Macros_h */

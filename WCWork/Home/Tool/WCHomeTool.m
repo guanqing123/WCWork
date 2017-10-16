@@ -33,4 +33,29 @@
     }];
 }
 
++ (void)homeDynamicWithParam:(WCDynamicParam *)dynamicParam success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure {
+    NSDictionary *headerDict = [NSDictionary dictionaryWithObjects:@[dynamicParam.appseq,dynamicParam.trcode,dynamicParam.trdate,dynamicParam.page,dynamicParam.columnId] forKeys:@[@"appseq",@"trcode",@"trdate",@"page",@"columnId"]];
+    
+    NSDictionary *dict = @{@"header" : headerDict, @"data" : dynamicParam.mj_keyValues};
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    NSDictionary *parameter = @{@"content" : jsonString};
+    [WCHttpTool postWithURL:WCURL params:parameter success:^(id json) {
+        if ([[[json objectForKey:@"header"] objectForKey:@"succflag"] isEqualToString:@"1"]) {
+            NSDictionary *dict = [json objectForKey:@"data"];
+            if ([[dict objectForKey:@"RRRR_STATUS"] isEqualToString:@"SUCCESS"]) {
+                NSArray *result = [WCDynamicResult mj_objectArrayWithKeyValuesArray:[[dict objectForKey:@"RRRR_DATA"] objectForKey:@"NewsList"]];
+                success(result);
+            }else{
+                success([NSArray array]);
+            }
+        }else{
+            success([NSArray array]);
+        }
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
 @end

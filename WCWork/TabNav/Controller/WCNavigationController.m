@@ -90,7 +90,17 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
+    if (self.childViewControllers.count >= 1) {
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"30"] style:UIBarButtonItemStyleDone target:self action:@selector(backItemClick)];
+        viewController.navigationItem.leftBarButtonItem = leftItem;
+        viewController.view.backgroundColor = [UIColor whiteColor];
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
     [super pushViewController:viewController animated:animated];
+}
+
+- (void)backItemClick {
+    [self popViewControllerAnimated:YES];
 }
 
 @end
