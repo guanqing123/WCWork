@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WCAddressBookViewController : UITableViewController
+@interface WCAddressBookViewController : UIViewController
 
 @end

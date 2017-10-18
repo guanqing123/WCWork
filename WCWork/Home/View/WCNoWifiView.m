@@ -15,6 +15,10 @@
 
 @implementation WCNoWifiView
 
++ (instancetype)noWifiView {
+    return [[self alloc] init];
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         self.frame = CGRectMake(0, 0, ScreenW, 180.0f);
@@ -63,7 +67,7 @@
 }
 
 - (void)show {
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         self.alpha = 1;
     }];
 }

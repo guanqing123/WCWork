@@ -14,6 +14,8 @@
 /** 屏幕宽度 */
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 
+#define NAV
+
 //色值
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 #define RGB(r,g,b) RGBA(r,g,b,1.0f)
@@ -50,5 +52,7 @@
 #define dynamic @"HYXK00003"
 //详细新闻
 #define dynamicDetail @"ZJMI00001"
+//通讯录
+#define addressBookList @"SUNON00002"
 
 #endif /* Macros_h */

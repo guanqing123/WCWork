@@ -21,4 +21,15 @@
  */
 + (void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(void(^)(id json))success failure:(void(^)(NSError *error))failure;
 
+/**
+ 发送一个POST请求,超时设置
+
+ @param url 请求路径
+ @param params 请求参数
+ @param timeoutInterval 超时
+ @param success 请求成功后的回调
+ @param failure 请求失败后的回调
+ */
++ (void)postWithURL:(NSString *)url params:(NSDictionary *)params timeoutInterval:(NSNumber *)timeoutInterval success:(void (^)(id))success failure:(void (^)(NSError *))failure;
+
 @end

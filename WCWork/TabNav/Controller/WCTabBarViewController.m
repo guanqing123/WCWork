@@ -45,11 +45,12 @@
     
     // 2.通讯录
     WCAddressBookViewController *addressBook = [[WCAddressBookViewController alloc] init];
-    [self setupChildViewController:addressBook title:@"通讯录" imageName:@"tab2" selectedImageName:@"tab2-2"];
+    [self setupChildViewController:addressBook title:@"通讯录"imageName:@"tab2" selectedImageName:@"tab2-2"];
     self.addressBook = addressBook;
     
     // 3.功能
     WCFunctionViewController *function = [[WCFunctionViewController alloc] init];
+    function.view.backgroundColor = [UIColor whiteColor];
     [self setupChildViewController:function title:@"功能" imageName:@"tab3" selectedImageName:@"tab3-3"];
     self.function = function;
     
@@ -72,6 +73,7 @@
 {
     // 1.设置控制器的属性
     childVc.title = title;
+    childVc.view.backgroundColor = [UIColor whiteColor];
     // 设置图标
     childVc.tabBarItem.image = [UIImage imageNamed:imageName];
     // 设置选中的图标
