@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,17 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>57D0A32C91E1F9ED093A179310F37B39</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B6FEC1C0C93884A0A1A2CC3303FACF7</key>
+		<key>5437890023F30CA85DFCA260CA914D48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90DF417F8645732060F66EFF6278E489</key>
+		<key>69A29E8B30831703DCE00C4D7D322EAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>90468CE39A5BB3F5090F9291A2200F39</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6A979BAC31D1C68014C8BBA3135B046</key>
+		<key>BF857B8CAAEF10E8456D654C29EEC867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7F66081E7CCD192EFE5FE93498F546A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,7 +7,12 @@
 //
 
 #import "WCDynamicResult.h"
+#import "MJExtension.h"
 
 @implementation WCDynamicResult
+
++ (NSDictionary *)mj_objectClassInArray {
+    return @{@"NewsList" : [WCDynamic class]};
+}
 
 @end

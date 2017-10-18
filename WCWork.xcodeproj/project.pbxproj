@@ -13,6 +13,12 @@
 		D60A4AF41F8E1C9900990D01 /* WCBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF31F8E1C9900990D01 /* WCBaseParam.m */; };
 		D60A4AF71F8E1CF200990D01 /* WCSliderParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF61F8E1CF200990D01 /* WCSliderParam.m */; };
 		D60A4AFA1F8E1D4300990D01 /* WCSliderResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF91F8E1D4300990D01 /* WCSliderResult.m */; };
+		D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C28B81F94E86C00327C01 /* WCDynamicListController.m */; };
+		D60C528A1F958B7800DA2DD3 /* WCNoWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C52891F958B7800DA2DD3 /* WCNoWifiView.m */; };
+		D60C528D1F95A6A900DA2DD3 /* WCDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C528C1F95A6A900DA2DD3 /* WCDynamic.m */; };
+		D60C52901F95D79700DA2DD3 /* WCDynamicDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C528F1F95D79700DA2DD3 /* WCDynamicDetailController.m */; };
+		D60C52931F95DA1700DA2DD3 /* WCDynamicDetailParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C52921F95DA1700DA2DD3 /* WCDynamicDetailParam.m */; };
+		D60C52961F95E0FC00DA2DD3 /* WCDynamicDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C52951F95E0FC00DA2DD3 /* WCDynamicDetailResult.m */; };
 		D60D74B41F8F54C900FDB286 /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D74B31F8F54C900FDB286 /* WCItem.m */; };
 		D60D74B71F8F559400FDB286 /* WCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D74B61F8F559400FDB286 /* WCGroup.m */; };
 		D60D74B91F8F560600FDB286 /* function.json in Resources */ = {isa = PBXBuildFile; fileRef = D60D74B81F8F560600FDB286 /* function.json */; };
@@ -22,6 +28,7 @@
 		D61521301F8E59560066A82A /* DotActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212E1F8E59560066A82A /* DotActivityIndicatorView.m */; };
 		D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61521321F8E5AD10066A82A /* WCSlideshowHeadView.m */; };
 		D615DDE21F7E9BA200CC02F9 /* CustomSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D615DDE11F7E9BA200CC02F9 /* CustomSegmentControl.m */; };
+		D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */; };
 		D61A64031F945884000FE435 /* WCMoreDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A64021F945884000FE435 /* WCMoreDynamicCell.m */; };
 		D61A64061F9471E9000FE435 /* WCDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A64051F9471E9000FE435 /* WCDynamicCell.m */; };
 		D61A64091F94736B000FE435 /* WCDynamicResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A64081F94736B000FE435 /* WCDynamicResult.m */; };
@@ -59,6 +66,18 @@
 		D60A4AF61F8E1CF200990D01 /* WCSliderParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSliderParam.m; sourceTree = "<group>"; };
 		D60A4AF81F8E1D4300990D01 /* WCSliderResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSliderResult.h; sourceTree = "<group>"; };
 		D60A4AF91F8E1D4300990D01 /* WCSliderResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSliderResult.m; sourceTree = "<group>"; };
+		D60C28B71F94E86C00327C01 /* WCDynamicListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicListController.h; sourceTree = "<group>"; };
+		D60C28B81F94E86C00327C01 /* WCDynamicListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamicListController.m; sourceTree = "<group>"; };
+		D60C52881F958B7800DA2DD3 /* WCNoWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNoWifiView.h; sourceTree = "<group>"; };
+		D60C52891F958B7800DA2DD3 /* WCNoWifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNoWifiView.m; sourceTree = "<group>"; };
+		D60C528B1F95A6A900DA2DD3 /* WCDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamic.h; sourceTree = "<group>"; };
+		D60C528C1F95A6A900DA2DD3 /* WCDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamic.m; sourceTree = "<group>"; };
+		D60C528E1F95D79700DA2DD3 /* WCDynamicDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicDetailController.h; sourceTree = "<group>"; };
+		D60C528F1F95D79700DA2DD3 /* WCDynamicDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamicDetailController.m; sourceTree = "<group>"; };
+		D60C52911F95DA1700DA2DD3 /* WCDynamicDetailParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicDetailParam.h; sourceTree = "<group>"; };
+		D60C52921F95DA1700DA2DD3 /* WCDynamicDetailParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamicDetailParam.m; sourceTree = "<group>"; };
+		D60C52941F95E0FC00DA2DD3 /* WCDynamicDetailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicDetailResult.h; sourceTree = "<group>"; };
+		D60C52951F95E0FC00DA2DD3 /* WCDynamicDetailResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamicDetailResult.m; sourceTree = "<group>"; };
 		D60D74B21F8F54C900FDB286 /* WCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCItem.h; sourceTree = "<group>"; };
 		D60D74B31F8F54C900FDB286 /* WCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCItem.m; sourceTree = "<group>"; };
 		D60D74B51F8F559400FDB286 /* WCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCGroup.h; sourceTree = "<group>"; };
@@ -76,6 +95,8 @@
 		D61521321F8E5AD10066A82A /* WCSlideshowHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSlideshowHeadView.m; sourceTree = "<group>"; };
 		D615DDE01F7E9BA200CC02F9 /* CustomSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentControl.h; sourceTree = "<group>"; };
 		D615DDE11F7E9BA200CC02F9 /* CustomSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentControl.m; sourceTree = "<group>"; };
+		D616C42D1F963BAC0075E30C /* WCAddressBookSearchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAddressBookSearchHeaderView.h; sourceTree = "<group>"; };
+		D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookSearchHeaderView.m; sourceTree = "<group>"; };
 		D61A64011F945884000FE435 /* WCMoreDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMoreDynamicCell.h; sourceTree = "<group>"; };
 		D61A64021F945884000FE435 /* WCMoreDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMoreDynamicCell.m; sourceTree = "<group>"; };
 		D61A64041F9471E9000FE435 /* WCDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicCell.h; sourceTree = "<group>"; };
@@ -191,6 +212,12 @@
 				D60D74BE1F8F726B00FDB286 /* WCDynamicParam.m */,
 				D61A64071F94736B000FE435 /* WCDynamicResult.h */,
 				D61A64081F94736B000FE435 /* WCDynamicResult.m */,
+				D60C528B1F95A6A900DA2DD3 /* WCDynamic.h */,
+				D60C528C1F95A6A900DA2DD3 /* WCDynamic.m */,
+				D60C52911F95DA1700DA2DD3 /* WCDynamicDetailParam.h */,
+				D60C52921F95DA1700DA2DD3 /* WCDynamicDetailParam.m */,
+				D60C52941F95E0FC00DA2DD3 /* WCDynamicDetailResult.h */,
+				D60C52951F95E0FC00DA2DD3 /* WCDynamicDetailResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +267,17 @@
 				D61A64051F9471E9000FE435 /* WCDynamicCell.m */,
 				D61A640D1F94B283000FE435 /* WCAddCommonCell.h */,
 				D61A640E1F94B283000FE435 /* WCAddCommonCell.m */,
+				D60C52881F958B7800DA2DD3 /* WCNoWifiView.h */,
+				D60C52891F958B7800DA2DD3 /* WCNoWifiView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D616C42C1F9639720075E30C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D616C42D1F963BAC0075E30C /* WCAddressBookSearchHeaderView.h */,
+				D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +289,10 @@
 				D61D42331F7DD04900B73FF1 /* WCHomeViewController.m */,
 				D61A640A1F94A6A5000FE435 /* WCAddCommonController.h */,
 				D61A640B1F94A6A5000FE435 /* WCAddCommonController.m */,
+				D60C28B71F94E86C00327C01 /* WCDynamicListController.h */,
+				D60C28B81F94E86C00327C01 /* WCDynamicListController.m */,
+				D60C528E1F95D79700DA2DD3 /* WCDynamicDetailController.h */,
+				D60C528F1F95D79700DA2DD3 /* WCDynamicDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,6 +471,7 @@
 		D65953A21F7CD3A400705749 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				D616C42C1F9639720075E30C /* View */,
 				D61D42351F7DD16B00B73FF1 /* Controller */,
 			);
 			path = AddressBook;
@@ -622,9 +665,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */,
 				D61A64031F945884000FE435 /* WCMoreDynamicCell.m in Sources */,
 				D61D424C1F7DDC8400B73FF1 /* SettingArrowItem.m in Sources */,
 				D60A4AF41F8E1C9900990D01 /* WCBaseParam.m in Sources */,
+				D60C52901F95D79700DA2DD3 /* WCDynamicDetailController.m in Sources */,
 				D61A64091F94736B000FE435 /* WCDynamicResult.m in Sources */,
 				D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */,
 				D61D42431F7DDC6200B73FF1 /* BaseViewController.m in Sources */,
@@ -637,6 +682,7 @@
 				D61D424E1F7DDC8400B73FF1 /* SettingItem.m in Sources */,
 				D61D42381F7DD1EF00B73FF1 /* WCAddressBookViewController.m in Sources */,
 				D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */,
+				D60C528A1F958B7800DA2DD3 /* WCNoWifiView.m in Sources */,
 				D60D74BF1F8F726B00FDB286 /* WCDynamicParam.m in Sources */,
 				D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */,
 				D61A64061F9471E9000FE435 /* WCDynamicCell.m in Sources */,
@@ -648,9 +694,13 @@
 				D61A640C1F94A6A5000FE435 /* WCAddCommonController.m in Sources */,
 				D61A640F1F94B283000FE435 /* WCAddCommonCell.m in Sources */,
 				D61D42521F7DDCB600B73FF1 /* SettingCell.m in Sources */,
+				D60C528D1F95A6A900DA2DD3 /* WCDynamic.m in Sources */,
 				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
+				D60C52961F95E0FC00DA2DD3 /* WCDynamicDetailResult.m in Sources */,
 				D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */,
+				D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */,
 				D65953AD1F7CD52400705749 /* main.m in Sources */,
+				D60C52931F95DA1700DA2DD3 /* WCDynamicDetailParam.m in Sources */,
 				D615212F1F8E59560066A82A /* DotActivityIndicatorParms.m in Sources */,
 				D60A4AEC1F8E164600990D01 /* WCHttpTool.m in Sources */,
 				D60A4AFA1F8E1D4300990D01 /* WCSliderResult.m in Sources */,

@@ -14,11 +14,37 @@
 #import "WCDynamicParam.h"
 #import "WCDynamicResult.h"
 
+#import "WCDynamicDetailParam.h"
+#import "WCDynamicDetailResult.h"
+
 @interface WCHomeTool : NSObject
 
+
+/**
+ 获取首页滚动数据
+
+ @param sliderParam 请求参数
+ @param success 成功回调
+ @param failure 失败回调
+ */
 + (void)homeSliderWithParam:(WCSliderParam *)sliderParam success:(void(^)(NSArray *sliderResult))success failure:(void(^)(NSError *error))failure;
 
+/**
+ 获取4大新闻内容
 
-+ (void)homeDynamicWithParam:(WCDynamicParam *)dynamicParam success:(void(^)(NSArray *dynamicResult))success failure:(void(^)(NSError *error))failure;
+ @param dynamicParam 请求参数
+ @param success 成功回调
+ @param failure 失败回调
+ */
++ (void)homeDynamicWithParam:(WCDynamicParam *)dynamicParam success:(void(^)(WCDynamicResult *dynamicResult))success failure:(void(^)(NSError *error))failure;
+
+/**
+ 获取某条新闻的具体内容
+
+ @param dynamicDetailParam 请求参数
+ @param success 成功回调
+ @param failure 失败回调
+ */
++ (void)dynamicDetailWithParam:(WCDynamicDetailParam *)dynamicDetailParam success:(void(^)(WCDynamicDetailResult *dynamicDetailResult))success failure:(void(^)(NSError *error))failure;
 
 @end

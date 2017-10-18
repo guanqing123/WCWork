@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WCDynamicResult.h"
+#import "WCDynamic.h"
 
 @interface WCDynamicCell : UITableViewCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
-@property (nonatomic, strong)  WCDynamicResult *dynamicResult;
+@property (nonatomic, strong)  WCDynamic *wcDynamic;
 
 @end

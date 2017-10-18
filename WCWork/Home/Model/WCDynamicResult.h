@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WCDynamic.h"
 
 @interface WCDynamicResult : NSObject
 
-@property (nonatomic, copy) NSString *AddDate;
-@property (nonatomic, copy) NSString *ContentId;
-@property (nonatomic, copy) NSString *Title;
+@property (nonatomic, copy) NSString *ColumnId;
+@property (nonatomic, assign) NSNumber *PageSize;
+@property (nonatomic, assign) NSNumber *CurrentPage;
+@property (nonatomic, assign) NSNumber *RCount;
+@property (nonatomic, strong)  NSArray *NewsList;
 
 @end

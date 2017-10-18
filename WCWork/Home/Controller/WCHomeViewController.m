@@ -8,6 +8,8 @@
 
 #import "WCHomeViewController.h"
 #import "WCAddCommonController.h"
+#import "WCDynamicListController.h"
+#import "WCDynamicDetailController.h"
 
 #import "CustomSegmentControl.h"
 #import "WCHomeTool.h"
@@ -45,6 +47,8 @@
 @property (nonatomic, assign)  NSInteger currentSelectedSegment;
 // 请求列
 @property (nonatomic, copy)    NSString *columnId;
+// segment desc
+@property (nonatomic, copy)    NSString *sgementDesc;
 
 @end
 
@@ -65,7 +69,6 @@
     [self.view addSubview:tableView];
     
     [self setUpData];
-    
 }
 
 #pragma mark - slide headerView
@@ -151,8 +154,8 @@
             case 0:
                 if (indexPath.row < self.coalMarketQuotationsArray.count) {
                     WCDynamicCell *dynamicCell = [WCDynamicCell cellWithTableView:tableView];
-                    WCDynamicResult *dynamicResult = self.coalMarketQuotationsArray[indexPath.row];
-                    dynamicCell.dynamicResult = dynamicResult;
+                    WCDynamic *wcDynamic = self.coalMarketQuotationsArray[indexPath.row];
+                    dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
                 }else{
                     return self.moreDynamicCell;
@@ -161,8 +164,8 @@
             case 1:
                 if (indexPath.row < self.coalMarketInformationArray.count) {
                     WCDynamicCell *dynamicCell = [WCDynamicCell cellWithTableView:tableView];
-                    WCDynamicResult *dynamicResult = self.coalMarketInformationArray[indexPath.row];
-                    dynamicCell.dynamicResult = dynamicResult;
+                    WCDynamic *wcDynamic = self.coalMarketInformationArray[indexPath.row];
+                    dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
                 }else{
                     return self.moreDynamicCell;
@@ -171,8 +174,8 @@
             case 2:
                 if (indexPath.row < self.logisticsStorageArray.count) {
                     WCDynamicCell *dynamicCell = [WCDynamicCell cellWithTableView:tableView];
-                    WCDynamicResult *dynamicResult = self.logisticsStorageArray[indexPath.row];
-                    dynamicCell.dynamicResult = dynamicResult;
+                    WCDynamic *wcDynamic = self.logisticsStorageArray[indexPath.row];
+                    dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
                 }else{
                     return self.moreDynamicCell;
@@ -181,8 +184,8 @@
             case 3:
                 if (indexPath.row < self.indexPriceArray.count) {
                     WCDynamicCell *dynamicCell = [WCDynamicCell cellWithTableView:tableView];
-                    WCDynamicResult *dynamicResult = self.indexPriceArray[indexPath.row];
-                    dynamicCell.dynamicResult = dynamicResult;
+                    WCDynamic *wcDynamic = self.indexPriceArray[indexPath.row];
+                    dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
                 }else{
                     return self.moreDynamicCell;
@@ -304,31 +307,92 @@
     [self.moreDynamicCell show];
     switch (segmentBar.selectedSegmentIndex) {
         case 0:
+            _columnId = @"1001";
+            _sgementDesc = @"煤市行情";
             [self.tableView reloadData];
             if (!self.coalMarketQuotationsArray.count) {
-                _columnId = @"1001";
                 [self setUpDynamicData:_columnId resultArray:self.coalMarketQuotationsArray];
             }
             break;
         case 1:
+            _columnId = @"1002";
+            _sgementDesc = @"煤市资讯";
             [self.tableView reloadData];
             if (!self.coalMarketInformationArray.count) {
-                _columnId = @"1002";
                 [self setUpDynamicData:_columnId resultArray:self.coalMarketInformationArray];
             }
             break;
         case 2:
+            _columnId = @"1003";
+            _sgementDesc = @"物流仓储";
             [self.tableView reloadData];
             if (!self.logisticsStorageArray.count) {
-                _columnId = @"1003";
                 [self setUpDynamicData:_columnId resultArray:self.logisticsStorageArray];
             }
             break;
         case 3:
+            _columnId = @"1004";
+            _sgementDesc = @"指数价格";
             [self.tableView reloadData];
             if (!self.indexPriceArray.count) {
-                _columnId = @"1004";
                 [self setUpDynamicData:_columnId resultArray:self.indexPriceArray];
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) return;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    switch (_currentSelectedSegment) {
+        case 0:
+            if (indexPath.row < self.coalMarketQuotationsArray.count) {
+                WCDynamic *wcDynamic = self.coalMarketQuotationsArray[indexPath.row];
+                WCDynamicDetailController *dynamicDetailVc = [[WCDynamicDetailController alloc] initWithWcDynamic:wcDynamic];
+                dynamicDetailVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicDetailVc animated:YES];
+            }else{
+                WCDynamicListController *dynamicListVc = [[WCDynamicListController alloc] initWithColumnId:_columnId];
+                dynamicListVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicListVc animated:YES];
+            }
+            break;
+        case 1:
+            if (indexPath.row < self.coalMarketInformationArray.count) {
+                WCDynamic *wcDynamic = self.coalMarketInformationArray[indexPath.row];
+                WCDynamicDetailController *dynamicDetailVc = [[WCDynamicDetailController alloc] initWithWcDynamic:wcDynamic];
+                dynamicDetailVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicDetailVc animated:YES];
+            }else{
+                WCDynamicListController *dynamicListVc = [[WCDynamicListController alloc] initWithColumnId:_columnId];
+                dynamicListVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicListVc animated:YES];
+            }
+            break;
+        case 2:
+            if (indexPath.row < self.logisticsStorageArray.count) {
+                WCDynamic *wcDynamic = self.logisticsStorageArray[indexPath.row];
+                WCDynamicDetailController *dynamicDetailVc = [[WCDynamicDetailController alloc] initWithWcDynamic:wcDynamic];
+                dynamicDetailVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicDetailVc animated:YES];
+            }else{
+                WCDynamicListController *dynamicListVc = [[WCDynamicListController alloc] initWithColumnId:_columnId];
+                dynamicListVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicListVc animated:YES];
+            }
+            break;
+        case 3:
+            if (indexPath.row < self.indexPriceArray.count) {
+                WCDynamic *wcDynamic = self.indexPriceArray[indexPath.row];
+                WCDynamicDetailController *dynamicDetailVc = [[WCDynamicDetailController alloc] initWithWcDynamic:wcDynamic];
+                dynamicDetailVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicDetailVc animated:YES];
+            }else{
+                WCDynamicListController *dynamicListVc = [[WCDynamicListController alloc] initWithColumnId:_columnId];
+                dynamicListVc.title = _sgementDesc;
+                [self.navigationController pushViewController:dynamicListVc animated:YES];
             }
             break;
         default:
@@ -427,12 +491,12 @@
 - (void)setUpDynamicData:(NSString *)columnId resultArray:(NSMutableArray * )resultArray{
     [self.moreDynamicCell loading];
     WCDynamicParam *param = [WCDynamicParam param:dynamic];
-    param.page = @"1";
+    param.page = @(1);
     param.columnId = columnId;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [WCHomeTool homeDynamicWithParam:param success:^(NSArray *dynamicResult) {
+        [WCHomeTool homeDynamicWithParam:param success:^(WCDynamicResult *dynamicResult) {
             [self.moreDynamicCell show];
-            [resultArray addObjectsFromArray:dynamicResult];
+            [resultArray addObjectsFromArray:dynamicResult.NewsList];
             [self.tableView reloadData];
         } failure:^(NSError *error) {
             [self.moreDynamicCell failure];

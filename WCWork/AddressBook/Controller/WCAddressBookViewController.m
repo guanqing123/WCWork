@@ -7,31 +7,47 @@
 //
 
 #import "WCAddressBookViewController.h"
+#import "WCAddressBookSearchHeaderView.h"
 
 @interface WCAddressBookViewController ()
-
+@property (nonatomic, strong)  WCAddressBookSearchHeaderView *tableHeaderView;
 @end
 
 @implementation WCAddressBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.showsHorizontalScrollIndicator = NO;
+    
+    self.tableView.tableHeaderView = self.tableHeaderView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - tableHeaderView
+- (WCAddressBookSearchHeaderView *)tableHeaderView {
+    if (!_tableHeaderView) {
+        _tableHeaderView = [WCAddressBookSearchHeaderView headerView];
+    }
+    return _tableHeaderView;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark tableView dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.textLabel.text = @"text";
+    return cell;
+}
+
+#pragma mark - tableView delegate
 
 @end

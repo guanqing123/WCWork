@@ -38,6 +38,7 @@
         
         UILabel *timeLabel = [[UILabel alloc] init];
         timeLabel.font = timeFont;
+        timeLabel.textColor = [UIColor lightGrayColor];
         [self.contentView addSubview:timeLabel];
         self.timeLabel = timeLabel;
         
@@ -62,12 +63,12 @@
     self.bottomLineView.frame = CGRectMake(0, 43.0f, ScreenW, 1.0f);
 }
 
-- (void)setDynamicResult:(WCDynamicResult *)dynamicResult {
-    _dynamicResult = dynamicResult;
+- (void)setWcDynamic:(WCDynamic *)wcDynamic {
+    _wcDynamic = wcDynamic;
     
-    self.titleLabel.text = dynamicResult.Title;
+    self.titleLabel.text = wcDynamic.Title;
     
-    self.timeLabel.text = dynamicResult.AddDate;
+    self.timeLabel.text = wcDynamic.AddDate;
 }
 
 @end

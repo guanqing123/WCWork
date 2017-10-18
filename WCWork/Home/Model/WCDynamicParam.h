@@ -10,7 +10,7 @@
 
 @interface WCDynamicParam : WCBaseParam
 
-@property (nonatomic, copy) NSString *page;
+@property (nonatomic, assign) NSNumber *page;
 @property (nonatomic, copy) NSString *columnId;
 
 @end

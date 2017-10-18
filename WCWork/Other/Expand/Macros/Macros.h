@@ -48,5 +48,7 @@
 #define slider @"HYXK00019"
 //公司行情
 #define dynamic @"HYXK00003"
+//详细新闻
+#define dynamicDetail @"ZJMI00001"
 
 #endif /* Macros_h */

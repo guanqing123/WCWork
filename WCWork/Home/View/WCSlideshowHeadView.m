@@ -106,7 +106,7 @@
 - (void)loading {
     self.cycleScrollView.alpha = 0;
     self.refreshView.alpha = 0;
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         self.indicatorView.alpha = 1;
         [self.indicatorView startAnimating];
     }];
@@ -117,7 +117,7 @@
     self.indicatorView.alpha = 0;
     self.refreshView.alpha = 0;
     self.cycleScrollView.imageURLStringsGroup = resultArray;
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         self.cycleScrollView.alpha = 1;
     }];
 }
@@ -126,7 +126,7 @@
     [self.indicatorView stopAnimating];
     self.indicatorView.alpha = 0;
     self.cycleScrollView.alpha = 0;
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         self.refreshView.alpha = 1;
     }];
 }
