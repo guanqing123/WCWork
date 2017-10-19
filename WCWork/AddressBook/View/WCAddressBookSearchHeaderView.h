@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WCAddressBookSearchHeaderView;
+
+@protocol WCAddressBookSearchHeaderViewDelegate <NSObject>
+@optional
+
+/**
+ 点击搜索🔍按钮
+
+ @param searchHeaderView 搜索headerView
+ */
+- (void)addressBookSearchHeaderViewDidSearchBtn:(WCAddressBookSearchHeaderView *)searchHeaderView;
+
+@end
 
 @interface WCAddressBookSearchHeaderView : UIView
 
 + (instancetype)headerView;
+
+@property (nonatomic, weak) id<WCAddressBookSearchHeaderViewDelegate>  delegate;
 
 @end

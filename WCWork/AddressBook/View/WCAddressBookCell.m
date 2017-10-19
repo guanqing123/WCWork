@@ -16,6 +16,7 @@
 @property (nonatomic, weak) UILabel  *mobileLabel;
 @property (nonatomic, weak) UIButton  *callBtn;
 @property (nonatomic, weak) UIView  *lineView;
+@property (nonatomic, strong)  UIWebView *webView;
 @end
 
 @implementation WCAddressBookCell
@@ -31,6 +32,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         // 1.trueNameLabel
         UILabel *trueNameLabel = [[UILabel alloc] init];
         trueNameLabel.font = [UIFont boldSystemFontOfSize:18.0f];
@@ -65,6 +67,19 @@
         [self.contentView addSubview:lineView];
     }
     return self;
+}
+
+- (UIWebView *)webView {
+    if (_webView == nil) {
+        _webView = [[UIWebView alloc] init];
+    }
+    return _webView;
+}
+
+- (void)telephone {
+    if (!_mobile || ![_mobile length]) return;
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_mobile]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)layoutSubviews {

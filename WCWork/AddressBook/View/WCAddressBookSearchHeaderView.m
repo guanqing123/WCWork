@@ -29,7 +29,7 @@
         
         UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         searchBtn.frame = CGRectMake(0.0f, 0.0f, ScreenW, 44.0f);
-        [searchBtn addTarget:self action:@selector(searchBtnSearchBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [searchBtn addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
         
         [searchBar addSubview:searchBtn];
         [self addSubview:searchBar];
@@ -41,8 +41,10 @@
     return [[self alloc] init];
 }
 
-- (void)searchBtnSearchBtnClick {
-    
+- (void)searchBtnClick {
+    if ([self.delegate respondsToSelector:@selector(addressBookSearchHeaderViewDidSearchBtn:)]) {
+        [self.delegate addressBookSearchHeaderViewDidSearchBtn:self];
+    }
 }
 
 @end

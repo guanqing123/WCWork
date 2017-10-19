@@ -11,6 +11,8 @@
 #import "WCAddressBookSectionHeaderView.h"
 #import "WCAddressBookCell.h"
 
+#import "WCNavigationController.h"
+#import "WCAddressBookSearchViewController.h"
 #import "WCAddressBookTool.h"
 
 #import "YLYTableViewIndexView.h"
@@ -21,15 +23,18 @@
 
 #define SearchHeaderViewH 44.0f
 
-@interface WCAddressBookViewController () <UITableViewDataSource,UITableViewDelegate,WCNoWifiViewDelegate,YLYTableViewIndexDelegate>
+@interface WCAddressBookViewController () <UITableViewDataSource,UITableViewDelegate,WCNoWifiViewDelegate,YLYTableViewIndexDelegate,WCAddressBookSearchHeaderViewDelegate>
 
 @property (nonatomic, strong)  NSArray *addressBookListResultAllKey;
 @property (nonatomic, strong)  WCAddressBookListResult *addressBookListResult;
+
 @property (nonatomic, strong)  WCActivityIndicatorView *indicatorView;
 @property (nonatomic, strong)  WCNoWifiView *noWifiView;
+
+@property (nonatomic, weak) WCAddressBookSearchHeaderView  *searchHeaderView;
 @property (nonatomic, weak) UITableView  *tableView;
-@property (nonatomic, strong)  UILabel *flotageLabel; //显示视图
-@property (nonatomic, strong) YLYTableViewIndexView  *indexView;
+@property (nonatomic, weak)  UILabel *flotageLabel; //显示视图
+@property (nonatomic, weak) YLYTableViewIndexView  *indexView;
 @end
 
 @implementation WCAddressBookViewController
@@ -54,12 +59,20 @@
     [self setupData];
 }
 
-#pragma mark - headerView & navigationItem
+#pragma mark - headerView & navigationItem / headerViewDelegate
 - (void)setupNavBarHeaderView {
     WCAddressBookSearchHeaderView *searchHeaderView = [WCAddressBookSearchHeaderView headerView];
     searchHeaderView.frame = CGRectMake(0, WCTopNavH, ScreenW, SearchHeaderViewH);
-    searchHeaderView.backgroundColor = [UIColor redColor];
+    searchHeaderView.delegate = self;
+    _searchHeaderView = searchHeaderView;
     [self.view addSubview:searchHeaderView];
+}
+
+- (void)addressBookSearchHeaderViewDidSearchBtn:(WCAddressBookSearchHeaderView *)searchHeaderView {
+    WCAddressBookSearchViewController *searchViewController = [[WCAddressBookSearchViewController alloc] initWithAddressBookListResult:self.addressBookListResult];
+    WCNavigationController *nav = [[WCNavigationController alloc] initWithRootViewController:searchViewController];
+    nav.modalTransitionStyle = UIModalTransitionStyleCrossDissolve; //设置动画效果
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark - tableView
@@ -68,7 +81,7 @@
     tableView.frame = CGRectMake(0, WCTopNavH + SearchHeaderViewH, ScreenW, ScreenH - WCTopNavH - SearchHeaderViewH - WCBottomTabH);
     tableView.dataSource = self;
     tableView.delegate = self;
-    tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.showsVerticalScrollIndicator = NO;
     tableView.showsHorizontalScrollIndicator = YES;
     _tableView = tableView;
@@ -230,5 +243,18 @@
 - (void)failure {
     [self.indicatorView hide];
     [self.noWifiView show];
+}
+
+#pragma mark -屏幕横竖屏设置
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 @end
