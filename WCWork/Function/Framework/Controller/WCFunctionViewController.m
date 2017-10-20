@@ -10,7 +10,7 @@
 #import "XLPlainFlowLayout.h"
 
 #import "WCFunctionCell.h"
-#import "ReusableView.h"
+#import "WCFunctionReusableView.h"
 
 #import "WCGroup.h"
 
@@ -32,7 +32,7 @@ static NSString * const sectionHeaderIdentifier = @"functionViewControllerSectio
     // Register cell classes
     [self.collectionView registerClass:[WCFunctionCell class] forCellWithReuseIdentifier:reuseIdentifier];
     // Register section header classes
-    [self.collectionView registerClass:[ReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:sectionHeaderIdentifier];
+    [self.collectionView registerClass:[WCFunctionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:sectionHeaderIdentifier];
     
     // Do any additional setup after loading the view.
     self.collectionView.alwaysBounceVertical = YES;
@@ -44,9 +44,9 @@ static NSString * const sectionHeaderIdentifier = @"functionViewControllerSectio
     XLPlainFlowLayout *layout = [XLPlainFlowLayout new];
     
     // 每个cell的尺寸
-    layout.itemSize = CGSizeMake((ScreenW - 50) / 4, (ScreenW - 50) / 4);
+    layout.itemSize = CGSizeMake((ScreenW - 80) / 4, (ScreenW - 80) / 4);
     // 设置cell之间的水平间距
-    layout.minimumInteritemSpacing = 10;
+    layout.minimumInteritemSpacing = 20;
     // 设置cell之间的垂直间距
     layout.minimumLineSpacing = 10;
     // 设置四周的内边距
@@ -104,9 +104,9 @@ static NSString * const sectionHeaderIdentifier = @"functionViewControllerSectio
     
     UICollectionReusableView *reusableView = nil;
     if (kind == UICollectionElementKindSectionHeader) {
-        ReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:sectionHeaderIdentifier forIndexPath:indexPath];
-        [headerView initText:group.header r:group.r g:group.g b:group.b];
-        reusableView = headerView;
+        WCFunctionReusableView *functionReusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:sectionHeaderIdentifier forIndexPath:indexPath];
+        functionReusableView.group = group;
+        reusableView = functionReusableView;
     }
     return reusableView;
 }

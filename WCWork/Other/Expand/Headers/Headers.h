@@ -12,4 +12,7 @@
 #import "WCConsts.h" // 常量
 #import "Macros.h" //宏
 
+#import "WCLoginViewController.h" //登录信息
+#import "MBProgressHUD.h"
+
 #endif /* Headers_h */

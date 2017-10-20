@@ -54,5 +54,10 @@
 #define dynamicDetail @"ZJMI00001"
 //通讯录
 #define addressBookList @"SUNON00002"
+//登录
+#define login @"SUNON00001"
+
+//自动登录
+#define WCAccountFile [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.data"]
 
 #endif /* Macros_h */

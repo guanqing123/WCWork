@@ -11,4 +11,6 @@ pod 'MJRefresh'
 
 pod 'DZNEmptyDataSet'
 
+pod 'MBProgressHUD', '~> 1.0.0'
+
 end

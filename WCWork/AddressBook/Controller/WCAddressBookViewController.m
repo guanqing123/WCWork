@@ -35,6 +35,7 @@
 @property (nonatomic, weak) UITableView  *tableView;
 @property (nonatomic, weak)  UILabel *flotageLabel; //显示视图
 @property (nonatomic, weak) YLYTableViewIndexView  *indexView;
+@property (nonatomic, weak) UIButton  *backTopButton;
 @end
 
 @implementation WCAddressBookViewController
@@ -55,7 +56,10 @@
     // 3.flotageLabel
     [self setupFlotageLabel];
     
-    // 4.loadData
+    // 4.backTopButton
+    [self setupBackTopButton];
+    
+    // 5.loadData
     [self setupData];
 }
 
@@ -139,6 +143,25 @@
     flotageLabel.textColor = [UIColor whiteColor];
     _flotageLabel = flotageLabel;
     [self.view addSubview:flotageLabel];
+}
+
+#pragma mark - setupBackTopButton
+- (void)setupBackTopButton {
+    UIButton *backTopButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backTopButton.frame = CGRectMake(ScreenW - 50, ScreenH - 100, 40, 40);
+    [backTopButton addTarget:self action:@selector(scrollToTop) forControlEvents:UIControlEventTouchUpInside];
+    [backTopButton setImage:[UIImage imageNamed:@"btn_UpToTop"] forState:UIControlStateNormal];
+    backTopButton.hidden = YES;
+    _backTopButton = backTopButton;
+    [self.view addSubview:backTopButton];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.backTopButton.hidden = (scrollView.contentOffset.y > self.tableView.frame.size.height) ? NO : YES;
+}
+
+- (void)scrollToTop {
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 #pragma mark - setupData
