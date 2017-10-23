@@ -20,11 +20,12 @@
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     NSDictionary *parameter = @{@"content" : jsonString};
-    [WCHttpTool postWithURL:XKURL params:parameter success:^(id json) {
-        if (success) {
-            NSArray *dictArray = [[json objectForKey:@"data"] objectForKey:@"list"];
-            NSArray *result = [WCSliderResult mj_objectArrayWithKeyValuesArray:dictArray];
+    [WCHttpTool postWithURL:WCURL params:parameter success:^(id json) {
+        if ([[[json objectForKey:@"header"] objectForKey:@"succflag"] isEqualToString:@"1"]) {
+            NSArray *result = [WCSliderResult mj_objectArrayWithKeyValuesArray:[[json objectForKey:@"data"] objectForKey:@"list"]];
             success(result);
+        }else{
+            success([NSArray array]);
         }
     } failure:^(NSError *error) {
         if (failure) {

@@ -46,8 +46,14 @@
 //鸿雁云商
 #define HYURL @"http://218.75.78.166:9106/app/api"
 
-#define WCURL @"http://sge.cn:9109/app/api"
 
+//物产URL
+#define WCURL @"http://mobile.zjmi.com:8080/app/api"
+//EMAIL
+#define EMAILURL @"http://mobile.zjmi.com:8080/app/email?email="
+//OA
+#define OAURL @"http://mobile.zjmi.com:8080/app/oauth?app=ebridge&loginid="
+//智慧党建
 #define WCBASEURL @"http://mobile.zjmi.com:8080/app/"
 
 
@@ -67,6 +73,10 @@
 //考勤
 #define KQ1 @"SGE00006"
 #define KQ2 @"SGE00007"
+//新品上市
+#define newArrival @"HYXK00027"
+//经典作品
+#define classicWorkUrl @"HYXK00020"
 
 //自动登录
 #define WCAccountFile [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.data"]

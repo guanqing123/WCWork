@@ -53,7 +53,7 @@
     
     WCLoginViewController *loginVc = [WCLoginViewController instance];
     NSString *userName = loginVc.loginAccount.userName;
-    NSString *url = [NSString stringWithFormat:@"%@oauth?app=ebridge&loginid=%@",WCBASEURL,userName];
+    NSString *url = [NSString stringWithFormat:@"%@%@",OAURL,userName];
     _url = url;
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }

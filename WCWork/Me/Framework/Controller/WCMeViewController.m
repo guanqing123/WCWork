@@ -14,6 +14,8 @@
 #import "SettingSwitchItem.h"
 #import "SettingGroup.h"
 
+#import "WCHelpViewController.h"
+
 @interface WCMeViewController () <WCMeTableFooterViewDelegate,WCLoginViewControllerDelegate>
 @property (nonatomic, strong)  WCMeTableHeaderView *tableHeaderView;
 @property (nonatomic, strong)  WCMeTableFooterView *tableFooterView;
@@ -34,7 +36,7 @@
 
 - (void)setupData {
     //帮助
-    SettingItem *help = [SettingArrowItem itemWithIcon:@"help" title:@"帮助" destVcClass:nil];
+    SettingItem *help = [SettingArrowItem itemWithIcon:@"help" title:@"帮助" destVcClass:[WCHelpViewController class]];
     SettingItem *autoLogin = [SettingSwitchItem itemWithIcon:@"zidongdenglu" title:@"自动登录"];
     SettingGroup *firstGroup = [[SettingGroup alloc] init];
     firstGroup.items = @[help, autoLogin];

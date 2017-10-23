@@ -70,6 +70,13 @@
     searchHeaderView.delegate = self;
     _searchHeaderView = searchHeaderView;
     [self.view addSubview:searchHeaderView];
+    
+    UIButton *refreshBtn = [[UIButton alloc] init];
+    refreshBtn.frame = CGRectMake(0, 0, 30, 30);
+    [refreshBtn setBackgroundImage:[UIImage imageNamed:@"refresh"] forState:UIControlStateNormal];
+    [refreshBtn addTarget:self action:@selector(updateLocationAddressBook) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem= [[UIBarButtonItem alloc] initWithCustomView:refreshBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)addressBookSearchHeaderViewDidSearchBtn:(WCAddressBookSearchHeaderView *)searchHeaderView {
@@ -162,6 +169,21 @@
 
 - (void)scrollToTop {
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+#pragma mark - updateLocationAddressBook
+- (void)updateLocationAddressBook {
+    self.addressBookListResultAllKey = nil;
+    self.addressBookListResult = nil;
+    [self.tableView reloadData];
+    // 删除文件
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isHave = [fileManager fileExistsAtPath:WCAddressBookFile];
+    if (isHave) {
+        NSError *error;
+        [fileManager removeItemAtPath:WCAddressBookFile error:&error];
+    }
+    [self setupData];
 }
 
 #pragma mark - setupData

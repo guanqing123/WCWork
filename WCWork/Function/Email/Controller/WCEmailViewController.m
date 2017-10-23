@@ -35,7 +35,7 @@
     
     WCLoginViewController *loginVc = [WCLoginViewController instance];
     NSString *email = loginVc.loginAccount.email;
-    NSString *url = [NSString stringWithFormat:@"%@email?email=%@",WCBASEURL,email];
+    NSString *url = [NSString stringWithFormat:@"%@%@",EMAILURL,email];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
