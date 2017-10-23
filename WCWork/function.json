@@ -4,9 +4,9 @@
   "g" : "114",
   "b" : "215",
   "items" : [
-             {"title":"OA办公","image":"oa","destVcClass":"OAViewController","order":"0","load":"1"},
-             {"title":"在线考勤","image":"zaixiankaoqin","destVcClass":"KqViewController","order":"1","load":"1"},
-             {"title":"企业邮箱","image":"email","destVcClass":"EmailViewController","order":"2","load":"1"}
+             {"title":"OA办公","image":"oa","destVcClass":"WCOAViewController","order":"0","load":"1"},
+             {"title":"在线考勤","image":"zaixiankaoqin","destVcClass":"WCCheckAttendenceViewController","order":"1","load":"1"},
+             {"title":"企业邮箱","image":"email","destVcClass":"WCEmailViewController","order":"2","load":"1"}
              ]
   },{
   "header" : "营销",
@@ -23,7 +23,7 @@
   "g" : "88",
   "b" : "189",
   "items" : [
-             {"title":"常见问题","image":"changjianwenti","destVcClass":"CjwtViewController","order":"6","load":"0"}
+             {"title":"常见问题","image":"changjianwenti","destVcClass":"WCCommonProblemViewController","order":"6","load":"0"}
              ]
   }
   ]

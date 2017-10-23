@@ -17,4 +17,6 @@
 
 + (void)saveLoginAccount:(WCLoginAccount *)loginAccount;
 
++ (WCLoginAccount *)loginAccount;
+
 @end

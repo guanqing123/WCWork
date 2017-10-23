@@ -43,8 +43,14 @@
 
 //鸿雁销客
 #define XKURL @"http://218.75.78.166:9101/app/api"
+//鸿雁云商
+#define HYURL @"http://218.75.78.166:9106/app/api"
 
 #define WCURL @"http://sge.cn:9109/app/api"
+
+#define WCBASEURL @"http://mobile.zjmi.com:8080/app/"
+
+
 
 //首页滚动条
 #define slider @"HYXK00019"
@@ -56,6 +62,11 @@
 #define addressBookList @"SUNON00002"
 //登录
 #define login @"SUNON00001"
+//常见问题
+#define commonProblemUrl @"HYXK00006"
+//考勤
+#define KQ1 @"SGE00006"
+#define KQ2 @"SGE00007"
 
 //自动登录
 #define WCAccountFile [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.data"]

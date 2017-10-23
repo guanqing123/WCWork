@@ -83,6 +83,15 @@
         loginVc.loginAccount = nil;
         [self.tableHeaderView unactive];
         [self.tableFooterView unactive];
+        
+        // 删除文件
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        BOOL isHave = [fileManager fileExistsAtPath:WCAccountFile];
+        if (isHave) {
+            NSError *error;
+            [fileManager removeItemAtPath:WCAccountFile error:&error];
+        }
+        
     }else{
         loginVc.delegate = self;
         [self.navigationController pushViewController:loginVc animated:YES];

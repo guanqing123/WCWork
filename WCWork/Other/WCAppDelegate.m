@@ -9,7 +9,7 @@
 #import "WCAppDelegate.h"
 #import "WCTabBarViewController.h"
 
-@interface WCAppDelegate ()
+@interface WCAppDelegate () <UITabBarControllerDelegate>
 
 @property (nonatomic, strong)  WCTabBarViewController *tabBarVc;
 
@@ -28,8 +28,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    WCLoginAccount *loginAccount = [WCLoginTool loginAccount];
+    if (loginAccount) {
+        WCLoginViewController *loginVc = [WCLoginViewController instance];
+        loginVc.loginAccount = loginAccount;
+        loginVc.logining = YES;
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     WCTabBarViewController *tabBarVc = [[WCTabBarViewController alloc] init];
+    tabBarVc.delegate = self;
     self.tabBarVc = tabBarVc;
     self.window.rootViewController = tabBarVc;
     [self.window makeKeyAndVisible];
@@ -37,6 +45,19 @@
     return YES;
 }
 
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    WCLoginViewController *loginVc = [WCLoginViewController instance];
+    if ([viewController.tabBarItem.title isEqualToString:@"通讯录"]) {
+        if (loginVc.logining) {
+            return YES;
+        }else{
+            [((UINavigationController *)tabBarController.selectedViewController) pushViewController:loginVc animated:YES];
+            return NO;
+        }
+    } else {
+        return YES;
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

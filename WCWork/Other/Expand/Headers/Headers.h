@@ -13,6 +13,6 @@
 #import "Macros.h" //宏
 
 #import "WCLoginViewController.h" //登录信息
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 #endif /* Headers_h */

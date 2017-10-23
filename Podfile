@@ -11,6 +11,8 @@ pod 'MJRefresh'
 
 pod 'DZNEmptyDataSet'
 
-pod 'MBProgressHUD', '~> 1.0.0'
+pod 'AMap3DMap'
+pod 'AMapSearch'
+pod 'AMapLocation'
 
 end

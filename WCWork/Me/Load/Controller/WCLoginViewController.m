@@ -102,26 +102,19 @@ static WCLoginViewController *loginVc = nil;
 
 #pragma mark - WCLoginSectionFooterViewDelegate
 - (void)loginSectionFooterViewDidClickLoginBtn:(WCLoginSectionFooterView *)footerView {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     if (![self.username length] || ![self.password length]) {
-        hud.mode = MBProgressHUDModeCustomView;
-        hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"warning"]];
-        hud.label.text = @"信息必须填写完整";
-        [hud hideAnimated:YES afterDelay:2.0f];
+        [MBProgressHUD showError:@"信息必须填写完整"];
         return;
     }
-    hud.label.text = @"logining";
+    [MBProgressHUD showMessage:@"登录验证中..."];
     WCLoginParam *param = [WCLoginParam param:login];
     param.gh = self.username;
     param.mm = self.password;
     [WCLoginTool loginWithParam:param success:^(WCLoginResult *loginResult) {
+        [MBProgressHUD hideHUD];
         if (loginResult.error) {
-            hud.mode = MBProgressHUDModeCustomView;
-            hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"error"]];
-            hud.label.text = loginResult.errorMsg;
-            [hud hideAnimated:YES afterDelay:2.0f];
+            [MBProgressHUD showError:loginResult.errorMsg];
         }else{
-            [hud hideAnimated:YES];
             self.loginAccount = loginResult.entry;
             self.logining = YES;
             
@@ -137,10 +130,7 @@ static WCLoginViewController *loginVc = nil;
             }
         }
     } failure:^(NSError *error) {
-        hud.mode = MBProgressHUDModeCustomView;
-        hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"error"]];
-        hud.label.text = @"网络异常";
-        [hud hideAnimated:YES afterDelay:2.0f];
+        [MBProgressHUD hideHUD];
     }];
 }
 

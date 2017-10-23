@@ -123,6 +123,22 @@ static NSString * const sectionHeaderIdentifier = @"functionViewControllerSectio
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    WCGroup *group = self.functions[indexPath.section];
+    WCItem *item = group.items[indexPath.item];
+    
+    UIViewController *desVc = nil;
+    WCLoginViewController *loginVc = [WCLoginViewController instance];
+    if (loginVc.logining) {
+        desVc = [[NSClassFromString(item.destVcClass) alloc] init];
+        desVc.title = item.title;
+    } else {
+        desVc = loginVc;
+    }
+    [self.navigationController pushViewController:desVc animated:YES];
+}
+
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {

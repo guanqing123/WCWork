@@ -22,6 +22,15 @@
 		D60D74B91F8F560600FDB286 /* function.json in Resources */ = {isa = PBXBuildFile; fileRef = D60D74B81F8F560600FDB286 /* function.json */; };
 		D60D74BC1F8F61F800FDB286 /* WCCommonUseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D74BB1F8F61F800FDB286 /* WCCommonUseCell.m */; };
 		D60D74BF1F8F726B00FDB286 /* WCDynamicParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D74BE1F8F726B00FDB286 /* WCDynamicParam.m */; };
+		D6120C7E1F9D910100A4AD4E /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */; };
+		D6120C7F1F9D910100A4AD4E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */; };
+		D6120C801F9D910100A4AD4E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C7D1F9D910100A4AD4E /* MBProgressHUD.m */; };
+		D6120C831F9D947200A4AD4E /* WCCheckAttendenceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C821F9D947200A4AD4E /* WCCheckAttendenceTool.m */; };
+		D6120C861F9D949D00A4AD4E /* WCCheckAttendenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C851F9D949D00A4AD4E /* WCCheckAttendenceParam.m */; };
+		D6120C891F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C881F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m */; };
+		D6120C8C1F9DAF9600A4AD4E /* WCCheckAttendenceFence.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C8B1F9DAF9600A4AD4E /* WCCheckAttendenceFence.m */; };
+		D6120C8F1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C8E1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.m */; };
+		D6120C921F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C911F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m */; };
 		D6128E5E1F98E6B700FA63E3 /* WCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6128E5D1F98E6B700FA63E3 /* WCMeViewController.m */; };
 		D6128E621F98EC7C00FA63E3 /* WCMeTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6128E611F98EC7C00FA63E3 /* WCMeTableHeaderView.m */; };
 		D615212F1F8E59560066A82A /* DotActivityIndicatorParms.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212C1F8E59560066A82A /* DotActivityIndicatorParms.m */; };
@@ -32,6 +41,20 @@
 		D6166FDB1F979D9E004B9D02 /* WCAddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6166FDA1F979D9E004B9D02 /* WCAddressBookCell.m */; };
 		D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */; };
 		D617FFAA1F99849A009D0509 /* WCMeTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D617FFA91F99849A009D0509 /* WCMeTableFooterView.m */; };
+		D618A3F41F9CAA8A00E53BAC /* WCFjViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A3F11F9CAA8A00E53BAC /* WCFjViewController.m */; };
+		D618A3F51F9CAA8A00E53BAC /* WCOAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A3F31F9CAA8A00E53BAC /* WCOAViewController.m */; };
+		D618A3FA1F9CB96100E53BAC /* WCEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A3F91F9CB96100E53BAC /* WCEmailViewController.m */; };
+		D618A4041F9CC7B700E53BAC /* WCCommonProblemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4031F9CC7B700E53BAC /* WCCommonProblemViewController.m */; };
+		D618A4091F9CCBB900E53BAC /* WCCommonProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4081F9CCBB900E53BAC /* WCCommonProblem.m */; };
+		D618A40D1F9CCCDD00E53BAC /* WCCommonProblemTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A40C1F9CCCDD00E53BAC /* WCCommonProblemTool.m */; };
+		D618A4101F9CCD0300E53BAC /* WCCommonProbleParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A40F1F9CCD0300E53BAC /* WCCommonProbleParam.m */; };
+		D618A4161F9CD08700E53BAC /* WCCommonProblemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4121F9CD08700E53BAC /* WCCommonProblemCell.m */; };
+		D618A4171F9CD08700E53BAC /* WCCommonProblemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D618A4131F9CD08700E53BAC /* WCCommonProblemCell.xib */; };
+		D618A4181F9CD08700E53BAC /* WCCommonProblemHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4151F9CD08700E53BAC /* WCCommonProblemHeaderView.m */; };
+		D618A4241F9CE30700E53BAC /* WCCheckAttendenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4231F9CE30700E53BAC /* WCCheckAttendenceViewController.m */; };
+		D618A4291F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4261F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m */; };
+		D618A42A1F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A4281F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m */; };
+		D618A43C1F9CE3C800E53BAC /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A43B1F9CE3C800E53BAC /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D619686F1F9838BF00919CEA /* WCAddressBookSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619686E1F9838BF00919CEA /* WCAddressBookSearchViewController.m */; };
 		D61968721F98442800919CEA /* YLYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968711F98442800919CEA /* YLYSearchBar.m */; };
 		D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968741F98467000919CEA /* WCAddressBookSearchTitleView.m */; };
@@ -106,6 +129,23 @@
 		D60D74BB1F8F61F800FDB286 /* WCCommonUseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonUseCell.m; sourceTree = "<group>"; };
 		D60D74BD1F8F726B00FDB286 /* WCDynamicParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicParam.h; sourceTree = "<group>"; };
 		D60D74BE1F8F726B00FDB286 /* WCDynamicParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamicParam.m; sourceTree = "<group>"; };
+		D6120C791F9D910100A4AD4E /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		D6120C7C1F9D910100A4AD4E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D6120C7D1F9D910100A4AD4E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D6120C811F9D947200A4AD4E /* WCCheckAttendenceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceTool.h; sourceTree = "<group>"; };
+		D6120C821F9D947200A4AD4E /* WCCheckAttendenceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceTool.m; sourceTree = "<group>"; };
+		D6120C841F9D949D00A4AD4E /* WCCheckAttendenceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceParam.h; sourceTree = "<group>"; };
+		D6120C851F9D949D00A4AD4E /* WCCheckAttendenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceParam.m; sourceTree = "<group>"; };
+		D6120C871F9DAEEC00A4AD4E /* WCCheckAttendenceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceResult.h; sourceTree = "<group>"; };
+		D6120C881F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceResult.m; sourceTree = "<group>"; };
+		D6120C8A1F9DAF9600A4AD4E /* WCCheckAttendenceFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceFence.h; sourceTree = "<group>"; };
+		D6120C8B1F9DAF9600A4AD4E /* WCCheckAttendenceFence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceFence.m; sourceTree = "<group>"; };
+		D6120C8D1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDidCheckAttendenceParam.h; sourceTree = "<group>"; };
+		D6120C8E1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDidCheckAttendenceParam.m; sourceTree = "<group>"; };
+		D6120C901F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDidCheckAttendenceResult.h; sourceTree = "<group>"; };
+		D6120C911F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDidCheckAttendenceResult.m; sourceTree = "<group>"; };
 		D6128E5C1F98E6B700FA63E3 /* WCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMeViewController.h; sourceTree = "<group>"; };
 		D6128E5D1F98E6B700FA63E3 /* WCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMeViewController.m; sourceTree = "<group>"; };
 		D6128E601F98EC7C00FA63E3 /* WCMeTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMeTableHeaderView.h; sourceTree = "<group>"; };
@@ -126,6 +166,34 @@
 		D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookSearchHeaderView.m; sourceTree = "<group>"; };
 		D617FFA81F99849A009D0509 /* WCMeTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMeTableFooterView.h; sourceTree = "<group>"; };
 		D617FFA91F99849A009D0509 /* WCMeTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMeTableFooterView.m; sourceTree = "<group>"; };
+		D618A3F01F9CAA8A00E53BAC /* WCFjViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFjViewController.h; sourceTree = "<group>"; };
+		D618A3F11F9CAA8A00E53BAC /* WCFjViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFjViewController.m; sourceTree = "<group>"; };
+		D618A3F21F9CAA8A00E53BAC /* WCOAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCOAViewController.h; sourceTree = "<group>"; };
+		D618A3F31F9CAA8A00E53BAC /* WCOAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCOAViewController.m; sourceTree = "<group>"; };
+		D618A3F81F9CB96100E53BAC /* WCEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEmailViewController.h; sourceTree = "<group>"; };
+		D618A3F91F9CB96100E53BAC /* WCEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEmailViewController.m; sourceTree = "<group>"; };
+		D618A4021F9CC7B700E53BAC /* WCCommonProblemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCommonProblemViewController.h; sourceTree = "<group>"; };
+		D618A4031F9CC7B700E53BAC /* WCCommonProblemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonProblemViewController.m; sourceTree = "<group>"; };
+		D618A4071F9CCBB900E53BAC /* WCCommonProblem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCommonProblem.h; sourceTree = "<group>"; };
+		D618A4081F9CCBB900E53BAC /* WCCommonProblem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonProblem.m; sourceTree = "<group>"; };
+		D618A40B1F9CCCDD00E53BAC /* WCCommonProblemTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCommonProblemTool.h; sourceTree = "<group>"; };
+		D618A40C1F9CCCDD00E53BAC /* WCCommonProblemTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonProblemTool.m; sourceTree = "<group>"; };
+		D618A40E1F9CCD0300E53BAC /* WCCommonProbleParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCommonProbleParam.h; sourceTree = "<group>"; };
+		D618A40F1F9CCD0300E53BAC /* WCCommonProbleParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonProbleParam.m; sourceTree = "<group>"; };
+		D618A4111F9CD08700E53BAC /* WCCommonProblemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCommonProblemCell.h; sourceTree = "<group>"; };
+		D618A4121F9CD08700E53BAC /* WCCommonProblemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonProblemCell.m; sourceTree = "<group>"; };
+		D618A4131F9CD08700E53BAC /* WCCommonProblemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCCommonProblemCell.xib; sourceTree = "<group>"; };
+		D618A4141F9CD08700E53BAC /* WCCommonProblemHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCommonProblemHeaderView.h; sourceTree = "<group>"; };
+		D618A4151F9CD08700E53BAC /* WCCommonProblemHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCommonProblemHeaderView.m; sourceTree = "<group>"; };
+		D618A41E1F9CE26900E53BAC /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		D618A4221F9CE30700E53BAC /* WCCheckAttendenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceViewController.h; sourceTree = "<group>"; };
+		D618A4231F9CE30700E53BAC /* WCCheckAttendenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceViewController.m; sourceTree = "<group>"; };
+		D618A4251F9CE33500E53BAC /* WCCheckAttendenceBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceBtnCell.h; sourceTree = "<group>"; };
+		D618A4261F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceBtnCell.m; sourceTree = "<group>"; };
+		D618A4271F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceMapViewCell.h; sourceTree = "<group>"; };
+		D618A4281F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceMapViewCell.m; sourceTree = "<group>"; };
+		D618A43A1F9CE3C800E53BAC /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		D618A43B1F9CE3C800E53BAC /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		D619686D1F9838BF00919CEA /* WCAddressBookSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAddressBookSearchViewController.h; sourceTree = "<group>"; };
 		D619686E1F9838BF00919CEA /* WCAddressBookSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookSearchViewController.m; sourceTree = "<group>"; };
 		D61968701F98442800919CEA /* YLYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLYSearchBar.h; sourceTree = "<group>"; };
@@ -291,6 +359,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D6120C781F9D910100A4AD4E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D6120C791F9D910100A4AD4E /* MBProgressHUD+MJ.h */,
+				D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */,
+				D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */,
+				D6120C7C1F9D910100A4AD4E /* MBProgressHUD.h */,
+				D6120C7D1F9D910100A4AD4E /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		D6128E571F98E65100FA63E3 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +403,7 @@
 		D61521291F8E58FB0066A82A /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				D6120C781F9D910100A4AD4E /* MBProgressHUD */,
 				D615212A1F8E59340066A82A /* DotsLoaderActivityIndicator */,
 			);
 			path = Vendors;
@@ -386,6 +467,146 @@
 				D6166FDA1F979D9E004B9D02 /* WCAddressBookCell.m */,
 				D61968731F98467000919CEA /* WCAddressBookSearchTitleView.h */,
 				D61968741F98467000919CEA /* WCAddressBookSearchTitleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D618A3EE1F9CA9EA00E53BAC /* OA */ = {
+			isa = PBXGroup;
+			children = (
+				D618A3EF1F9CAA3100E53BAC /* Controller */,
+			);
+			path = OA;
+			sourceTree = "<group>";
+		};
+		D618A3EF1F9CAA3100E53BAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D618A3F01F9CAA8A00E53BAC /* WCFjViewController.h */,
+				D618A3F11F9CAA8A00E53BAC /* WCFjViewController.m */,
+				D618A3F21F9CAA8A00E53BAC /* WCOAViewController.h */,
+				D618A3F31F9CAA8A00E53BAC /* WCOAViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D618A3F61F9CB91D00E53BAC /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				D618A3F71F9CB93A00E53BAC /* Controller */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		D618A3F71F9CB93A00E53BAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D618A3F81F9CB96100E53BAC /* WCEmailViewController.h */,
+				D618A3F91F9CB96100E53BAC /* WCEmailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D618A3FB1F9CBFC900E53BAC /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				D618A41C1F9CE25F00E53BAC /* Model */,
+				D618A41D1F9CE25F00E53BAC /* View */,
+				D618A3FC1F9CBFE200E53BAC /* Controller */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		D618A3FC1F9CBFE200E53BAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D618A4221F9CE30700E53BAC /* WCCheckAttendenceViewController.h */,
+				D618A4231F9CE30700E53BAC /* WCCheckAttendenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D618A4001F9CC77000E53BAC /* CommonProblem */ = {
+			isa = PBXGroup;
+			children = (
+				D618A4061F9CCB9900E53BAC /* Model */,
+				D618A40A1F9CCCAD00E53BAC /* Tool */,
+				D618A4051F9CCB9400E53BAC /* View */,
+				D618A4011F9CC78900E53BAC /* Controller */,
+			);
+			path = CommonProblem;
+			sourceTree = "<group>";
+		};
+		D618A4011F9CC78900E53BAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D618A4021F9CC7B700E53BAC /* WCCommonProblemViewController.h */,
+				D618A4031F9CC7B700E53BAC /* WCCommonProblemViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D618A4051F9CCB9400E53BAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D618A4141F9CD08700E53BAC /* WCCommonProblemHeaderView.h */,
+				D618A4151F9CD08700E53BAC /* WCCommonProblemHeaderView.m */,
+				D618A4111F9CD08700E53BAC /* WCCommonProblemCell.h */,
+				D618A4121F9CD08700E53BAC /* WCCommonProblemCell.m */,
+				D618A4131F9CD08700E53BAC /* WCCommonProblemCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D618A4061F9CCB9900E53BAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D618A4071F9CCBB900E53BAC /* WCCommonProblem.h */,
+				D618A4081F9CCBB900E53BAC /* WCCommonProblem.m */,
+				D618A40E1F9CCD0300E53BAC /* WCCommonProbleParam.h */,
+				D618A40F1F9CCD0300E53BAC /* WCCommonProbleParam.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D618A40A1F9CCCAD00E53BAC /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D618A40B1F9CCCDD00E53BAC /* WCCommonProblemTool.h */,
+				D618A40C1F9CCCDD00E53BAC /* WCCommonProblemTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D618A41C1F9CE25F00E53BAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D618A41E1F9CE26900E53BAC /* APIKey.h */,
+				D618A43A1F9CE3C800E53BAC /* SFHFKeychainUtils.h */,
+				D618A43B1F9CE3C800E53BAC /* SFHFKeychainUtils.m */,
+				D6120C811F9D947200A4AD4E /* WCCheckAttendenceTool.h */,
+				D6120C821F9D947200A4AD4E /* WCCheckAttendenceTool.m */,
+				D6120C841F9D949D00A4AD4E /* WCCheckAttendenceParam.h */,
+				D6120C851F9D949D00A4AD4E /* WCCheckAttendenceParam.m */,
+				D6120C871F9DAEEC00A4AD4E /* WCCheckAttendenceResult.h */,
+				D6120C881F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m */,
+				D6120C8A1F9DAF9600A4AD4E /* WCCheckAttendenceFence.h */,
+				D6120C8B1F9DAF9600A4AD4E /* WCCheckAttendenceFence.m */,
+				D6120C8D1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.h */,
+				D6120C8E1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.m */,
+				D6120C901F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.h */,
+				D6120C911F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D618A41D1F9CE25F00E53BAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D618A4251F9CE33500E53BAC /* WCCheckAttendenceBtnCell.h */,
+				D618A4261F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m */,
+				D618A4271F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.h */,
+				D618A4281F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -661,6 +882,10 @@
 		D65953A31F7CD3A400705749 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				D618A4001F9CC77000E53BAC /* CommonProblem */,
+				D618A3FB1F9CBFC900E53BAC /* Attendance */,
+				D618A3F61F9CB91D00E53BAC /* Email */,
+				D618A3EE1F9CA9EA00E53BAC /* OA */,
 				D61968781F98819F00919CEA /* Framework */,
 			);
 			path = Function;
@@ -681,8 +906,8 @@
 			isa = PBXGroup;
 			children = (
 				D61D423D1F7DD56E00B73FF1 /* MJKJ */,
-				D6128E571F98E65100FA63E3 /* Framework */,
 				D64D2B9E1F998BDE0076F1B8 /* Load */,
+				D6128E571F98E65100FA63E3 /* Framework */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -785,7 +1010,9 @@
 				D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */,
 				D65953981F7CBE6200705749 /* Images.xcassets in Resources */,
 				D65953961F7CBE6200705749 /* Main.storyboard in Resources */,
+				D618A4171F9CD08700E53BAC /* WCCommonProblemCell.xib in Resources */,
 				D60D74B91F8F560600FDB286 /* function.json in Resources */,
+				D6120C7F1F9D910100A4AD4E /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,18 +1071,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6120C921F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m in Sources */,
+				D618A3FA1F9CB96100E53BAC /* WCEmailViewController.m in Sources */,
 				D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */,
 				D61A64031F945884000FE435 /* WCMoreDynamicCell.m in Sources */,
 				D61D424C1F7DDC8400B73FF1 /* SettingArrowItem.m in Sources */,
 				D60A4AF41F8E1C9900990D01 /* WCBaseParam.m in Sources */,
 				D60C52901F95D79700DA2DD3 /* WCDynamicDetailController.m in Sources */,
+				D618A40D1F9CCCDD00E53BAC /* WCCommonProblemTool.m in Sources */,
+				D6120C7E1F9D910100A4AD4E /* MBProgressHUD+MJ.m in Sources */,
 				D64313DB1F99E95D00729DF6 /* WCLoginAccount.m in Sources */,
 				D61A64091F94736B000FE435 /* WCDynamicResult.m in Sources */,
 				D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */,
 				D619688D1F9885FA00919CEA /* WCFunctionCell.m in Sources */,
 				D61968831F98826700919CEA /* WCGroup.m in Sources */,
+				D618A42A1F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m in Sources */,
+				D618A3F41F9CAA8A00E53BAC /* WCFjViewController.m in Sources */,
 				D61D42431F7DDC6200B73FF1 /* BaseViewController.m in Sources */,
 				D60D74BC1F8F61F800FDB286 /* WCCommonUseCell.m in Sources */,
+				D618A43C1F9CE3C800E53BAC /* SFHFKeychainUtils.m in Sources */,
 				D61D42341F7DD04900B73FF1 /* WCHomeViewController.m in Sources */,
 				D61521301F8E59560066A82A /* DotActivityIndicatorView.m in Sources */,
 				D64D2BA91F99C4CE0076F1B8 /* WCLoginSectionFooterView.m in Sources */,
@@ -871,6 +1105,7 @@
 				D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */,
 				D60C528A1F958B7800DA2DD3 /* WCNoWifiView.m in Sources */,
 				D64D2BAE1F99DF7E0076F1B8 /* WCLoginTool.m in Sources */,
+				D6120C891F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m in Sources */,
 				D60D74BF1F8F726B00FDB286 /* WCDynamicParam.m in Sources */,
 				D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */,
 				D64313D81F99E86000729DF6 /* WCLoginResult.m in Sources */,
@@ -880,29 +1115,42 @@
 				D615DDE21F7E9BA200CC02F9 /* CustomSegmentControl.m in Sources */,
 				D60A4AF71F8E1CF200990D01 /* WCSliderParam.m in Sources */,
 				D619688A1F9882E100919CEA /* XLPlainFlowLayout.m in Sources */,
+				D618A4161F9CD08700E53BAC /* WCCommonProblemCell.m in Sources */,
 				D60A4AF01F8E191400990D01 /* WCHomeTool.m in Sources */,
 				D64D2BA61F99983D0076F1B8 /* WCLoginCell.m in Sources */,
 				D61A640C1F94A6A5000FE435 /* WCAddCommonController.m in Sources */,
 				D648E7F51F97373D006A9C88 /* WCAddressBookSectionHeaderView.m in Sources */,
+				D618A4241F9CE30700E53BAC /* WCCheckAttendenceViewController.m in Sources */,
 				D61A640F1F94B283000FE435 /* WCAddCommonCell.m in Sources */,
 				D61968891F9882E100919CEA /* WCFunctionReusableView.m in Sources */,
 				D617FFAA1F99849A009D0509 /* WCMeTableFooterView.m in Sources */,
 				D61D42521F7DDCB600B73FF1 /* SettingCell.m in Sources */,
 				D6166FDB1F979D9E004B9D02 /* WCAddressBookCell.m in Sources */,
+				D618A4091F9CCBB900E53BAC /* WCCommonProblem.m in Sources */,
 				D61968841F98826700919CEA /* WCItem.m in Sources */,
 				D60C528D1F95A6A900DA2DD3 /* WCDynamic.m in Sources */,
+				D6120C8C1F9DAF9600A4AD4E /* WCCheckAttendenceFence.m in Sources */,
 				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
 				D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */,
+				D618A4181F9CD08700E53BAC /* WCCommonProblemHeaderView.m in Sources */,
 				D60C52961F95E0FC00DA2DD3 /* WCDynamicDetailResult.m in Sources */,
 				D648E7F81F9743BA006A9C88 /* YLYTableViewIndexView.m in Sources */,
 				D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */,
 				D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */,
+				D618A4041F9CC7B700E53BAC /* WCCommonProblemViewController.m in Sources */,
 				D6166FD81F9786FB004B9D02 /* WCConsts.m in Sources */,
+				D6120C801F9D910100A4AD4E /* MBProgressHUD.m in Sources */,
+				D6120C8F1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.m in Sources */,
 				D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */,
 				D65953AD1F7CD52400705749 /* main.m in Sources */,
 				D6128E5E1F98E6B700FA63E3 /* WCMeViewController.m in Sources */,
+				D6120C831F9D947200A4AD4E /* WCCheckAttendenceTool.m in Sources */,
 				D60C52931F95DA1700DA2DD3 /* WCDynamicDetailParam.m in Sources */,
+				D618A4101F9CCD0300E53BAC /* WCCommonProbleParam.m in Sources */,
 				D615212F1F8E59560066A82A /* DotActivityIndicatorParms.m in Sources */,
+				D6120C861F9D949D00A4AD4E /* WCCheckAttendenceParam.m in Sources */,
+				D618A3F51F9CAA8A00E53BAC /* WCOAViewController.m in Sources */,
+				D618A4291F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m in Sources */,
 				D60A4AEC1F8E164600990D01 /* WCHttpTool.m in Sources */,
 				D60A4AFA1F8E1D4300990D01 /* WCSliderResult.m in Sources */,
 				D648E7E51F96DC07006A9C88 /* WCAddressBookTool.m in Sources */,

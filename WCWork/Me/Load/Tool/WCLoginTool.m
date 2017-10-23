@@ -40,4 +40,9 @@
     [NSKeyedArchiver archiveRootObject:loginAccount toFile:WCAccountFile];
 }
 
++ (WCLoginAccount *)loginAccount {
+    WCLoginAccount *loginAccount = [NSKeyedUnarchiver unarchiveObjectWithFile:WCAccountFile];
+    return loginAccount;
+}
+
 @end

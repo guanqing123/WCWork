@@ -207,7 +207,9 @@
         vc.title = item.title;
         [self.navigationController pushViewController:vc animated:YES];
     }else{
-        
+        UIViewController *vc = [[NSClassFromString(item.destVcClass) alloc] init];
+        vc.title = item.title;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
