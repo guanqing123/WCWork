@@ -79,7 +79,6 @@
 		D619686F1F9838BF00919CEA /* WCAddressBookSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619686E1F9838BF00919CEA /* WCAddressBookSearchViewController.m */; };
 		D61968721F98442800919CEA /* YLYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968711F98442800919CEA /* YLYSearchBar.m */; };
 		D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968741F98467000919CEA /* WCAddressBookSearchTitleView.m */; };
-		D619687E1F98821300919CEA /* WCFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619687D1F98821300919CEA /* WCFunctionViewController.m */; };
 		D61968831F98826700919CEA /* WCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968801F98826700919CEA /* WCGroup.m */; };
 		D61968841F98826700919CEA /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968821F98826700919CEA /* WCItem.m */; };
 		D61968891F9882E100919CEA /* WCFunctionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968861F9882E100919CEA /* WCFunctionReusableView.m */; };
@@ -111,6 +110,7 @@
 		D64D2BA91F99C4CE0076F1B8 /* WCLoginSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64D2BA81F99C4CE0076F1B8 /* WCLoginSectionFooterView.m */; };
 		D64D2BAE1F99DF7E0076F1B8 /* WCLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D64D2BAD1F99DF7E0076F1B8 /* WCLoginTool.m */; };
 		D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D64D2BB01F99DFC60076F1B8 /* WCLoginParam.m */; };
+		D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619687D1F98821300919CEA /* WCFunctionViewController.m */; };
 		D65953961F7CBE6200705749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953941F7CBE6200705749 /* Main.storyboard */; };
 		D65953981F7CBE6200705749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65953971F7CBE6200705749 /* Images.xcassets */; };
 		D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953991F7CBE6200705749 /* LaunchScreen.storyboard */; };
@@ -1292,6 +1292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */,
 				D6120C921F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m in Sources */,
 				D618A3FA1F9CB96100E53BAC /* WCEmailViewController.m in Sources */,
 				D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */,
@@ -1340,7 +1341,6 @@
 				D64313D81F99E86000729DF6 /* WCLoginResult.m in Sources */,
 				D61A64061F9471E9000FE435 /* WCDynamicCell.m in Sources */,
 				D648E7E91F96DC65006A9C88 /* WCAddressBookListParam.m in Sources */,
-				D619687E1F98821300919CEA /* WCFunctionViewController.m in Sources */,
 				D615DDE21F7E9BA200CC02F9 /* CustomSegmentControl.m in Sources */,
 				D6108C3C1F9E18C60087DF00 /* WCNewArrivalCell.m in Sources */,
 				D60A4AF71F8E1CF200990D01 /* WCSliderParam.m in Sources */,
