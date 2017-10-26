@@ -208,6 +208,7 @@
     MACircle *visiable = [MACircle circleWithCenterCoordinate:coordinate radius:150];
     [self.mapView setVisibleMapRect:visiable.boundingMapRect];
     
+    
     //指北针
     //self.mapView.compassOrigin = CGPointMake(10, 10);
     self.mapView.showsCompass = NO;

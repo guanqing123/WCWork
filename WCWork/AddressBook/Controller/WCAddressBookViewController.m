@@ -73,7 +73,7 @@
     
     UIButton *refreshBtn = [[UIButton alloc] init];
     refreshBtn.frame = CGRectMake(0, 0, 30, 30);
-    [refreshBtn setBackgroundImage:[UIImage imageNamed:@"refresh"] forState:UIControlStateNormal];
+    [refreshBtn setBackgroundImage:[UIImage imageNamed:@"flush"] forState:UIControlStateNormal];
     [refreshBtn addTarget:self action:@selector(updateLocationAddressBook) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem= [[UIBarButtonItem alloc] initWithCustomView:refreshBtn];
     self.navigationItem.rightBarButtonItem = rightItem;

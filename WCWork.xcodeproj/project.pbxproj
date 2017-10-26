@@ -40,9 +40,14 @@
 		D6108C5D1F9E3BB20087DF00 /* help.json in Resources */ = {isa = PBXBuildFile; fileRef = D6108C5C1F9E3BB20087DF00 /* help.json */; };
 		D6108C621F9E3C340087DF00 /* WCHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6108C611F9E3C340087DF00 /* WCHelpViewController.m */; };
 		D6108C661F9E3CAB0087DF00 /* WCHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = D6108C651F9E3CAB0087DF00 /* WCHtml.m */; };
-		D6108C691F9E3DCA0087DF00 /* WCHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6108C681F9E3DCA0087DF00 /* WCHtmlViewController.m */; };
 		D6108C6C1F9E3E570087DF00 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = D6108C6A1F9E3E570087DF00 /* help.html */; };
 		D6108C6D1F9E3E570087DF00 /* rule.css in Resources */ = {isa = PBXBuildFile; fileRef = D6108C6B1F9E3E570087DF00 /* rule.css */; };
+		D61097941FA1A81B006E0F66 /* WCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61097921FA1A81B006E0F66 /* WCAboutViewController.m */; };
+		D61097951FA1A81B006E0F66 /* WCAboutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61097931FA1A81B006E0F66 /* WCAboutViewController.storyboard */; };
+		D61097991FA1A863006E0F66 /* WCAboutHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61097981FA1A863006E0F66 /* WCAboutHeaderView.m */; };
+		D610979B1FA1A890006E0F66 /* WCAboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D610979A1FA1A890006E0F66 /* WCAboutHeaderView.xib */; };
+		D610979E1FA1B9D8006E0F66 /* WCAboutFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D610979D1FA1B9D8006E0F66 /* WCAboutFooterView.m */; };
+		D61097A01FA1BE06006E0F66 /* WCAboutFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D610979F1FA1BE06006E0F66 /* WCAboutFooterView.xib */; };
 		D6120C7E1F9D910100A4AD4E /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */; };
 		D6120C7F1F9D910100A4AD4E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */; };
 		D6120C801F9D910100A4AD4E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C7D1F9D910100A4AD4E /* MBProgressHUD.m */; };
@@ -54,6 +59,10 @@
 		D6120C921F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C911F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m */; };
 		D6128E5E1F98E6B700FA63E3 /* WCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6128E5D1F98E6B700FA63E3 /* WCMeViewController.m */; };
 		D6128E621F98EC7C00FA63E3 /* WCMeTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6128E611F98EC7C00FA63E3 /* WCMeTableHeaderView.m */; };
+		D614F03B1FA02941000EC8AE /* sz.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03A1FA02941000EC8AE /* sz.jpeg */; };
+		D614F03F1FA02D16000EC8AE /* wczd.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03C1FA02D16000EC8AE /* wczd.jpeg */; };
+		D614F0411FA02D16000EC8AE /* ys.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03E1FA02D16000EC8AE /* ys.jpeg */; };
+		D614F0431FA02DF4000EC8AE /* dw.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F0421FA02DF4000EC8AE /* dw.jpeg */; };
 		D615212F1F8E59560066A82A /* DotActivityIndicatorParms.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212C1F8E59560066A82A /* DotActivityIndicatorParms.m */; };
 		D61521301F8E59560066A82A /* DotActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212E1F8E59560066A82A /* DotActivityIndicatorView.m */; };
 		D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61521321F8E5AD10066A82A /* WCSlideshowHeadView.m */; };
@@ -111,6 +120,8 @@
 		D64D2BAE1F99DF7E0076F1B8 /* WCLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D64D2BAD1F99DF7E0076F1B8 /* WCLoginTool.m */; };
 		D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D64D2BB01F99DFC60076F1B8 /* WCLoginParam.m */; };
 		D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619687D1F98821300919CEA /* WCFunctionViewController.m */; };
+		D6530FDB1F9F1EE800C00DA6 /* WCHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6530FDA1F9F1EE800C00DA6 /* WCHtmlViewController.m */; };
+		D6530FE11F9F248F00C00DA6 /* addressBook.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6530FE01F9F248F00C00DA6 /* addressBook.jpeg */; };
 		D65953961F7CBE6200705749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953941F7CBE6200705749 /* Main.storyboard */; };
 		D65953981F7CBE6200705749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65953971F7CBE6200705749 /* Images.xcassets */; };
 		D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953991F7CBE6200705749 /* LaunchScreen.storyboard */; };
@@ -184,10 +195,17 @@
 		D6108C611F9E3C340087DF00 /* WCHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHelpViewController.m; sourceTree = "<group>"; };
 		D6108C641F9E3CAB0087DF00 /* WCHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHtml.h; sourceTree = "<group>"; };
 		D6108C651F9E3CAB0087DF00 /* WCHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHtml.m; sourceTree = "<group>"; };
-		D6108C671F9E3DCA0087DF00 /* WCHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHtmlViewController.h; sourceTree = "<group>"; };
-		D6108C681F9E3DCA0087DF00 /* WCHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHtmlViewController.m; sourceTree = "<group>"; };
 		D6108C6A1F9E3E570087DF00 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		D6108C6B1F9E3E570087DF00 /* rule.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = rule.css; sourceTree = "<group>"; };
+		D61097911FA1A81B006E0F66 /* WCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAboutViewController.h; sourceTree = "<group>"; };
+		D61097921FA1A81B006E0F66 /* WCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAboutViewController.m; sourceTree = "<group>"; };
+		D61097931FA1A81B006E0F66 /* WCAboutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WCAboutViewController.storyboard; sourceTree = "<group>"; };
+		D61097971FA1A863006E0F66 /* WCAboutHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAboutHeaderView.h; sourceTree = "<group>"; };
+		D61097981FA1A863006E0F66 /* WCAboutHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAboutHeaderView.m; sourceTree = "<group>"; };
+		D610979A1FA1A890006E0F66 /* WCAboutHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCAboutHeaderView.xib; sourceTree = "<group>"; };
+		D610979C1FA1B9D8006E0F66 /* WCAboutFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAboutFooterView.h; sourceTree = "<group>"; };
+		D610979D1FA1B9D8006E0F66 /* WCAboutFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAboutFooterView.m; sourceTree = "<group>"; };
+		D610979F1FA1BE06006E0F66 /* WCAboutFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCAboutFooterView.xib; sourceTree = "<group>"; };
 		D6120C791F9D910100A4AD4E /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -209,6 +227,10 @@
 		D6128E5D1F98E6B700FA63E3 /* WCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMeViewController.m; sourceTree = "<group>"; };
 		D6128E601F98EC7C00FA63E3 /* WCMeTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMeTableHeaderView.h; sourceTree = "<group>"; };
 		D6128E611F98EC7C00FA63E3 /* WCMeTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMeTableHeaderView.m; sourceTree = "<group>"; };
+		D614F03A1FA02941000EC8AE /* sz.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sz.jpeg; sourceTree = "<group>"; };
+		D614F03C1FA02D16000EC8AE /* wczd.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wczd.jpeg; sourceTree = "<group>"; };
+		D614F03E1FA02D16000EC8AE /* ys.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ys.jpeg; sourceTree = "<group>"; };
+		D614F0421FA02DF4000EC8AE /* dw.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dw.jpeg; sourceTree = "<group>"; };
 		D615212B1F8E59560066A82A /* DotActivityIndicatorParms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotActivityIndicatorParms.h; sourceTree = "<group>"; };
 		D615212C1F8E59560066A82A /* DotActivityIndicatorParms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotActivityIndicatorParms.m; sourceTree = "<group>"; };
 		D615212D1F8E59560066A82A /* DotActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotActivityIndicatorView.h; sourceTree = "<group>"; };
@@ -326,6 +348,9 @@
 		D64D2BAD1F99DF7E0076F1B8 /* WCLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginTool.m; sourceTree = "<group>"; };
 		D64D2BAF1F99DFC60076F1B8 /* WCLoginParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginParam.h; sourceTree = "<group>"; };
 		D64D2BB01F99DFC60076F1B8 /* WCLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginParam.m; sourceTree = "<group>"; };
+		D6530FD91F9F1EE800C00DA6 /* WCHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHtmlViewController.h; sourceTree = "<group>"; };
+		D6530FDA1F9F1EE800C00DA6 /* WCHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHtmlViewController.m; sourceTree = "<group>"; };
+		D6530FE01F9F248F00C00DA6 /* addressBook.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addressBook.jpeg; sourceTree = "<group>"; };
 		D65953881F7CBE6200705749 /* WCWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65953951F7CBE6200705749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D65953971F7CBE6200705749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -540,6 +565,11 @@
 		D6108C5B1F9E3B930087DF00 /* help */ = {
 			isa = PBXGroup;
 			children = (
+				D614F03C1FA02D16000EC8AE /* wczd.jpeg */,
+				D614F0421FA02DF4000EC8AE /* dw.jpeg */,
+				D614F03E1FA02D16000EC8AE /* ys.jpeg */,
+				D614F03A1FA02941000EC8AE /* sz.jpeg */,
+				D6530FE01F9F248F00C00DA6 /* addressBook.jpeg */,
 				D6108C6A1F9E3E570087DF00 /* help.html */,
 				D6108C6B1F9E3E570087DF00 /* rule.css */,
 				D6108C5C1F9E3BB20087DF00 /* help.json */,
@@ -559,6 +589,8 @@
 		D6108C5F1F9E3C1D0087DF00 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6530FD91F9F1EE800C00DA6 /* WCHtmlViewController.h */,
+				D6530FDA1F9F1EE800C00DA6 /* WCHtmlViewController.m */,
 				D6108C601F9E3C340087DF00 /* WCHelpViewController.h */,
 				D6108C611F9E3C340087DF00 /* WCHelpViewController.m */,
 			);
@@ -572,6 +604,29 @@
 				D6108C651F9E3CAB0087DF00 /* WCHtml.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D61097901FA1A7F4006E0F66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D61097911FA1A81B006E0F66 /* WCAboutViewController.h */,
+				D61097921FA1A81B006E0F66 /* WCAboutViewController.m */,
+				D61097931FA1A81B006E0F66 /* WCAboutViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61097961FA1A833006E0F66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D61097971FA1A863006E0F66 /* WCAboutHeaderView.h */,
+				D61097981FA1A863006E0F66 /* WCAboutHeaderView.m */,
+				D610979A1FA1A890006E0F66 /* WCAboutHeaderView.xib */,
+				D610979C1FA1B9D8006E0F66 /* WCAboutFooterView.h */,
+				D610979D1FA1B9D8006E0F66 /* WCAboutFooterView.m */,
+				D610979F1FA1BE06006E0F66 /* WCAboutFooterView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D6120C781F9D910100A4AD4E /* MBProgressHUD */ = {
@@ -598,8 +653,6 @@
 		D6128E5B1F98E68B00FA63E3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6108C671F9E3DCA0087DF00 /* WCHtmlViewController.h */,
-				D6108C681F9E3DCA0087DF00 /* WCHtmlViewController.m */,
 				D6128E5C1F98E6B700FA63E3 /* WCMeViewController.h */,
 				D6128E5D1F98E6B700FA63E3 /* WCMeViewController.m */,
 			);
@@ -615,6 +668,15 @@
 				D617FFA91F99849A009D0509 /* WCMeTableFooterView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D614F0441FA030C0000EC8AE /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D61097961FA1A833006E0F66 /* View */,
+				D61097901FA1A7F4006E0F66 /* Controller */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 		D61521291F8E58FB0066A82A /* Vendors */ = {
@@ -1124,6 +1186,7 @@
 				D61D423D1F7DD56E00B73FF1 /* MJKJ */,
 				D6108C5E1F9E3C000087DF00 /* Help */,
 				D64D2B9E1F998BDE0076F1B8 /* Load */,
+				D614F0441FA030C0000EC8AE /* About */,
 				D6128E571F98E65100FA63E3 /* Framework */,
 			);
 			path = Me;
@@ -1224,13 +1287,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D614F0431FA02DF4000EC8AE /* dw.jpeg in Resources */,
+				D61097A01FA1BE06006E0F66 /* WCAboutFooterView.xib in Resources */,
+				D614F03B1FA02941000EC8AE /* sz.jpeg in Resources */,
 				D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */,
 				D6108C6D1F9E3E570087DF00 /* rule.css in Resources */,
+				D610979B1FA1A890006E0F66 /* WCAboutHeaderView.xib in Resources */,
 				D6108C6C1F9E3E570087DF00 /* help.html in Resources */,
 				D6108C3D1F9E18C60087DF00 /* WCNewArrivalCell.xib in Resources */,
+				D61097951FA1A81B006E0F66 /* WCAboutViewController.storyboard in Resources */,
 				D6108C5D1F9E3BB20087DF00 /* help.json in Resources */,
 				D65953981F7CBE6200705749 /* Images.xcassets in Resources */,
+				D6530FE11F9F248F00C00DA6 /* addressBook.jpeg in Resources */,
 				D65953961F7CBE6200705749 /* Main.storyboard in Resources */,
+				D614F0411FA02D16000EC8AE /* ys.jpeg in Resources */,
+				D614F03F1FA02D16000EC8AE /* wczd.jpeg in Resources */,
 				D618A4171F9CD08700E53BAC /* WCCommonProblemCell.xib in Resources */,
 				D60D74B91F8F560600FDB286 /* function.json in Resources */,
 				D6120C7F1F9D910100A4AD4E /* MBProgressHUD.bundle in Resources */,
@@ -1319,8 +1390,8 @@
 				D61D42341F7DD04900B73FF1 /* WCHomeViewController.m in Sources */,
 				D61521301F8E59560066A82A /* DotActivityIndicatorView.m in Sources */,
 				D64D2BA91F99C4CE0076F1B8 /* WCLoginSectionFooterView.m in Sources */,
+				D6530FDB1F9F1EE800C00DA6 /* WCHtmlViewController.m in Sources */,
 				D61968721F98442800919CEA /* YLYSearchBar.m in Sources */,
-				D6108C691F9E3DCA0087DF00 /* WCHtmlViewController.m in Sources */,
 				D61D424D1F7DDC8400B73FF1 /* SettingGroup.m in Sources */,
 				D648E7EC1F96EE8F006A9C88 /* WCAddressBookListResult.m in Sources */,
 				D6108C661F9E3CAB0087DF00 /* WCHtml.m in Sources */,
@@ -1370,6 +1441,7 @@
 				D6108C571F9E31F20087DF00 /* WCClassicWorkView.m in Sources */,
 				D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */,
 				D618A4181F9CD08700E53BAC /* WCCommonProblemHeaderView.m in Sources */,
+				D610979E1FA1B9D8006E0F66 /* WCAboutFooterView.m in Sources */,
 				D60C52961F95E0FC00DA2DD3 /* WCDynamicDetailResult.m in Sources */,
 				D648E7F81F9743BA006A9C88 /* YLYTableViewIndexView.m in Sources */,
 				D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */,
@@ -1381,6 +1453,8 @@
 				D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */,
 				D65953AD1F7CD52400705749 /* main.m in Sources */,
 				D6128E5E1F98E6B700FA63E3 /* WCMeViewController.m in Sources */,
+				D61097991FA1A863006E0F66 /* WCAboutHeaderView.m in Sources */,
+				D61097941FA1A81B006E0F66 /* WCAboutViewController.m in Sources */,
 				D6120C831F9D947200A4AD4E /* WCCheckAttendenceTool.m in Sources */,
 				D60C52931F95DA1700DA2DD3 /* WCDynamicDetailParam.m in Sources */,
 				D618A4101F9CCD0300E53BAC /* WCCommonProbleParam.m in Sources */,

@@ -119,7 +119,8 @@
 
 - (void)setMobile:(NSString *)mobile {
     _mobile = mobile;
-    self.mobileLabel.text = mobile;
+    //self.mobileLabel.text = mobile;
+    self.mobileLabel.text = @"xxxxxxxxxxx";
 }
 
 + (CGFloat)height {

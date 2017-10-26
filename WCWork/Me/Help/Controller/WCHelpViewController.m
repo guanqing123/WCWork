@@ -7,6 +7,10 @@
 //
 
 #import "WCHelpViewController.h"
+
+#import "WCHtmlViewController.h"
+#import "WCNavigationController.h"
+
 #import "SettingArrowItem.h"
 #import "SettingGroup.h"
 #import "WCHtml.h"
@@ -56,9 +60,12 @@
     [self.data addObject:group];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WCHtmlViewController *htmlVc = [[WCHtmlViewController alloc] init];
+    htmlVc.html = self.htmls[indexPath.row];
+    WCNavigationController *nav = [[WCNavigationController alloc] initWithRootViewController:htmlVc];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark -屏幕横竖屏设置

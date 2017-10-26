@@ -15,6 +15,7 @@
 #import "SettingGroup.h"
 
 #import "WCHelpViewController.h"
+#import "WCAboutViewController.h"
 
 @interface WCMeViewController () <WCMeTableFooterViewDelegate,WCLoginViewControllerDelegate>
 @property (nonatomic, strong)  WCMeTableHeaderView *tableHeaderView;
@@ -37,13 +38,19 @@
 - (void)setupData {
     //帮助
     SettingItem *help = [SettingArrowItem itemWithIcon:@"help" title:@"帮助" destVcClass:[WCHelpViewController class]];
+    
+    //默认自动登录
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setBool:YES forKey:@"自动登录"];
+    [userDefault synchronize];
+    
     SettingItem *autoLogin = [SettingSwitchItem itemWithIcon:@"zidongdenglu" title:@"自动登录"];
     SettingGroup *firstGroup = [[SettingGroup alloc] init];
     firstGroup.items = @[help, autoLogin];
     [self.data addObject:firstGroup];
     
     //关于
-    SettingItem *about = [SettingArrowItem itemWithIcon:@"guanyu" title:@"关于" destVcClass:nil];
+    SettingItem *about = [SettingArrowItem itemWithIcon:@"guanyu" title:@"关于" destVcClass:[WCAboutViewController class]];
     SettingGroup *secondGroup = [[SettingGroup alloc] init];
     secondGroup.items = @[about];
     [self.data addObject:secondGroup];

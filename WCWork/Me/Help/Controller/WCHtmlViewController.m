@@ -19,6 +19,10 @@
     self.view = [[UIWebView alloc] init];
 }
 
+- (void)setHtml:(WCHtml *)html {
+    _html = html;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -28,6 +32,7 @@
     
     UIWebView *webView = (UIWebView *)self.view;
     webView.delegate = self;
+    webView.scrollView.showsVerticalScrollIndicator = NO;
     
     // 创建URL
     NSURL *url = [[NSBundle mainBundle] URLForResource:self.html.html withExtension:nil];
