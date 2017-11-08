@@ -155,7 +155,7 @@
 #pragma mark - setupBackTopButton
 - (void)setupBackTopButton {
     UIButton *backTopButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backTopButton.frame = CGRectMake(ScreenW - 50, ScreenH - 100, 40, 40);
+    backTopButton.frame = CGRectMake(ScreenW - 50, ScreenH - WCBottomTabH - 51, 40, 40);
     [backTopButton addTarget:self action:@selector(scrollToTop) forControlEvents:UIControlEventTouchUpInside];
     [backTopButton setImage:[UIImage imageNamed:@"btn_UpToTop"] forState:UIControlStateNormal];
     backTopButton.hidden = YES;

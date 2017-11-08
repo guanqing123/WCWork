@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIColor *selectionIndicatorColor;
 @property (nonatomic, assign) NSInteger selectedSegmentIndex;
 @property (nonatomic, copy) void (^IndexChangeBlock)(NSInteger index);
+@property (nonatomic, strong) NSArray * items;
 
 - (instancetype)initWithItems:(NSArray<NSString *> *)items;
 

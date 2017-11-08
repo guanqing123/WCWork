@@ -51,7 +51,7 @@
     [navBar setTintColor:[UIColor whiteColor]];
     
     [navBar setTranslucent:YES];
-    [navBar setBarTintColor:[UIColor colorWithRed:0.0f/255.0f green:157.0f/255.0f blue:133.0f/255.0f alpha:1]];
+    [navBar setBarTintColor:WCThemeColor];
 }
 
 

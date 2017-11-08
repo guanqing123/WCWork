@@ -67,6 +67,12 @@
     
     self.tableView.tableHeaderView = _searchVc.searchBar;
     self.definesPresentationContext = YES;
+    
+    if(@available(iOS 11.0, *)){
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableView.contentInset = UIEdgeInsetsMake(WCTopNavH, 0, 0, 0);
+        self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    }
 }
 
 #pragma mark - tableView dataSource
@@ -112,36 +118,42 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 110.0f;
+}
+
 #pragma mark - headerRefreshing
 - (void)headerRefreshing {
-    page = 1;
-    [self.noWifiView hide];
-    WCDynamicParam *param = [WCDynamicParam param:dynamic];
-    param.page = @(page);
-    param.columnId = _columnId;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [WCHomeTool homeDynamicWithParam:param success:^(WCDynamicResult *dynamicResult) {
-            [self.tableView.mj_header endRefreshing];
-            
-            [self.dynamicArray removeAllObjects];
-            [self.dynamicArray addObjectsFromArray:dynamicResult.NewsList];
-            [self.titleArray removeAllObjects];
-            for (WCDynamic *wcDynamic in dynamicResult.NewsList) {
-                [self.titleArray addObject:wcDynamic.Title];
-            }
-            [self.dynamicDic removeAllObjects];
-            [self.dynamicDic setValuesForKeysWithDictionary:[NSDictionary dictionaryWithObjects:self.dynamicArray forKeys:self.titleArray]];
-            
-            [self.tableView reloadData];
-            totalPage = (dynamicResult.PageSize == 0 ? 0 : ([dynamicResult.RCount intValue] % [dynamicResult.PageSize intValue] == 0 ? [dynamicResult.RCount intValue] / [dynamicResult.PageSize intValue] : [dynamicResult.RCount intValue] / [dynamicResult.PageSize intValue] + 1));
-            if (totalPage > page) {
-                [self setupFooterRefresh];
-            }
-            page ++;
-        } failure:^(NSError *error) {
-            [self.tableView.mj_header endRefreshing];
-            [self.noWifiView show];
-        }];
+        page = 1;
+        [self.noWifiView hide];
+        WCDynamicParam *param = [WCDynamicParam param:dynamic];
+        param.page = @(page);
+        param.columnId = _columnId;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [WCHomeTool homeDynamicWithParam:param success:^(WCDynamicResult *dynamicResult) {
+                [self.tableView.mj_header endRefreshing];
+                
+                [self.dynamicArray removeAllObjects];
+                [self.dynamicArray addObjectsFromArray:dynamicResult.NewsList];
+                [self.titleArray removeAllObjects];
+                for (WCDynamic *wcDynamic in dynamicResult.NewsList) {
+                    [self.titleArray addObject:wcDynamic.Title];
+                }
+                [self.dynamicDic removeAllObjects];
+                [self.dynamicDic setValuesForKeysWithDictionary:[NSDictionary dictionaryWithObjects:self.dynamicArray forKeys:self.titleArray]];
+                
+                [self.tableView reloadData];
+                totalPage = (dynamicResult.PageSize == 0 ? 0 : ([dynamicResult.RCount intValue] % [dynamicResult.PageSize intValue] == 0 ? [dynamicResult.RCount intValue] / [dynamicResult.PageSize intValue] : [dynamicResult.RCount intValue] / [dynamicResult.PageSize intValue] + 1));
+                if (totalPage > page) {
+                    [self setupFooterRefresh];
+                }
+                page ++;
+            } failure:^(NSError *error) {
+                [self.tableView.mj_header endRefreshing];
+                [self.noWifiView show];
+            }];
+        });
     });
 }
 

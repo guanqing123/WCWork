@@ -9,7 +9,7 @@
 #ifndef Headers_h
 #define Headers_h
 
-#import "WCConsts.h" // 常量
+//#import "WCConsts.h" // 常量
 #import "Macros.h" //宏
 
 #import "WCLoginViewController.h" //登录信息

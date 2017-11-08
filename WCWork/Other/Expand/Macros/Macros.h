@@ -13,15 +13,21 @@
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 /** 屏幕宽度 */
 #define ScreenW [UIScreen mainScreen].bounds.size.width
-
-#define NAV
+/** 状态栏高度 */
+#define WCStatusBarH [[UIApplication sharedApplication] statusBarFrame].size.height
+/** 导航栏高度 */
+#define WCNaviH 44.0
+/** 顶部Nav高度+指示器 */
+#define WCTopNavH (WCStatusBarH + WCNaviH)
+/** 底部tab高度 */
+#define WCBottomTabH (WCStatusBarH > 20 ? 83 : 49)
 
 //色值
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 #define RGB(r,g,b) RGBA(r,g,b,1.0f)
 
 //主题色
-#define WCThemeColor RGB(0, 157, 133)
+#define WCThemeColor RGB(53, 123, 202)
 
 //cell line color
 #define cellLineColor RGB(238,238,238)
@@ -54,12 +60,12 @@
 //OA
 #define OAURL @"http://mobile.zjmi.com:8080/app/oauth?app=ebridge&loginid="
 //智慧党建
-#define WCBASEURL @"http://mobile.zjmi.com:8080/app/"
-
-
+#define PARTYURL @"http://mobile.zjmi.com:8080/app/oauth?app=dangjian&loginid="
 
 //首页滚动条
 #define slider @"HYXK00019"
+//首页Segement
+#define homeSegement @"ZJMI00002"
 //公司行情
 #define dynamic @"HYXK00003"
 //详细新闻

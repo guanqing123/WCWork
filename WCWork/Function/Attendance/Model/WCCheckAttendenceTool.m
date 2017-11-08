@@ -20,7 +20,7 @@
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     NSDictionary *parameter = @{@"content" : jsonString};
-    [WCHttpTool postWithURL:HYURL params:parameter success:^(id json) {
+    [WCHttpTool postWithURL:WCURL params:parameter success:^(id json) {
         if ([[[json objectForKey:@"header"] objectForKey:@"succflag"] isEqualToString:@"1"]) {
             WCCheckAttendenceResult *result = [WCCheckAttendenceResult mj_objectWithKeyValues:[json objectForKey:@"data"]];
             success(result);

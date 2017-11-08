@@ -13,7 +13,6 @@
 @interface CustomSegmentControl ()
 
 @property (nonatomic, strong) UIView * contentView;
-@property (nonatomic, strong) NSArray * items;
 
 @end
 
@@ -45,8 +44,13 @@
     _textColor = RGBColor(50, 50, 50);
     _selectedTextColor = RGBColor(0, 0, 0);
     _selectionIndicatorColor = RGBColor(150, 150, 150);
-    _items = @[@"Segment0",@"Segment1"];
+    _items = @[];
     _selectedSegmentIndex = 0;
+}
+
+- (void)setItems:(NSArray *)items {
+    _items = items;
+    [self setNeedsLayout];
 }
 
 - (void)layoutSubviews {
@@ -104,8 +108,3 @@
 }
 
 @end
-
-
-
-
-

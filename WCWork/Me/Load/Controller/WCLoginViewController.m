@@ -53,6 +53,11 @@ static WCLoginViewController *loginVc = nil;
     tableView.dataSource = self;
     tableView.delegate = self;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    if(@available(iOS 11.0, *)){
+        tableView.estimatedRowHeight = 0;
+        tableView.estimatedSectionHeaderHeight = 0;
+        tableView.estimatedSectionFooterHeight = 0;
+    }
     _tableView = tableView;
     [self.view addSubview:tableView];
 }

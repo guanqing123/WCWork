@@ -85,6 +85,8 @@
 - (void)headerRefreshing {
     WCCommonProbleParam *problemParam = [WCCommonProbleParam param:commonProblemUrl];
     [WCCommonProblemTool commomProblemWithParam:problemParam success:^(NSArray *commonProblem) {
+        [self.modelArray removeAllObjects];
+        [self.questionArray removeAllObjects];
         [self.modelArray addObjectsFromArray:commonProblem];
         for (WCCommonProblem *commonProblem in self.modelArray) {
             [self.questionArray addObject:commonProblem.question];

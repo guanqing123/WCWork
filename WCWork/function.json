@@ -15,7 +15,8 @@
   "b" : "18",
   "items" : [
              {"title":"新品上市","image":"xinpinzixun","destVcClass":"WCNewArrivalViewController","order":"3","load":"0"},
-             {"title":"经典作品","image":"yingxiaohuodong","destVcClass":"WCClassicWorkViewController","order":"4","load":"0"}
+             {"title":"经典作品","image":"yingxiaohuodong","destVcClass":"WCClassicWorkViewController","order":"4","load":"0"},
+             {"title":"智慧党建","image":"zhihuidangjian","destVcClass":"WCPartyConstructViewController","order":"5","load":"0"}
              ]
   },{
   "header" : "服务",

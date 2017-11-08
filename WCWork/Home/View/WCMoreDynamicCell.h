@@ -11,6 +11,12 @@
 
 @protocol WCMoreDynamicCellDelegate <NSObject>
 @optional
+
+/**
+ 失败后的刷新按钮
+
+ @param moreDynamicCell 当前刷新按钮所在的cell
+ */
 - (void)moreDynamicCellDidRefreshBtn:(WCMoreDynamicCell *)moreDynamicCell;
 @end
 

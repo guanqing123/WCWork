@@ -11,6 +11,9 @@
 #import "WCSliderParam.h"
 #import "WCSliderResult.h"
 
+#import "WCSectionHeaderViewParam.h"
+#import "WCSectionHeaderViewResult.h"
+
 #import "WCDynamicParam.h"
 #import "WCDynamicResult.h"
 
@@ -28,6 +31,15 @@
  @param failure 失败回调
  */
 + (void)homeSliderWithParam:(WCSliderParam *)sliderParam success:(void(^)(NSArray *sliderResult))success failure:(void(^)(NSError *error))failure;
+
+/**
+ 获取sectionHeaderView内容
+
+ @param sectionHeaderViewParam 请求参数
+ @param success 成功回调
+ @param failure 失败回掉
+ */
++ (void)homeSectionHeaderViewParam:(WCSectionHeaderViewParam *)sectionHeaderViewParam success:(void(^)(NSArray *sectionHeaderViewResult))success failure:(void(^)(NSError *error))failure;
 
 /**
  获取4大新闻内容

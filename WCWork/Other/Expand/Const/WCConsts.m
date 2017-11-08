@@ -11,12 +11,12 @@
 @implementation WCConsts
 
 /** 导航栏高度 */
-CGFloat const WCNaviH = 44;
+//CGFloat const WCNaviH = 44;
 
 /** 底部tab高度 */
-CGFloat const WCBottomTabH = 49;
+//CGFloat const WCBottomTabH = 49;
 
 /** 顶部Nav高度+指示器 */
-CGFloat const WCTopNavH = 64;
+//CGFloat const WCTopNavH = 64;
 
 @end

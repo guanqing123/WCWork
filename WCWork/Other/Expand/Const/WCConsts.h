@@ -11,12 +11,12 @@
 @interface WCConsts : NSObject
 
 /** 导航栏高度 */
-UIKIT_EXTERN CGFloat const WCNaviH;
+//UIKIT_EXTERN CGFloat const WCNaviH;
 
 /** 底部tab高度 */
-UIKIT_EXTERN CGFloat const WCBottomTabH;
+//UIKIT_EXTERN CGFloat const WCBottomTabH;
 
 /** 顶部Nav高度+指示器 */
-UIKIT_EXTERN CGFloat const WCTopNavH;
+//UIKIT_EXTERN CGFloat const WCTopNavH;
 
 @end

@@ -54,7 +54,7 @@
         button.imageEdgeInsets = UIEdgeInsetsMake(0, edgX, edgY, edgX);
         [button setTitle:item.title forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:12];
-        [button setTitleColor:[UIColor colorWithRed:0.0f/255.0f green:157.0f/255.0f blue:133.0f/255.0f alpha:1.0] forState:UIControlStateNormal];
+        [button setTitleColor:WCThemeColor forState:UIControlStateNormal];
         button.titleEdgeInsets = UIEdgeInsetsMake(image.size.height + 10, -imageW, 0, 0);
         
         [button addTarget:self action:@selector(btnItemClick:) forControlEvents:UIControlEventTouchUpInside];

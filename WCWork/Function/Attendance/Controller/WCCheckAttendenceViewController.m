@@ -58,6 +58,8 @@
 
 @property (nonatomic, copy) NSString *time;
 
+@property (nonatomic, copy) NSString *userName;
+
 @end
 
 @implementation WCCheckAttendenceViewController
@@ -76,11 +78,13 @@
 
 - (void)initData {
     _wzStr = @"正在定位...";
-    _inImgName = @"kqBtnN";
-    _outImgName = @"kqBtnN";
+    _inImgName = @"kqBtnNI";
+    _outImgName = @"kqBtnNO";
     _kqClick = NO;
     _click = NO;
     _btnImg = @"shuaxindinweiH";
+    WCLoginViewController *loginVc = [WCLoginViewController instance];
+    _userName = loginVc.loginAccount.userName;
 }
 
 - (void)configureAPIKey {
@@ -164,7 +168,8 @@
     if (!error) {
         WCCheckAttendenceParam *checkAttendenceParam = [WCCheckAttendenceParam param:KQ1];
         checkAttendenceParam.citycode = regeocode.citycode;
-        checkAttendenceParam.gh = @"06407";
+        WCLoginViewController *loginVc = [WCLoginViewController instance];
+        checkAttendenceParam.gh = _userName;
         [WCCheckAttendenceTool checkAttendenceWithParam:checkAttendenceParam success:^(WCCheckAttendenceResult *result) {
             [MBProgressHUD hideHUD];
             if (result.errorMsg) {
@@ -238,8 +243,8 @@
 }
 
 - (void)amapLocationManager:(AMapLocationManager *)manager didExitRegion:(AMapLocationRegion *)region {
-    _inImgName = @"kqBtnN";
-    _outImgName = @"kqBtnN";
+    _inImgName = @"kqBtnNI";
+    _outImgName = @"kqBtnNO";
     _kqClick = NO;
     //刷新按钮
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
@@ -485,7 +490,7 @@
 
 #pragma mark - WCCheckAttendenceBtnCellDelegate
 - (void)checkAttendenceBtnCellDelegateClickInBtn:(WCCheckAttendenceBtnCell *)checkAttendenceBtnCell {
-    [checkAttendenceBtnCell setInBtnImg:@"kqBtnN" outBtnImg:@"kqBtnN" canClick:NO];
+    [checkAttendenceBtnCell setInBtnImg:@"kqBtnNI" outBtnImg:@"kqBtnNO" canClick:NO];
     NSDictionary *uuid = @{@"device":self.uuid};
     if ((_result.devices.count < 2) && ![_result.devices containsObject:uuid]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您的手机第一次考勤需要绑定,确认绑定吗?" preferredStyle:UIAlertControllerStyleAlert];
@@ -506,7 +511,7 @@
 }
 
 - (void)checkAttendenceBtnCellDelegateClickOutBtn:(WCCheckAttendenceBtnCell *)checkAttendenceBtnCell {
-    [checkAttendenceBtnCell setInBtnImg:@"kqBtnN" outBtnImg:@"kqBtnN" canClick:NO];
+    [checkAttendenceBtnCell setInBtnImg:@"kqBtnNI" outBtnImg:@"kqBtnNO" canClick:NO];
     NSDictionary *uuid = @{@"device":self.uuid};
     if ((_result.devices.count < 2) && ![_result.devices containsObject:uuid]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您的手机第一次考勤需要绑定,确认绑定吗?" preferredStyle:UIAlertControllerStyleAlert];
@@ -531,7 +536,7 @@
     [MBProgressHUD showMessage:@"考勤中..."];
     WCDidCheckAttendenceParam *param = [WCDidCheckAttendenceParam param:KQ2];
     param.did = self.uuid;
-    param.gh = @"06407";
+    param.gh = _userName;
     param.sign = sign;
     [WCCheckAttendenceTool didCheckAttendenceWithParam:param success:^(WCDidCheckAttendenceResult *result) {
         [MBProgressHUD hideHUD];

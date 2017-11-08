@@ -12,6 +12,10 @@
 
 @property (nonatomic, copy) NSString *AddDate;
 @property (nonatomic, copy) NSString *ContentId;
+@property (nonatomic, copy) NSString *Img;
+@property (nonatomic, assign) BOOL IsImg;
+@property (nonatomic, copy) NSString *PageUrl;
+@property (nonatomic, copy) NSString *Summary;
 @property (nonatomic, copy) NSString *Title;
 
 @end

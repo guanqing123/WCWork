@@ -34,6 +34,31 @@
     }];
 }
 
++ (void)homeSectionHeaderViewParam:(WCSectionHeaderViewParam *)sectionHeaderViewParam success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure {
+    NSDictionary *headerDict = [NSDictionary dictionaryWithObjects:@[sectionHeaderViewParam.appseq,sectionHeaderViewParam.trcode,sectionHeaderViewParam.trdate] forKeys:@[@"appseq",@"trcode",@"trdate"]];
+    
+    NSDictionary *dict = @{@"header" : headerDict, @"data" : sectionHeaderViewParam.mj_keyValues};
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    NSDictionary *parameter = @{@"content" : jsonString};
+    [WCHttpTool postWithURL:WCURL params:parameter success:^(id json) {
+        if([[[json objectForKey:@"header"] objectForKey:@"succflag"] isEqualToString:@"1"]){
+            NSDictionary *dict = [json objectForKey:@"data"];
+            if ([[dict objectForKey:@"RRRR_STATUS"] isEqualToString:@"SUCCESS"]) {
+                NSArray *result = [WCSectionHeaderViewResult mj_objectArrayWithKeyValuesArray:[[dict objectForKey:@"RRRR_DATA"] objectForKey:@"NewsColumn"]];
+                success(result);
+            }else{
+                success([NSArray array]);
+            }
+        }else{
+            success([NSArray array]);
+        }
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
 + (void)homeDynamicWithParam:(WCDynamicParam *)dynamicParam success:(void (^)(WCDynamicResult *))success failure:(void (^)(NSError *))failure {
     NSDictionary *headerDict = [NSDictionary dictionaryWithObjects:@[dynamicParam.appseq,dynamicParam.trcode,dynamicParam.trdate,dynamicParam.page,dynamicParam.columnId] forKeys:@[@"appseq",@"trcode",@"trdate",@"page",@"columnId"]];
     

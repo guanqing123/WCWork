@@ -42,7 +42,7 @@
     }
     
     //_webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0.0f, ScreenW, ScreenH - 64.0f)];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0.0f, ScreenW, ScreenH - WCTopNavH)];
     _webView.scrollView.showsVerticalScrollIndicator = NO;
     _webView.navigationDelegate = self;
     _webView.UIDelegate = self;

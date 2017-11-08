@@ -66,6 +66,7 @@
 		D615212F1F8E59560066A82A /* DotActivityIndicatorParms.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212C1F8E59560066A82A /* DotActivityIndicatorParms.m */; };
 		D61521301F8E59560066A82A /* DotActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212E1F8E59560066A82A /* DotActivityIndicatorView.m */; };
 		D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61521321F8E5AD10066A82A /* WCSlideshowHeadView.m */; };
+		D615DBDE1FB2A7580041BFA9 /* NSString+GQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D615DBDD1FB2A7580041BFA9 /* NSString+GQExtension.m */; };
 		D615DDE21F7E9BA200CC02F9 /* CustomSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D615DDE11F7E9BA200CC02F9 /* CustomSegmentControl.m */; };
 		D6166FD81F9786FB004B9D02 /* WCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = D6166FD71F9786FB004B9D02 /* WCConsts.m */; };
 		D6166FDB1F979D9E004B9D02 /* WCAddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6166FDA1F979D9E004B9D02 /* WCAddressBookCell.m */; };
@@ -129,6 +130,10 @@
 		D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953AC1F7CD52400705749 /* WCAppDelegate.m */; };
 		D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B21F7CD6F000705749 /* WCTabBarViewController.m */; };
 		D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B51F7CEA0900705749 /* WCNavigationController.m */; };
+		D6AB01D81FB17BD400A6C23E /* WCSectionHeaderViewParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB01D71FB17BD400A6C23E /* WCSectionHeaderViewParam.m */; };
+		D6AB01DB1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB01DA1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m */; };
+		D6AB01DE1FB194AF00A6C23E /* WCSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB01DD1FB194AF00A6C23E /* WCSectionHeaderView.m */; };
+		D6B933EC1FA6F6F90041D9BF /* WCPartyConstructViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B933EB1FA6F6F90041D9BF /* WCPartyConstructViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -237,6 +242,8 @@
 		D615212E1F8E59560066A82A /* DotActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotActivityIndicatorView.m; sourceTree = "<group>"; };
 		D61521311F8E5AD10066A82A /* WCSlideshowHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSlideshowHeadView.h; sourceTree = "<group>"; };
 		D61521321F8E5AD10066A82A /* WCSlideshowHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSlideshowHeadView.m; sourceTree = "<group>"; };
+		D615DBDC1FB2A7580041BFA9 /* NSString+GQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GQExtension.h"; sourceTree = "<group>"; };
+		D615DBDD1FB2A7580041BFA9 /* NSString+GQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GQExtension.m"; sourceTree = "<group>"; };
 		D615DDE01F7E9BA200CC02F9 /* CustomSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentControl.h; sourceTree = "<group>"; };
 		D615DDE11F7E9BA200CC02F9 /* CustomSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentControl.m; sourceTree = "<group>"; };
 		D6166FD61F9786FB004B9D02 /* WCConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCConsts.h; sourceTree = "<group>"; };
@@ -363,6 +370,14 @@
 		D65953B21F7CD6F000705749 /* WCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTabBarViewController.m; sourceTree = "<group>"; };
 		D65953B41F7CEA0900705749 /* WCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNavigationController.h; sourceTree = "<group>"; };
 		D65953B51F7CEA0900705749 /* WCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNavigationController.m; sourceTree = "<group>"; };
+		D6AB01D61FB17BD400A6C23E /* WCSectionHeaderViewParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionHeaderViewParam.h; sourceTree = "<group>"; };
+		D6AB01D71FB17BD400A6C23E /* WCSectionHeaderViewParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionHeaderViewParam.m; sourceTree = "<group>"; };
+		D6AB01D91FB17FCC00A6C23E /* WCSectionHeaderViewResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionHeaderViewResult.h; sourceTree = "<group>"; };
+		D6AB01DA1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionHeaderViewResult.m; sourceTree = "<group>"; };
+		D6AB01DC1FB194AF00A6C23E /* WCSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionHeaderView.h; sourceTree = "<group>"; };
+		D6AB01DD1FB194AF00A6C23E /* WCSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionHeaderView.m; sourceTree = "<group>"; };
+		D6B933EA1FA6F6F90041D9BF /* WCPartyConstructViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCPartyConstructViewController.h; sourceTree = "<group>"; };
+		D6B933EB1FA6F6F90041D9BF /* WCPartyConstructViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCPartyConstructViewController.m; sourceTree = "<group>"; };
 		F81CE32B237C836950FA6B3C /* libPods-WCWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -439,6 +454,10 @@
 				D60C52921F95DA1700DA2DD3 /* WCDynamicDetailParam.m */,
 				D60C52941F95E0FC00DA2DD3 /* WCDynamicDetailResult.h */,
 				D60C52951F95E0FC00DA2DD3 /* WCDynamicDetailResult.m */,
+				D6AB01D61FB17BD400A6C23E /* WCSectionHeaderViewParam.h */,
+				D6AB01D71FB17BD400A6C23E /* WCSectionHeaderViewParam.m */,
+				D6AB01D91FB17FCC00A6C23E /* WCSectionHeaderViewResult.h */,
+				D6AB01DA1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -699,6 +718,15 @@
 			path = DotsLoaderActivityIndicator;
 			sourceTree = "<group>";
 		};
+		D615DBDB1FB2A6A70041BFA9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D615DBDC1FB2A7580041BFA9 /* NSString+GQExtension.h */,
+				D615DBDD1FB2A7580041BFA9 /* NSString+GQExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		D615DDDF1F7E9B7D00CC02F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +744,8 @@
 				D61A640E1F94B283000FE435 /* WCAddCommonCell.m */,
 				D60C52881F958B7800DA2DD3 /* WCNoWifiView.h */,
 				D60C52891F958B7800DA2DD3 /* WCNoWifiView.m */,
+				D6AB01DC1FB194AF00A6C23E /* WCSectionHeaderView.h */,
+				D6AB01DD1FB194AF00A6C23E /* WCSectionHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1001,6 +1031,7 @@
 		D61F0E451F7D3BD50080273B /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				D615DBDB1FB2A6A70041BFA9 /* Category */,
 				D6166FD51F97868E004B9D02 /* Const */,
 				D61F0E461F7D3BD50080273B /* Headers */,
 				D61F0E481F7D3C4D0080273B /* Macros */,
@@ -1158,11 +1189,12 @@
 		D65953A31F7CD3A400705749 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				D618A4001F9CC77000E53BAC /* CommonProblem */,
+				D6B933E81FA6F6A10041D9BF /* PartyConstruct */,
 				D6108C411F9E27CC0087DF00 /* ClassicWork */,
 				D6108C241F9E0ABA0087DF00 /* NewArrival */,
-				D618A4001F9CC77000E53BAC /* CommonProblem */,
-				D618A3FB1F9CBFC900E53BAC /* Attendance */,
 				D618A3F61F9CB91D00E53BAC /* Email */,
+				D618A3FB1F9CBFC900E53BAC /* Attendance */,
 				D618A3EE1F9CA9EA00E53BAC /* OA */,
 				D61968781F98819F00919CEA /* Framework */,
 			);
@@ -1220,6 +1252,23 @@
 				D65953B21F7CD6F000705749 /* WCTabBarViewController.m */,
 				D65953B41F7CEA0900705749 /* WCNavigationController.h */,
 				D65953B51F7CEA0900705749 /* WCNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6B933E81FA6F6A10041D9BF /* PartyConstruct */ = {
+			isa = PBXGroup;
+			children = (
+				D6B933E91FA6F6C30041D9BF /* Controller */,
+			);
+			path = PartyConstruct;
+			sourceTree = "<group>";
+		};
+		D6B933E91FA6F6C30041D9BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6B933EA1FA6F6F90041D9BF /* WCPartyConstructViewController.h */,
+				D6B933EB1FA6F6F90041D9BF /* WCPartyConstructViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1380,6 +1429,7 @@
 				D64313DB1F99E95D00729DF6 /* WCLoginAccount.m in Sources */,
 				D61A64091F94736B000FE435 /* WCDynamicResult.m in Sources */,
 				D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */,
+				D6AB01DE1FB194AF00A6C23E /* WCSectionHeaderView.m in Sources */,
 				D619688D1F9885FA00919CEA /* WCFunctionCell.m in Sources */,
 				D61968831F98826700919CEA /* WCGroup.m in Sources */,
 				D618A42A1F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m in Sources */,
@@ -1405,6 +1455,7 @@
 				D6108C511F9E2E440087DF00 /* WCClassicWorkResult.m in Sources */,
 				D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */,
 				D60C528A1F958B7800DA2DD3 /* WCNoWifiView.m in Sources */,
+				D6AB01DB1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m in Sources */,
 				D64D2BAE1F99DF7E0076F1B8 /* WCLoginTool.m in Sources */,
 				D6120C891F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m in Sources */,
 				D60D74BF1F8F726B00FDB286 /* WCDynamicParam.m in Sources */,
@@ -1440,11 +1491,14 @@
 				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
 				D6108C571F9E31F20087DF00 /* WCClassicWorkView.m in Sources */,
 				D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */,
+				D6AB01D81FB17BD400A6C23E /* WCSectionHeaderViewParam.m in Sources */,
 				D618A4181F9CD08700E53BAC /* WCCommonProblemHeaderView.m in Sources */,
+				D615DBDE1FB2A7580041BFA9 /* NSString+GQExtension.m in Sources */,
 				D610979E1FA1B9D8006E0F66 /* WCAboutFooterView.m in Sources */,
 				D60C52961F95E0FC00DA2DD3 /* WCDynamicDetailResult.m in Sources */,
 				D648E7F81F9743BA006A9C88 /* YLYTableViewIndexView.m in Sources */,
 				D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */,
+				D6B933EC1FA6F6F90041D9BF /* WCPartyConstructViewController.m in Sources */,
 				D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */,
 				D618A4041F9CC7B700E53BAC /* WCCommonProblemViewController.m in Sources */,
 				D6166FD81F9786FB004B9D02 /* WCConsts.m in Sources */,
@@ -1586,12 +1640,17 @@
 			baseConfigurationReference = 51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Y6S2469TB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
 				INFOPLIST_FILE = WCWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1600,12 +1659,17 @@
 			baseConfigurationReference = 382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Y6S2469TB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
 				INFOPLIST_FILE = WCWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
