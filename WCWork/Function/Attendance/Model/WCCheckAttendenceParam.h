@@ -10,8 +10,6 @@
 
 @interface WCCheckAttendenceParam : WCBaseParam
 
-@property (nonatomic, copy) NSString *citycode;
-
 @property (nonatomic, copy) NSString *gh;
 
 @end

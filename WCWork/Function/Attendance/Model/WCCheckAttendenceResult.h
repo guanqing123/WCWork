@@ -15,7 +15,6 @@
 @property (nonatomic, strong)  NSArray *devices;
 @property (nonatomic, strong)  NSArray *fence;
 @property (nonatomic, assign) NSNumber *hasDevice;
-@property (nonatomic, assign) NSNumber *hasFence;
 @property (nonatomic, copy)   NSString *errorMsg;
 
 - (instancetype)initWithErrorMsg:(NSString *)errorMsg;

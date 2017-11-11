@@ -7,6 +7,7 @@
 //
 
 #import "WCSlideshowHeadView.h"
+#import "WCSliderResult.h"
 #import "DotActivityIndicatorView.h"
 #import <SDCycleScrollView.h>
 
@@ -14,6 +15,7 @@
 @property (nonatomic, strong)  DotActivityIndicatorView *indicatorView;
 @property (nonatomic, strong)  SDCycleScrollView *cycleScrollView;
 @property (nonatomic, strong)  UIView *refreshView;
+@property (nonatomic, strong)  NSArray *scrollViewArray;
 @end
 
 @implementation WCSlideshowHeadView
@@ -67,6 +69,7 @@
     if (!_cycleScrollView) {
         _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenW, ScreenW / 3) delegate:self placeholderImage:[UIImage imageNamed:@"home_img_loading"]];
         _cycleScrollView.alpha = 0;
+        _cycleScrollView.delegate = self;
         _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
         _cycleScrollView.autoScrollTimeInterval = 3.0;
         _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
@@ -113,6 +116,7 @@
 }
 
 - (void)show:(NSArray *)resultArray {
+    _scrollViewArray = resultArray;
     [self.indicatorView stopAnimating];
     self.indicatorView.alpha = 0;
     self.refreshView.alpha = 0;
@@ -134,6 +138,14 @@
 - (void)refreshBtnClick {
     if ([self.delegate respondsToSelector:@selector(slideShowHeaderViewDidClickRefreshBtn:)]) {
         [self.delegate slideShowHeaderViewDidClickRefreshBtn:self];
+    }
+}
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    WCSliderResult *result = [_scrollViewArray objectAtIndex:index];
+    if (!result.url) return;
+    if ([self.delegate respondsToSelector:@selector(slideShowHeaderView:urlPath:)]) {
+        [self.delegate slideShowHeaderView:self urlPath:result.url];
     }
 }
 

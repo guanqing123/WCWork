@@ -12,33 +12,24 @@
 @interface WCCheckAttendenceFence : NSObject
 
 /**
- *  地址
- */
-@property (nonatomic, copy) NSString *address;
-
-/**
- *  城市编号
- */
-@property (nonatomic, copy) NSString *citycode;
-
-/**
- *  围栏ID
- */
-@property (nonatomic, assign) NSNumber *fenceid;
-
-/**
  *  维度
  */
-@property (nonatomic, assign) CLLocationDegrees latitude;
+@property (nonatomic, assign) CLLocationDegrees lbs_latitude;
 
 /**
  *  经度
  */
-@property (nonatomic, assign) CLLocationDegrees longitude;
+@property (nonatomic, assign) CLLocationDegrees lsb_longitude;
 
 /**
  *  半径
  */
-@property (nonatomic, assign) NSNumber *radius;
+@property (nonatomic, assign) NSNumber *lbs_radius;
+
+
+/**
+ lbs_name
+ */
+@property (nonatomic, copy) NSString *lbs_name;
 
 @end

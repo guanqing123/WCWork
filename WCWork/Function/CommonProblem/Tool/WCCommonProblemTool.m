@@ -29,7 +29,7 @@
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     NSDictionary *parameter = @{@"content" : jsonString};
-    [WCHttpTool postWithURL:XKURL params:parameter success:^(id json) {
+    [WCHttpTool postWithURL:WCURL params:parameter success:^(id json) {
         if ([[[json objectForKey:@"header"] objectForKey:@"succflag"] isEqualToString:@"1"]) {
             NSArray *result = [self jsonArrayToModelArray:[json objectForKey:@"data"]];
             success(result);

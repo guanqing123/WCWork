@@ -71,6 +71,7 @@
 		D6166FD81F9786FB004B9D02 /* WCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = D6166FD71F9786FB004B9D02 /* WCConsts.m */; };
 		D6166FDB1F979D9E004B9D02 /* WCAddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6166FDA1F979D9E004B9D02 /* WCAddressBookCell.m */; };
 		D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */; };
+		D6179F671FB5986300D77C48 /* WCNewsPaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6179F661FB5986200D77C48 /* WCNewsPaperViewController.m */; };
 		D617FFAA1F99849A009D0509 /* WCMeTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D617FFA91F99849A009D0509 /* WCMeTableFooterView.m */; };
 		D618A3F41F9CAA8A00E53BAC /* WCFjViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A3F11F9CAA8A00E53BAC /* WCFjViewController.m */; };
 		D618A3F51F9CAA8A00E53BAC /* WCOAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D618A3F31F9CAA8A00E53BAC /* WCOAViewController.m */; };
@@ -107,6 +108,7 @@
 		D61D424E1F7DDC8400B73FF1 /* SettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42491F7DDC8400B73FF1 /* SettingItem.m */; };
 		D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D424B1F7DDC8400B73FF1 /* SettingSwitchItem.m */; };
 		D61D42521F7DDCB600B73FF1 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61D42511F7DDCB600B73FF1 /* SettingCell.m */; };
+		D6290E201FB6ECF40040553E /* WCSliderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6290E1F1FB6ECF40040553E /* WCSliderDetailViewController.m */; };
 		D64313D81F99E86000729DF6 /* WCLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D64313D71F99E86000729DF6 /* WCLoginResult.m */; };
 		D64313DB1F99E95D00729DF6 /* WCLoginAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D64313DA1F99E95D00729DF6 /* WCLoginAccount.m */; };
 		D648E7E51F96DC07006A9C88 /* WCAddressBookTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D648E7E41F96DC07006A9C88 /* WCAddressBookTool.m */; };
@@ -252,6 +254,8 @@
 		D6166FDA1F979D9E004B9D02 /* WCAddressBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookCell.m; sourceTree = "<group>"; };
 		D616C42D1F963BAC0075E30C /* WCAddressBookSearchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAddressBookSearchHeaderView.h; sourceTree = "<group>"; };
 		D616C42E1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookSearchHeaderView.m; sourceTree = "<group>"; };
+		D6179F651FB5986200D77C48 /* WCNewsPaperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNewsPaperViewController.h; sourceTree = "<group>"; };
+		D6179F661FB5986200D77C48 /* WCNewsPaperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNewsPaperViewController.m; sourceTree = "<group>"; };
 		D617FFA81F99849A009D0509 /* WCMeTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMeTableFooterView.h; sourceTree = "<group>"; };
 		D617FFA91F99849A009D0509 /* WCMeTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMeTableFooterView.m; sourceTree = "<group>"; };
 		D618A3F01F9CAA8A00E53BAC /* WCFjViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFjViewController.h; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 		D61F0E431F7D3B170080273B /* WCWork.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCWork.pch; sourceTree = "<group>"; };
 		D61F0E471F7D3BFF0080273B /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		D61F0E491F7D3C630080273B /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		D6290E1E1FB6ECF40040553E /* WCSliderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSliderDetailViewController.h; sourceTree = "<group>"; };
+		D6290E1F1FB6ECF40040553E /* WCSliderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSliderDetailViewController.m; sourceTree = "<group>"; };
 		D64313D61F99E86000729DF6 /* WCLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginResult.h; sourceTree = "<group>"; };
 		D64313D71F99E86000729DF6 /* WCLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginResult.m; sourceTree = "<group>"; };
 		D64313D91F99E95D00729DF6 /* WCLoginAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginAccount.h; sourceTree = "<group>"; };
@@ -780,6 +786,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D6179F5F1FB5951700D77C48 /* DecisionAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DecisionAnalysis;
+			sourceTree = "<group>";
+		};
+		D6179F601FB5963300D77C48 /* NewsPaper */ = {
+			isa = PBXGroup;
+			children = (
+				D6179F641FB5986200D77C48 /* Controller */,
+			);
+			path = NewsPaper;
+			sourceTree = "<group>";
+		};
+		D6179F641FB5986200D77C48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6179F651FB5986200D77C48 /* WCNewsPaperViewController.h */,
+				D6179F661FB5986200D77C48 /* WCNewsPaperViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D618A3EE1F9CA9EA00E53BAC /* OA */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,6 +1000,8 @@
 				D60C28B81F94E86C00327C01 /* WCDynamicListController.m */,
 				D60C528E1F95D79700DA2DD3 /* WCDynamicDetailController.h */,
 				D60C528F1F95D79700DA2DD3 /* WCDynamicDetailController.m */,
+				D6290E1E1FB6ECF40040553E /* WCSliderDetailViewController.h */,
+				D6290E1F1FB6ECF40040553E /* WCSliderDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1189,13 +1221,15 @@
 		D65953A31F7CD3A400705749 /* Function */ = {
 			isa = PBXGroup;
 			children = (
-				D618A4001F9CC77000E53BAC /* CommonProblem */,
+				D6179F601FB5963300D77C48 /* NewsPaper */,
 				D6B933E81FA6F6A10041D9BF /* PartyConstruct */,
+				D6179F5F1FB5951700D77C48 /* DecisionAnalysis */,
+				D618A3EE1F9CA9EA00E53BAC /* OA */,
+				D618A4001F9CC77000E53BAC /* CommonProblem */,
 				D6108C411F9E27CC0087DF00 /* ClassicWork */,
 				D6108C241F9E0ABA0087DF00 /* NewArrival */,
 				D618A3F61F9CB91D00E53BAC /* Email */,
 				D618A3FB1F9CBFC900E53BAC /* Attendance */,
-				D618A3EE1F9CA9EA00E53BAC /* OA */,
 				D61968781F98819F00919CEA /* Framework */,
 			);
 			path = Function;
@@ -1415,6 +1449,7 @@
 				D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */,
 				D6120C921F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m in Sources */,
 				D618A3FA1F9CB96100E53BAC /* WCEmailViewController.m in Sources */,
+				D6179F671FB5986300D77C48 /* WCNewsPaperViewController.m in Sources */,
 				D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */,
 				D61A64031F945884000FE435 /* WCMoreDynamicCell.m in Sources */,
 				D61D424C1F7DDC8400B73FF1 /* SettingArrowItem.m in Sources */,
@@ -1467,6 +1502,7 @@
 				D6108C3C1F9E18C60087DF00 /* WCNewArrivalCell.m in Sources */,
 				D60A4AF71F8E1CF200990D01 /* WCSliderParam.m in Sources */,
 				D6108C4B1F9E28E80087DF00 /* WCClassicWorkParam.m in Sources */,
+				D6290E201FB6ECF40040553E /* WCSliderDetailViewController.m in Sources */,
 				D619688A1F9882E100919CEA /* XLPlainFlowLayout.m in Sources */,
 				D618A4161F9CD08700E53BAC /* WCCommonProblemCell.m in Sources */,
 				D6108C351F9E15FD0087DF00 /* WCNewArrivalResult.m in Sources */,

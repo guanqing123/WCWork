@@ -5,8 +5,11 @@
   "b" : "215",
   "items" : [
              {"title":"OA办公","image":"oa","destVcClass":"WCOAViewController","order":"0","load":"1"},
-             {"title":"在线考勤","image":"zaixiankaoqin","destVcClass":"WCCheckAttendenceViewController","order":"1","load":"1"},
-             {"title":"企业邮箱","image":"email","destVcClass":"WCEmailViewController","order":"2","load":"1"}
+             {"title":"决策分析","image":"juecefenxi","destVcClass":"WCDecisionAnalysisViewController","order":"1","load":"1"},
+             {"title":"智慧党建","image":"zhihuidangjian","destVcClass":"WCPartyConstructViewController","order":"2","load":"0"},
+             {"title":"物产中大报","image":"newspaper","destVcClass":"WCNewsPaperViewController","order":"3","load":"0"},
+             {"title":"在线考勤","image":"zaixiankaoqin","destVcClass":"WCCheckAttendenceViewController","order":"4","load":"1"},
+             {"title":"企业邮箱","image":"email","destVcClass":"WCEmailViewController","order":"5","load":"1"}
              ]
   },{
   "header" : "营销",
@@ -14,9 +17,8 @@
   "g" : "0",
   "b" : "18",
   "items" : [
-             {"title":"新品上市","image":"xinpinzixun","destVcClass":"WCNewArrivalViewController","order":"3","load":"0"},
-             {"title":"经典作品","image":"yingxiaohuodong","destVcClass":"WCClassicWorkViewController","order":"4","load":"0"},
-             {"title":"智慧党建","image":"zhihuidangjian","destVcClass":"WCPartyConstructViewController","order":"5","load":"0"}
+             {"title":"车家佳","image":"chejj","destVcClass":"","order":"6","load":"0"},
+             {"title":"物产商城","image":"wcmall","destVcClass":"","order":"7","load":"0"}
              ]
   },{
   "header" : "服务",
@@ -24,7 +26,9 @@
   "g" : "88",
   "b" : "189",
   "items" : [
-             {"title":"常见问题","image":"changjianwenti","destVcClass":"WCCommonProblemViewController","order":"6","load":"0"}
+             {"title":"集团招聘","image":"recruit","destVcClass":"","order":"8","load":"0"},
+             {"title":"实用工具","image":"utilities","destVcClass":"","order":"9","load":"0"},
+             {"title":"关于物产","image":"about","destVcClass":"","order":"10","load":"0"}
              ]
   }
   ]

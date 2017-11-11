@@ -21,6 +21,16 @@
 @property (nonatomic, copy) NSString *did;
 
 /**
+ 考勤类型
+ */
+@property (nonatomic, copy) NSString *kqlx;
+
+/**
+ 地址
+ */
+@property (nonatomic, copy) NSString *dz;
+
+/**
  *  是否需要绑定设备ID
  */
 @property (nonatomic, assign, getter=isSign) NSString *sign;

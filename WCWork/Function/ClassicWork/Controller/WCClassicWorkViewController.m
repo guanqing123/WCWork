@@ -34,6 +34,12 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshing)];
     [self.tableView.mj_header beginRefreshing];
+    
+    if(@available(iOS 11.0, *)){
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableView.contentInset = UIEdgeInsetsMake(WCTopNavH, 0, 0, 0);
+        self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    }
 }
 
 - (void)headerRefreshing {

@@ -13,6 +13,7 @@
 
 #import "WCHomeTool.h"
 #import "WCSlideshowHeadView.h"
+#import "WCSliderDetailViewController.h"
 #import "WCSectionHeaderView.h"
 
 #import "WCCommonUseCell.h"
@@ -439,6 +440,11 @@
             [self.headerView failure];
         }];
     });
+}
+
+- (void)slideShowHeaderView:(WCSlideshowHeadView *)headerView urlPath:(NSString *)urlPath {
+    WCSliderDetailViewController *sliderDetailVc = [[WCSliderDetailViewController alloc] initWithUrlPath:urlPath];
+    [self.navigationController pushViewController:sliderDetailVc animated:YES];
 }
 
 - (void)setUpCommonUseFunction {

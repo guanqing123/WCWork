@@ -26,21 +26,31 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    WKWebView *webView = [[WKWebView alloc] init];
+    webView.frame = CGRectMake(0, WCTopNavH, ScreenW, ScreenH - WCTopNavH);
     webView.scrollView.showsVerticalScrollIndicator = NO;
     webView.navigationDelegate = self;
     webView.UIDelegate = self;
     _webView = webView;
     [self.view addSubview:_webView];
     
-    //_web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    //[self.view addSubview:_web];
+    if (@available(iOS 11.0,*)) {
+        webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        webView.scrollView.scrollIndicatorInsets = webView.scrollView.contentInset;
+    }
     
     WCLoginViewController *loginVc = [WCLoginViewController instance];
     NSString *userName = loginVc.loginAccount.userName;
     userName = @"fugm";
     NSString *url = [NSString stringWithFormat:@"%@%@",PARTYURL,userName];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+}
+
+- (void)close {
+    if (self.webView.loading) {[self.webView stopLoading];}
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)back {

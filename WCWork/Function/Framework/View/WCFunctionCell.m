@@ -19,6 +19,7 @@
     if (self =[super initWithFrame:frame]) {
         // 1.图片
         UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
         _imageView = imageView;
         [self.contentView addSubview:imageView];
         

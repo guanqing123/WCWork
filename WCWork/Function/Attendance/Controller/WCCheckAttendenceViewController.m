@@ -144,7 +144,7 @@
 }
 
 - (void)getCurrentLocation {
-    [MBProgressHUD showMessage:@"定位中..."];
+    [MBProgressHUD showMessage:@"定位中..." toView:self.view];
     __weak typeof(self) weakSelf = self;
     [self.locationManager requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
         [weakSelf didSomeThingWithReGeocode:regeocode Error:error];
@@ -167,17 +167,15 @@
 - (void)addCircleReionForCoordinate:(CLLocationCoordinate2D)coordinate Regeocode:(AMapLocationReGeocode *)regeocode NSError:(NSError *)error {
     if (!error) {
         WCCheckAttendenceParam *checkAttendenceParam = [WCCheckAttendenceParam param:KQ1];
-        checkAttendenceParam.citycode = regeocode.citycode;
-        WCLoginViewController *loginVc = [WCLoginViewController instance];
         checkAttendenceParam.gh = _userName;
         [WCCheckAttendenceTool checkAttendenceWithParam:checkAttendenceParam success:^(WCCheckAttendenceResult *result) {
-            [MBProgressHUD hideHUD];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             if (result.errorMsg) {
-                [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg]];
+                [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg] toView:self.view];
             } else {
                 _result = result;
                 for (WCCheckAttendenceFence *fence in result.fence) {
-                    [self circleWithLatitude:fence.latitude longitude:fence.longitude radius:[fence.radius floatValue] identifier:[NSString stringWithFormat:@"%@",fence.fenceid]];
+                    [self circleWithLatitude:fence.lbs_latitude longitude:fence.lsb_longitude radius:[fence.lbs_radius floatValue] identifier:[NSString stringWithFormat:@"%@",fence]];
                 }
                 _count = [result.checkInTimes intValue];
                 // 局部刷新
@@ -186,11 +184,12 @@
                 [self setVisiableMapRect:coordinate];
             }
         } failure:^(NSError *error) {
-            [MBProgressHUD hideHUD];
-            [MBProgressHUD showError:@"网络异常,请刷新定位"];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [MBProgressHUD showError:@"网络异常,请刷新定位" toView:self.view];
         }];
     }else{
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showError:@"定位异常,请刷新" toView:self.view];
     }
 }
 
@@ -264,10 +263,10 @@
 
 #pragma mark - 封装进入和离开监控区域(重构) 因为后台进入前台要进行判断当前点是不是在圈内
 - (void)refreshLocationWithLocationManagerWhenAppActive:(AMapLocationManager *)manager {
-    [MBProgressHUD showMessage:@"刷新中..."];
+    [MBProgressHUD showMessage:@"刷新中..." toView:self.view];
     __weak typeof(self) weakSelf = self;
     [manager requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         [weakSelf didSomeThingWithReGeocode:regeocode Error:error];
         [weakSelf setVisiableMapRect:location.coordinate];
     }];
@@ -533,24 +532,26 @@
 
 #pragma mark - 考勤功能
 - (void)kqAction:(NSString *)sign inOrOut:(NSString *)inOrOut {
-    [MBProgressHUD showMessage:@"考勤中..."];
+    [MBProgressHUD showMessage:@"考勤中..." toView:self.view];
     WCDidCheckAttendenceParam *param = [WCDidCheckAttendenceParam param:KQ2];
-    param.did = self.uuid;
     param.gh = _userName;
+    param.did = self.uuid;
+    param.kqlx = inOrOut;
+    param.dz = _wzStr;
     param.sign = sign;
     [WCCheckAttendenceTool didCheckAttendenceWithParam:param success:^(WCDidCheckAttendenceResult *result) {
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (result.errorMsg) {
-            [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg]];
+            [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg] toView:self.view];
         } else {
             self.result.devices = result.devices;
             self.count = [result.checkInTimes intValue];
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
             [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [MBProgressHUD showSuccess:[NSString stringWithFormat:@"考勤时间:%@",result.signTime]];
+            [MBProgressHUD showSuccess:[NSString stringWithFormat:@"考勤时间:%@",result.signTime] toView:self.view];
         }
     } failure:^(NSError *error) {
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         [MBProgressHUD showError:@"网络异常,稍后再试"];
     }];
 }

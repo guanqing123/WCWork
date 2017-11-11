@@ -136,6 +136,7 @@ static NSString * const sectionHeaderIdentifier = @"functionViewControllerSectio
     } else {
         desVc = loginVc;
     }
+    if (desVc == nil) return;
     [self.navigationController pushViewController:desVc animated:YES];
 }
 

@@ -12,7 +12,21 @@
 @protocol WCSlideshowHeadViewDelegate <NSObject>
 @optional
 
+/**
+ 网络异常,点击重新刷新按钮
+
+ @param headerView 当前头部View
+ */
 - (void)slideShowHeaderViewDidClickRefreshBtn:(WCSlideshowHeadView *)headerView;
+
+
+/**
+ 点击当前图片,跳转方法
+
+ @param headerView 当前头部View
+ @param urlPath 跳转路径
+ */
+- (void)slideShowHeaderView:(WCSlideshowHeadView *)headerView urlPath:(NSString *)urlPath;
 
 @end
 

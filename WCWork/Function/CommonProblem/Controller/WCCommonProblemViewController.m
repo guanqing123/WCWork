@@ -45,6 +45,12 @@
     
     self.tableView.tableHeaderView = _searchController.searchBar;
     self.definesPresentationContext = YES;
+    
+    if(@available(iOS 11.0, *)){
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableView.contentInset = UIEdgeInsetsMake(WCTopNavH, 0, 0, 0);
+        self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -97,25 +103,6 @@
     } failure:^(NSError *error) {
         [self.tableView.mj_header endRefreshing];
     }];
-    
-    /*[CjwtManager getCjwtWithUrl:url success:^(id json) {
-        NSDictionary *header = [json objectForKey:@"header"];
-        if ([[header objectForKey:@"succflag"] intValue] > 1) {
-            [MBProgressHUD showError:[[Utils getDict] objectForKey:[header objectForKey:@"errorcode"]]];
-        } else {
-            self.modelArray = [CjwtManager jsonArrayToModelArray:[json objectForKey:@"data"]];
-            [self.questionArray removeAllObjects];
-            for (QuestionModel *model in self.modelArray) {
-                [self.questionArray addObject:model.question];
-            }
-            _dict = [[NSDictionary alloc] initWithObjects:self.modelArray forKeys:self.questionArray];
-            [self.tableView reloadData];
-        }
-        [self.tableView.mj_header endRefreshing];
-    } fail:^{
-        [self.tableView.mj_header endRefreshing];
-        [MBProgressHUD showError:@"网络异常,请下拉刷新"];
-    }];*/
 }
 
 #pragma mark - tableView dataSource
@@ -147,7 +134,6 @@
         WCCommonProblem *commonProblem = self.modelArray[indexPath.section];
         cell.commonProblem = commonProblem;
     }
-    
     return cell;
 }
 

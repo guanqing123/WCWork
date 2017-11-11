@@ -49,8 +49,6 @@
 
 //鸿雁销客
 #define XKURL @"http://218.75.78.166:9101/app/api"
-//鸿雁云商
-#define HYURL @"http://218.75.78.166:9106/app/api"
 
 
 //物产URL
@@ -61,6 +59,8 @@
 #define OAURL @"http://mobile.zjmi.com:8080/app/oauth?app=ebridge&loginid="
 //智慧党建
 #define PARTYURL @"http://mobile.zjmi.com:8080/app/oauth?app=dangjian&loginid="
+//物产中大报
+#define NEWSPAPER @"http://weixin.zjmi.com/zjmimvc/Mobile/newspaper/index"
 
 //首页滚动条
 #define slider @"HYXK00019"
@@ -77,8 +77,8 @@
 //常见问题
 #define commonProblemUrl @"HYXK00006"
 //考勤
-#define KQ1 @"SGE00006"
-#define KQ2 @"SGE00007"
+#define KQ1 @"SUNON00006"
+#define KQ2 @"SUNON00007"
 //新品上市
 #define newArrival @"HYXK00027"
 //经典作品

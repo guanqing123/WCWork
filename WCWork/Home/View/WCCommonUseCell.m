@@ -46,6 +46,7 @@
         WCItem  *item = [_commonUseArray objectAtIndex:index];
         UIImage *image = [UIImage imageNamed:item.image];
         [button setImage:image forState:UIControlStateNormal];
+        button.imageView.contentMode = UIViewContentModeScaleAspectFit;
         //设置image在button上的位置（上top，左left，下bottom，右right）这里可以写负值，对上写－5，那么image就象上移动5个像素
         CGFloat imageW = image.size.width;
         CGFloat edgX = (appW - imageW) * 0.5;
