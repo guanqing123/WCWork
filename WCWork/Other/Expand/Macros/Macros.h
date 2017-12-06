@@ -66,6 +66,8 @@
 #define slider @"HYXK00019"
 //首页Segement
 #define homeSegement @"ZJMI00002"
+//中间滚动
+#define sectionSlider @"ZJMI00003"
 //公司行情
 #define dynamic @"HYXK00003"
 //详细新闻

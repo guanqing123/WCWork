@@ -19,4 +19,14 @@
  */
 - (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 
+
+
+/**
+ md5 加密
+
+ @param input 输入参数
+ @return 返回加密结果
+ */
++ (NSString *)md5DigestWithString:(NSString *)input;
+
 @end

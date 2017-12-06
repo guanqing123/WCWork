@@ -142,10 +142,8 @@
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
-    WCSliderResult *result = [_scrollViewArray objectAtIndex:index];
-    if (!result.url) return;
-    if ([self.delegate respondsToSelector:@selector(slideShowHeaderView:urlPath:)]) {
-        [self.delegate slideShowHeaderView:self urlPath:result.url];
+    if ([self.delegate respondsToSelector:@selector(slideShowHeaderView:selectedIndex:)]) {
+        [self.delegate slideShowHeaderView:self selectedIndex:index];
     }
 }
 

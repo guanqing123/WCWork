@@ -24,9 +24,9 @@
  点击当前图片,跳转方法
 
  @param headerView 当前头部View
- @param urlPath 跳转路径
+ @param index 选择索引
  */
-- (void)slideShowHeaderView:(WCSlideshowHeadView *)headerView urlPath:(NSString *)urlPath;
+- (void)slideShowHeaderView:(WCSlideshowHeadView *)headerView selectedIndex:(NSInteger)index;
 
 @end
 

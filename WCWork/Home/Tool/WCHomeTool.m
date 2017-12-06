@@ -34,6 +34,28 @@
     }];
 }
 
++ (void)homeSectionFooterViewParam:(WCSectionFooterViewParam *)sectionFooterViewParam success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure {
+    NSDictionary *headerDict = [NSDictionary dictionaryWithObjects:@[sectionFooterViewParam.appseq,sectionFooterViewParam.trcode,sectionFooterViewParam.trdate] forKeys:@[@"appseq",@"trcode",@"trdate"]];
+
+    NSDictionary *dict = @{@"header" : headerDict, @"data" : sectionFooterViewParam.mj_keyValues};
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    NSDictionary *parameter = @{@"content" : jsonString};
+    [WCHttpTool postWithURL:WCURL params:parameter success:^(id json) {
+        if ([[[json objectForKey:@"header"] objectForKey:@"succflag"] isEqualToString:@"1"]) {
+            NSArray *result = [WCSectionFooterViewResult mj_objectArrayWithKeyValuesArray:[[[json objectForKey:@"data"] objectForKey:@"RRRR_DATA"] objectForKey:@"ImgList"]];
+            success(result);
+        }else{
+            success([NSArray array]);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 + (void)homeSectionHeaderViewParam:(WCSectionHeaderViewParam *)sectionHeaderViewParam success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure {
     NSDictionary *headerDict = [NSDictionary dictionaryWithObjects:@[sectionHeaderViewParam.appseq,sectionHeaderViewParam.trcode,sectionHeaderViewParam.trdate] forKeys:@[@"appseq",@"trcode",@"trdate"]];
     

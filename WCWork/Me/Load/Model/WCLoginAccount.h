@@ -13,5 +13,6 @@
 @property (nonatomic, copy) NSString *trueName;
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *password;
 
 @end

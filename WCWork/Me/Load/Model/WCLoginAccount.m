@@ -15,6 +15,7 @@
         self.trueName = [aDecoder decodeObjectForKey:@"trueName"];
         self.userName = [aDecoder decodeObjectForKey:@"userName"];
         self.email = [aDecoder decodeObjectForKey:@"email"];
+        self.password = [aDecoder decodeObjectForKey:@"password"];
     }
     return self;
 }
@@ -23,6 +24,7 @@
     [aCoder encodeObject:self.trueName forKey:@"trueName"];
     [aCoder encodeObject:self.userName forKey:@"userName"];
     [aCoder encodeObject:self.email forKey:@"email"];
+    [aCoder encodeObject:self.password forKey:@"password"];
 }
 
 @end

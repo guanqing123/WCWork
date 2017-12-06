@@ -10,13 +10,15 @@
 #import "WCNavigationController.h"
 #import "WCHomeViewController.h"
 #import "WCAddressBookViewController.h"
+#import "WCAddressBookFromOAViewController.h"
 #import "WCFunctionViewController.h"
 #import "WCMeViewController.h"
 
 @interface WCTabBarViewController ()
 
 @property (nonatomic, strong)  WCHomeViewController *home;
-@property (nonatomic, strong)  WCAddressBookViewController *addressBook;
+//@property (nonatomic, strong)  WCAddressBookViewController *addressBook;
+@property (nonatomic, strong)  WCAddressBookFromOAViewController *addressBook;
 @property (nonatomic, strong)  WCFunctionViewController *function;
 @property (nonatomic, strong)  WCMeViewController *me;
 
@@ -44,8 +46,13 @@
     self.home = home;
     
     // 2.通讯录
+    /*
     WCAddressBookViewController *addressBook = [[WCAddressBookViewController alloc] init];
     [self setupChildViewController:addressBook title:@"通讯录"imageName:@"tab2" selectedImageName:@"tab2-2"];
+    self.addressBook = addressBook;
+     */
+    WCAddressBookFromOAViewController *addressBook = [[WCAddressBookFromOAViewController alloc] init];
+    [self setupChildViewController:addressBook title:@"通讯录" imageName:@"tab2" selectedImageName:@"tab2-2"];
     self.addressBook = addressBook;
     
     // 3.功能

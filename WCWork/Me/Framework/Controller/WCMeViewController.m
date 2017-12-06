@@ -16,6 +16,8 @@
 
 #import "WCHelpViewController.h"
 #import "WCAboutViewController.h"
+#import "WCPersonInformationViewController.h"
+#import "WCSalaryInformationViewController.h"
 
 @interface WCMeViewController () <WCMeTableFooterViewDelegate,WCLoginViewControllerDelegate>
 @property (nonatomic, strong)  WCMeTableHeaderView *tableHeaderView;
@@ -51,8 +53,15 @@
     
     //关于
     SettingItem *about = [SettingArrowItem itemWithIcon:@"guanyu" title:@"关于" destVcClass:[WCAboutViewController class]];
+    
+    //个人信息
+    SettingItem *personInformation = [SettingArrowItem itemWithIcon:@"personInformation" title:@"个人信息" destVcClass:[WCPersonInformationViewController class]];
+    
+    //薪资查询
+    SettingItem *salaryInformation = [SettingArrowItem itemWithIcon:@"salaryInformation" title:@"薪资查询" destVcClass:[WCSalaryInformationViewController class]];
+    
     SettingGroup *secondGroup = [[SettingGroup alloc] init];
-    secondGroup.items = @[about];
+    secondGroup.items = @[personInformation, salaryInformation, about];
     [self.data addObject:secondGroup];
 }
 

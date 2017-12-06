@@ -120,6 +120,7 @@ static WCLoginViewController *loginVc = nil;
         if (loginResult.error) {
             [MBProgressHUD showError:loginResult.errorMsg];
         }else{
+            loginResult.entry.password = self.password;
             self.loginAccount = loginResult.entry;
             self.logining = YES;
             

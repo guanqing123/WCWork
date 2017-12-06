@@ -10,13 +10,9 @@
 
 @interface WCNewArrival : NSObject
 
-@property (nonatomic, copy) NSString *content;
-@property (nonatomic, copy) NSString *cymc;
-@property (nonatomic, assign) NSNumber *temprownumber;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *cydm;
-@property (nonatomic, copy) NSString *img_url;
+@property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *submit_date;
-@property (nonatomic, assign) NSNumber *tempcolumn;
+@property (nonatomic, copy) NSString *remark;
 
 @end

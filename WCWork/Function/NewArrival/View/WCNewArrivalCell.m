@@ -10,8 +10,8 @@
 #import "UIImageView+WebCache.h"
 
 @interface WCNewArrivalCell()
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
@@ -34,11 +34,11 @@
 
 - (void)setArrival:(WCNewArrival *)arrival {
     _arrival = arrival;
-    
-    NSURL *url = [NSURL URLWithString:arrival.img_url];
-    [self.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"home_img_loading"]]; //加载
-    
-    self.nameLabel.text = arrival.title;
+//    
+//    NSURL *url = [NSURL URLWithString:arrival.img_url];
+//    [self.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"home_img_loading"]]; //加载
+//    
+//    self.nameLabel.text = arrival.title;
     
     self.timeLabel.text = arrival.submit_date;
 }

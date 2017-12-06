@@ -10,14 +10,14 @@
 
 @interface WCSliderDetailViewController ()<WKNavigationDelegate,WKUIDelegate>
 @property (nonatomic, weak)  WKWebView *webView;
-@property (nonatomic, copy) NSString *urlPath;
+@property (nonatomic, strong)  WCSliderResult *sliderResult;
 @end
 
 @implementation WCSliderDetailViewController
 
-- (instancetype)initWithUrlPath:(NSString *)urlPath {
+- (instancetype)initWithSliderResult:(WCSliderResult *)sliderResult {
     if (self = [super init]) {
-        _urlPath = urlPath;
+        _sliderResult = sliderResult;
     }
     return self;
 }
@@ -47,8 +47,8 @@
     
     //_web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     //[self.view addSubview:_web];
-    NSString *url = [NSString stringWithFormat:@"%@",_urlPath];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    NSString *url = [NSString stringWithFormat:@"%@",_sliderResult.url];
+    [self.webView loadHTMLString:_sliderResult.content baseURL:[NSURL URLWithString:url]];
 }
 
 - (void)back {
@@ -67,6 +67,8 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    //修改字体大小 300%
+    [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '200%'" completionHandler:nil];
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
@@ -85,6 +87,16 @@
     [self presentViewController:alertVc animated:YES completion:^{}];
 }
 
+- (void)dealloc {
+    self.webView.navigationDelegate = nil;
+    self.webView.UIDelegate = nil;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 #pragma mark -屏幕横竖屏设置
 - (BOOL)shouldAutorotate {
     return YES;
@@ -98,24 +110,5 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)dealloc {
-    self.webView.navigationDelegate = nil;
-    self.webView.UIDelegate = nil;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

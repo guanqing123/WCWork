@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		56CA9390FAB0932D68D33909 /* libPods-WCWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CE32B237C836950FA6B3C /* libPods-WCWork.a */; };
+		D6060E021FD7C21D001EDE42 /* WCSectionFooterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060E011FD7C21D001EDE42 /* WCSectionFooterDetailViewController.m */; };
+		D6060E071FD7C716001EDE42 /* WCPersonInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060E061FD7C716001EDE42 /* WCPersonInformationViewController.m */; };
+		D6060E0C1FD7DDE5001EDE42 /* WCSalaryInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060E0B1FD7DDE5001EDE42 /* WCSalaryInformationViewController.m */; };
+		D6060E101FD7E757001EDE42 /* WCDecisionAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060E0F1FD7E757001EDE42 /* WCDecisionAnalysisViewController.m */; };
+		D6060E151FD7F140001EDE42 /* WCCommonToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6060E141FD7F140001EDE42 /* WCCommonToolsViewController.m */; };
 		D60A4AEC1F8E164600990D01 /* WCHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AEB1F8E164600990D01 /* WCHttpTool.m */; };
 		D60A4AF01F8E191400990D01 /* WCHomeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AEF1F8E191400990D01 /* WCHomeTool.m */; };
 		D60A4AF41F8E1C9900990D01 /* WCBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF31F8E1C9900990D01 /* WCBaseParam.m */; };
@@ -48,6 +53,9 @@
 		D610979B1FA1A890006E0F66 /* WCAboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D610979A1FA1A890006E0F66 /* WCAboutHeaderView.xib */; };
 		D610979E1FA1B9D8006E0F66 /* WCAboutFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D610979D1FA1B9D8006E0F66 /* WCAboutFooterView.m */; };
 		D61097A01FA1BE06006E0F66 /* WCAboutFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D610979F1FA1BE06006E0F66 /* WCAboutFooterView.xib */; };
+		D61100491FD689520010A505 /* WCSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61100481FD689520010A505 /* WCSectionFooterView.m */; };
+		D611004C1FD6937B0010A505 /* WCSectionFooterViewParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D611004B1FD6937B0010A505 /* WCSectionFooterViewParam.m */; };
+		D611004F1FD6A13C0010A505 /* WCSectionFooterViewResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D611004E1FD6A13C0010A505 /* WCSectionFooterViewResult.m */; };
 		D6120C7E1F9D910100A4AD4E /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */; };
 		D6120C7F1F9D910100A4AD4E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */; };
 		D6120C801F9D910100A4AD4E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6120C7D1F9D910100A4AD4E /* MBProgressHUD.m */; };
@@ -95,6 +103,7 @@
 		D61968891F9882E100919CEA /* WCFunctionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968861F9882E100919CEA /* WCFunctionReusableView.m */; };
 		D619688A1F9882E100919CEA /* XLPlainFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968881F9882E100919CEA /* XLPlainFlowLayout.m */; };
 		D619688D1F9885FA00919CEA /* WCFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D619688C1F9885FA00919CEA /* WCFunctionCell.m */; };
+		D619D7701FD8188000CF854D /* WCAddressBookFromOAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619D76F1FD8188000CF854D /* WCAddressBookFromOAViewController.m */; };
 		D61A64031F945884000FE435 /* WCMoreDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A64021F945884000FE435 /* WCMoreDynamicCell.m */; };
 		D61A64061F9471E9000FE435 /* WCDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A64051F9471E9000FE435 /* WCDynamicCell.m */; };
 		D61A64091F94736B000FE435 /* WCDynamicResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A64081F94736B000FE435 /* WCDynamicResult.m */; };
@@ -141,6 +150,16 @@
 /* Begin PBXFileReference section */
 		382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.release.xcconfig"; sourceTree = "<group>"; };
 		51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCWork/Pods-WCWork.debug.xcconfig"; sourceTree = "<group>"; };
+		D6060E001FD7C21D001EDE42 /* WCSectionFooterDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionFooterDetailViewController.h; sourceTree = "<group>"; };
+		D6060E011FD7C21D001EDE42 /* WCSectionFooterDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionFooterDetailViewController.m; sourceTree = "<group>"; };
+		D6060E051FD7C716001EDE42 /* WCPersonInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCPersonInformationViewController.h; sourceTree = "<group>"; };
+		D6060E061FD7C716001EDE42 /* WCPersonInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCPersonInformationViewController.m; sourceTree = "<group>"; };
+		D6060E0A1FD7DDE5001EDE42 /* WCSalaryInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSalaryInformationViewController.h; sourceTree = "<group>"; };
+		D6060E0B1FD7DDE5001EDE42 /* WCSalaryInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSalaryInformationViewController.m; sourceTree = "<group>"; };
+		D6060E0E1FD7E757001EDE42 /* WCDecisionAnalysisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCDecisionAnalysisViewController.h; sourceTree = "<group>"; };
+		D6060E0F1FD7E757001EDE42 /* WCDecisionAnalysisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCDecisionAnalysisViewController.m; sourceTree = "<group>"; };
+		D6060E131FD7F140001EDE42 /* WCCommonToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCCommonToolsViewController.h; sourceTree = "<group>"; };
+		D6060E141FD7F140001EDE42 /* WCCommonToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCCommonToolsViewController.m; sourceTree = "<group>"; };
 		D60A4AEA1F8E164600990D01 /* WCHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHttpTool.h; sourceTree = "<group>"; };
 		D60A4AEB1F8E164600990D01 /* WCHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHttpTool.m; sourceTree = "<group>"; };
 		D60A4AEE1F8E191400990D01 /* WCHomeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHomeTool.h; sourceTree = "<group>"; };
@@ -213,6 +232,12 @@
 		D610979C1FA1B9D8006E0F66 /* WCAboutFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAboutFooterView.h; sourceTree = "<group>"; };
 		D610979D1FA1B9D8006E0F66 /* WCAboutFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAboutFooterView.m; sourceTree = "<group>"; };
 		D610979F1FA1BE06006E0F66 /* WCAboutFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCAboutFooterView.xib; sourceTree = "<group>"; };
+		D61100471FD689520010A505 /* WCSectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionFooterView.h; sourceTree = "<group>"; };
+		D61100481FD689520010A505 /* WCSectionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionFooterView.m; sourceTree = "<group>"; };
+		D611004A1FD6937B0010A505 /* WCSectionFooterViewParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionFooterViewParam.h; sourceTree = "<group>"; };
+		D611004B1FD6937B0010A505 /* WCSectionFooterViewParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionFooterViewParam.m; sourceTree = "<group>"; };
+		D611004D1FD6A13C0010A505 /* WCSectionFooterViewResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionFooterViewResult.h; sourceTree = "<group>"; };
+		D611004E1FD6A13C0010A505 /* WCSectionFooterViewResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionFooterViewResult.m; sourceTree = "<group>"; };
 		D6120C791F9D910100A4AD4E /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D6120C7A1F9D910100A4AD4E /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D6120C7B1F9D910100A4AD4E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -304,6 +329,8 @@
 		D61968881F9882E100919CEA /* XLPlainFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPlainFlowLayout.m; sourceTree = "<group>"; };
 		D619688B1F9885FA00919CEA /* WCFunctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFunctionCell.h; sourceTree = "<group>"; };
 		D619688C1F9885FA00919CEA /* WCFunctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFunctionCell.m; sourceTree = "<group>"; };
+		D619D76E1FD8188000CF854D /* WCAddressBookFromOAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCAddressBookFromOAViewController.h; sourceTree = "<group>"; };
+		D619D76F1FD8188000CF854D /* WCAddressBookFromOAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCAddressBookFromOAViewController.m; sourceTree = "<group>"; };
 		D61A64011F945884000FE435 /* WCMoreDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMoreDynamicCell.h; sourceTree = "<group>"; };
 		D61A64021F945884000FE435 /* WCMoreDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMoreDynamicCell.m; sourceTree = "<group>"; };
 		D61A64041F9471E9000FE435 /* WCDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicCell.h; sourceTree = "<group>"; };
@@ -416,6 +443,66 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D6060E031FD7C6C0001EDE42 /* PersonInformation */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E041FD7C6DC001EDE42 /* Controller */,
+			);
+			path = PersonInformation;
+			sourceTree = "<group>";
+		};
+		D6060E041FD7C6DC001EDE42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E051FD7C716001EDE42 /* WCPersonInformationViewController.h */,
+				D6060E061FD7C716001EDE42 /* WCPersonInformationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6060E081FD7DDAC001EDE42 /* SalaryInformation */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E091FD7DDCE001EDE42 /* Controller */,
+			);
+			path = SalaryInformation;
+			sourceTree = "<group>";
+		};
+		D6060E091FD7DDCE001EDE42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E0A1FD7DDE5001EDE42 /* WCSalaryInformationViewController.h */,
+				D6060E0B1FD7DDE5001EDE42 /* WCSalaryInformationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6060E0D1FD7E73F001EDE42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E0E1FD7E757001EDE42 /* WCDecisionAnalysisViewController.h */,
+				D6060E0F1FD7E757001EDE42 /* WCDecisionAnalysisViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6060E111FD7F040001EDE42 /* CommonTools */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E121FD7F0ED001EDE42 /* Controller */,
+			);
+			path = CommonTools;
+			sourceTree = "<group>";
+		};
+		D6060E121FD7F0ED001EDE42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6060E131FD7F140001EDE42 /* WCCommonToolsViewController.h */,
+				D6060E141FD7F140001EDE42 /* WCCommonToolsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D60A4AE81F8E160A00990D01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +551,10 @@
 				D6AB01D71FB17BD400A6C23E /* WCSectionHeaderViewParam.m */,
 				D6AB01D91FB17FCC00A6C23E /* WCSectionHeaderViewResult.h */,
 				D6AB01DA1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m */,
+				D611004A1FD6937B0010A505 /* WCSectionFooterViewParam.h */,
+				D611004B1FD6937B0010A505 /* WCSectionFooterViewParam.m */,
+				D611004D1FD6A13C0010A505 /* WCSectionFooterViewResult.h */,
+				D611004E1FD6A13C0010A505 /* WCSectionFooterViewResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -752,6 +843,8 @@
 				D60C52891F958B7800DA2DD3 /* WCNoWifiView.m */,
 				D6AB01DC1FB194AF00A6C23E /* WCSectionHeaderView.h */,
 				D6AB01DD1FB194AF00A6C23E /* WCSectionHeaderView.m */,
+				D61100471FD689520010A505 /* WCSectionFooterView.h */,
+				D61100481FD689520010A505 /* WCSectionFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -789,6 +882,7 @@
 		D6179F5F1FB5951700D77C48 /* DecisionAnalysis */ = {
 			isa = PBXGroup;
 			children = (
+				D6060E0D1FD7E73F001EDE42 /* Controller */,
 			);
 			path = DecisionAnalysis;
 			sourceTree = "<group>";
@@ -1002,6 +1096,8 @@
 				D60C528F1F95D79700DA2DD3 /* WCDynamicDetailController.m */,
 				D6290E1E1FB6ECF40040553E /* WCSliderDetailViewController.h */,
 				D6290E1F1FB6ECF40040553E /* WCSliderDetailViewController.m */,
+				D6060E001FD7C21D001EDE42 /* WCSectionFooterDetailViewController.h */,
+				D6060E011FD7C21D001EDE42 /* WCSectionFooterDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1013,6 +1109,8 @@
 				D61D42371F7DD1EF00B73FF1 /* WCAddressBookViewController.m */,
 				D619686D1F9838BF00919CEA /* WCAddressBookSearchViewController.h */,
 				D619686E1F9838BF00919CEA /* WCAddressBookSearchViewController.m */,
+				D619D76E1FD8188000CF854D /* WCAddressBookFromOAViewController.h */,
+				D619D76F1FD8188000CF854D /* WCAddressBookFromOAViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1221,15 +1319,16 @@
 		D65953A31F7CD3A400705749 /* Function */ = {
 			isa = PBXGroup;
 			children = (
-				D6179F601FB5963300D77C48 /* NewsPaper */,
-				D6B933E81FA6F6A10041D9BF /* PartyConstruct */,
-				D6179F5F1FB5951700D77C48 /* DecisionAnalysis */,
 				D618A3EE1F9CA9EA00E53BAC /* OA */,
+				D6179F5F1FB5951700D77C48 /* DecisionAnalysis */,
+				D6B933E81FA6F6A10041D9BF /* PartyConstruct */,
+				D6179F601FB5963300D77C48 /* NewsPaper */,
+				D618A3FB1F9CBFC900E53BAC /* Attendance */,
+				D618A3F61F9CB91D00E53BAC /* Email */,
+				D6060E111FD7F040001EDE42 /* CommonTools */,
 				D618A4001F9CC77000E53BAC /* CommonProblem */,
 				D6108C411F9E27CC0087DF00 /* ClassicWork */,
 				D6108C241F9E0ABA0087DF00 /* NewArrival */,
-				D618A3F61F9CB91D00E53BAC /* Email */,
-				D618A3FB1F9CBFC900E53BAC /* Attendance */,
 				D61968781F98819F00919CEA /* Framework */,
 			);
 			path = Function;
@@ -1249,6 +1348,8 @@
 		D65953A51F7CD3A400705749 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				D6060E081FD7DDAC001EDE42 /* SalaryInformation */,
+				D6060E031FD7C6C0001EDE42 /* PersonInformation */,
 				D61D423D1F7DD56E00B73FF1 /* MJKJ */,
 				D6108C5E1F9E3C000087DF00 /* Help */,
 				D64D2B9E1F998BDE0076F1B8 /* Load */,
@@ -1448,6 +1549,7 @@
 			files = (
 				D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */,
 				D6120C921F9DC9D400A4AD4E /* WCDidCheckAttendenceResult.m in Sources */,
+				D611004F1FD6A13C0010A505 /* WCSectionFooterViewResult.m in Sources */,
 				D618A3FA1F9CB96100E53BAC /* WCEmailViewController.m in Sources */,
 				D6179F671FB5986300D77C48 /* WCNewsPaperViewController.m in Sources */,
 				D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */,
@@ -1496,7 +1598,9 @@
 				D60D74BF1F8F726B00FDB286 /* WCDynamicParam.m in Sources */,
 				D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */,
 				D64313D81F99E86000729DF6 /* WCLoginResult.m in Sources */,
+				D6060E071FD7C716001EDE42 /* WCPersonInformationViewController.m in Sources */,
 				D61A64061F9471E9000FE435 /* WCDynamicCell.m in Sources */,
+				D61100491FD689520010A505 /* WCSectionFooterView.m in Sources */,
 				D648E7E91F96DC65006A9C88 /* WCAddressBookListParam.m in Sources */,
 				D615DDE21F7E9BA200CC02F9 /* CustomSegmentControl.m in Sources */,
 				D6108C3C1F9E18C60087DF00 /* WCNewArrivalCell.m in Sources */,
@@ -1505,6 +1609,7 @@
 				D6290E201FB6ECF40040553E /* WCSliderDetailViewController.m in Sources */,
 				D619688A1F9882E100919CEA /* XLPlainFlowLayout.m in Sources */,
 				D618A4161F9CD08700E53BAC /* WCCommonProblemCell.m in Sources */,
+				D619D7701FD8188000CF854D /* WCAddressBookFromOAViewController.m in Sources */,
 				D6108C351F9E15FD0087DF00 /* WCNewArrivalResult.m in Sources */,
 				D60A4AF01F8E191400990D01 /* WCHomeTool.m in Sources */,
 				D64D2BA61F99983D0076F1B8 /* WCLoginCell.m in Sources */,
@@ -1516,6 +1621,7 @@
 				D617FFAA1F99849A009D0509 /* WCMeTableFooterView.m in Sources */,
 				D61D42521F7DDCB600B73FF1 /* SettingCell.m in Sources */,
 				D6108C311F9E0C810087DF00 /* WCNewArrivalParam.m in Sources */,
+				D6060E021FD7C21D001EDE42 /* WCSectionFooterDetailViewController.m in Sources */,
 				D6166FDB1F979D9E004B9D02 /* WCAddressBookCell.m in Sources */,
 				D618A4091F9CCBB900E53BAC /* WCCommonProblem.m in Sources */,
 				D6108C4E1F9E2A6B0087DF00 /* WCClassicWorkTool.m in Sources */,
@@ -1523,7 +1629,9 @@
 				D6108C401F9E21790087DF00 /* WCNewArrivalDetailViewController.m in Sources */,
 				D60C528D1F95A6A900DA2DD3 /* WCDynamic.m in Sources */,
 				D6108C381F9E168F0087DF00 /* WCNewArrival.m in Sources */,
+				D6060E0C1FD7DDE5001EDE42 /* WCSalaryInformationViewController.m in Sources */,
 				D6120C8C1F9DAF9600A4AD4E /* WCCheckAttendenceFence.m in Sources */,
+				D611004C1FD6937B0010A505 /* WCSectionFooterViewParam.m in Sources */,
 				D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */,
 				D6108C571F9E31F20087DF00 /* WCClassicWorkView.m in Sources */,
 				D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */,
@@ -1535,6 +1643,7 @@
 				D648E7F81F9743BA006A9C88 /* YLYTableViewIndexView.m in Sources */,
 				D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */,
 				D6B933EC1FA6F6F90041D9BF /* WCPartyConstructViewController.m in Sources */,
+				D6060E151FD7F140001EDE42 /* WCCommonToolsViewController.m in Sources */,
 				D61521331F8E5AD10066A82A /* WCSlideshowHeadView.m in Sources */,
 				D618A4041F9CC7B700E53BAC /* WCCommonProblemViewController.m in Sources */,
 				D6166FD81F9786FB004B9D02 /* WCConsts.m in Sources */,
@@ -1554,6 +1663,7 @@
 				D618A4291F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m in Sources */,
 				D60A4AEC1F8E164600990D01 /* WCHttpTool.m in Sources */,
 				D60A4AFA1F8E1D4300990D01 /* WCSliderResult.m in Sources */,
+				D6060E101FD7E757001EDE42 /* WCDecisionAnalysisViewController.m in Sources */,
 				D648E7E51F96DC07006A9C88 /* WCAddressBookTool.m in Sources */,
 				D6108C621F9E3C340087DF00 /* WCHelpViewController.m in Sources */,
 			);
@@ -1622,7 +1732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1664,7 +1774,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

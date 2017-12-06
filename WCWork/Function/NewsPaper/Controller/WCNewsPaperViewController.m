@@ -22,8 +22,8 @@
     // 2.返回按钮
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"30"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem = left;
-    
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
+    // 3.关闭按钮
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
     WKWebView *webView = [[WKWebView alloc] init];

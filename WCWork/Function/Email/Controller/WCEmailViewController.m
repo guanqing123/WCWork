@@ -22,7 +22,9 @@
     // 2.返回按钮
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"30"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem = left;
-    
+    // 3.关闭按钮
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     _webView.scrollView.showsVerticalScrollIndicator = NO;
@@ -37,6 +39,12 @@
     NSString *email = loginVc.loginAccount.email;
     NSString *url = [NSString stringWithFormat:@"%@%@",EMAILURL,email];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+}
+
+- (void)close {
+    if (self.webView.loading) {[self.webView stopLoading];}
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)back {

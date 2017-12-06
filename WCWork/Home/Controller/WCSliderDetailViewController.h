@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
+#import "WCSliderResult.h"
+
 @interface WCSliderDetailViewController : UIViewController
 
-- (instancetype)initWithUrlPath:(NSString *)urlPath;
+- (instancetype)initWithSliderResult:(WCSliderResult *)sliderResult;
 
 @end

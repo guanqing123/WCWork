@@ -14,7 +14,10 @@
 #import "WCHomeTool.h"
 #import "WCSlideshowHeadView.h"
 #import "WCSliderDetailViewController.h"
+
 #import "WCSectionHeaderView.h"
+#import "WCSectionFooterView.h"
+#import "WCSectionFooterDetailViewController.h"
 
 #import "WCCommonUseCell.h"
 #import "WCMoreDynamicCell.h"
@@ -23,7 +26,7 @@
 #import "WCGroup.h"
 #import "WCItem.h"
 
-@interface WCHomeViewController () <UITableViewDataSource,UITableViewDelegate,WCSlideshowHeadViewDelegate,WCMoreDynamicCellDelegate,WCCommonUseCellDelegate,WCAddCommonControllerDelegate,WCSectionHeaderViewDelegate>
+@interface WCHomeViewController () <UITableViewDataSource,UITableViewDelegate,WCSlideshowHeadViewDelegate,WCMoreDynamicCellDelegate,WCCommonUseCellDelegate,WCAddCommonControllerDelegate,WCSectionHeaderViewDelegate,WCSectionFooterViewDelegate>
 
 @property (nonatomic, strong)  UITableView *tableView;
 @property (nonatomic, strong)  NSMutableArray *dynamicArray;
@@ -34,6 +37,8 @@
 
 @property (nonatomic, strong)  WCSectionHeaderView *sectionHeaderView;
 @property (nonatomic, strong)  WCMoreDynamicCell *moreDynamicCell;
+
+@property (nonatomic, strong)  WCSectionFooterView *sectionFooterView;
 
 // 煤市行情
 @property (nonatomic, strong)  NSMutableArray *coalMarketQuotationsArray;
@@ -47,7 +52,10 @@
 @property (nonatomic, assign)  NSInteger currentSelectedSegment;
 // segment array
 @property (nonatomic, strong)  NSArray *item;
-
+// 头条滚动
+@property (nonatomic, strong)  NSArray *sliderResult;
+// section footerView Result
+@property (nonatomic, strong)  NSArray *sectionFooterViewResult;
 @end
 
 @implementation WCHomeViewController
@@ -79,8 +87,15 @@
     return _headerView;
 }
 
+#pragma mark - WCSlideshowHeadViewDelegate
 - (void)slideShowHeaderViewDidClickRefreshBtn:(WCSlideshowHeadView *)headerView {
     [self setUpSliderData];
+}
+
+- (void)slideShowHeaderView:(WCSlideshowHeadView *)headerView selectedIndex:(NSInteger)index {
+    WCSliderResult *result = [_sliderResult objectAtIndex:index];
+    WCSliderDetailViewController *sliderDetailVc = [[WCSliderDetailViewController alloc] initWithSliderResult:result];
+    [self.navigationController pushViewController:sliderDetailVc animated:YES];
 }
 
 #pragma mark - dynamicArray
@@ -206,9 +221,15 @@
         vc.title = item.title;
         [self.navigationController pushViewController:vc animated:YES];
     }else{
-        UIViewController *vc = [[NSClassFromString(item.destVcClass) alloc] init];
-        vc.title = item.title;
-        [self.navigationController pushViewController:vc animated:YES];
+        UIViewController *desVc = nil;
+        WCLoginViewController *loginVc = [WCLoginViewController instance];
+        if (loginVc.logining) {
+            desVc = [[NSClassFromString(item.destVcClass) alloc] init];
+            desVc.title = item.title;
+        } else {
+            desVc = loginVc;
+        }
+        [self.navigationController pushViewController:desVc animated:YES];
     }
 }
 
@@ -309,12 +330,18 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == 0) {
-        return 0.0f;
-    }else{
+        return ScreenW / 4;
+    }
+    return 0.0f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 1) {
         return 44.0f;
     }
+    return 0.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -357,11 +384,29 @@
     }
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return self.sectionHeaderView;
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (section == 0) {
+        return self.sectionFooterView;
+    }
+    return nil;
 }
 
-- (UIView *)sectionHeaderView {
+- (WCSectionFooterView *)sectionFooterView {
+    if (!_sectionFooterView) {
+        _sectionFooterView = [WCSectionFooterView footerView];
+        _sectionFooterView.delegate = self;
+    }
+    return _sectionFooterView;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (section == 1) {
+        return self.sectionHeaderView;
+    }
+    return nil;
+}
+
+- (WCSectionHeaderView *)sectionHeaderView {
     if (!_sectionHeaderView) {
         _sectionHeaderView = [WCSectionHeaderView headerView];
         _sectionHeaderView.delegate = self;
@@ -403,6 +448,17 @@
     }
 }
 
+#pragma mark - WCSectionFooterViewDelegate
+- (void)sectionFooterViewDidClickRefreshBtn:(WCSectionFooterView *)footerView {
+    [self setUpSectionFooterView];
+}
+
+- (void)sectionFooterView:(WCSectionFooterView *)footerView selectedIndex:(NSInteger)index {
+    WCSectionFooterViewResult *result = [_sectionFooterViewResult objectAtIndex:index];
+    WCSectionFooterDetailViewController *sectionFooterDetailVc = [[WCSectionFooterDetailViewController alloc] initWithSectionFooterViewResult:result];
+    [self.navigationController pushViewController:sectionFooterDetailVc animated:YES];
+}
+
 #pragma mark - WCSectionHeaderViewDelegate
 - (void)sectionHeaderViewDidClickRefreshBtn:(WCSectionHeaderView *)headerView {
     [self setUpSectionHeaderView];
@@ -421,7 +477,10 @@
     // 2.加载常用
     [self setUpCommonUseFunction];
     
-    // 3.加载 tableView sectionHeaderView
+    // 3.价值 tableView sectionFooterView
+    [self setUpSectionFooterView];
+    
+    // 4.加载 tableView sectionHeaderView
     [self setUpSectionHeaderView];
 }
 
@@ -430,6 +489,7 @@
     WCSliderParam *param = [WCSliderParam param:slider];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [WCHomeTool homeSliderWithParam:param success:^(NSArray *sliderResult) {
+            _sliderResult = sliderResult;
             NSMutableArray *resultArray = [NSMutableArray array];
             [sliderResult enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 WCSliderResult *result = obj;
@@ -440,11 +500,6 @@
             [self.headerView failure];
         }];
     });
-}
-
-- (void)slideShowHeaderView:(WCSlideshowHeadView *)headerView urlPath:(NSString *)urlPath {
-    WCSliderDetailViewController *sliderDetailVc = [[WCSliderDetailViewController alloc] initWithUrlPath:urlPath];
-    [self.navigationController pushViewController:sliderDetailVc animated:YES];
 }
 
 - (void)setUpCommonUseFunction {
@@ -504,6 +559,22 @@
         _functions = itemArray;
     }
     return _functions;
+}
+
+- (void)setUpSectionFooterView {
+    [self.sectionFooterView loading];
+    WCSectionFooterViewParam *param = [WCSectionFooterViewParam param:sectionSlider];
+    [WCHomeTool homeSectionFooterViewParam:param success:^(NSArray *sectionFooterViewResult) {
+        _sectionFooterViewResult = sectionFooterViewResult;
+        NSMutableArray *resultArray = [NSMutableArray array];
+        [sectionFooterViewResult enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            WCSectionFooterViewResult *result = obj;
+            [resultArray addObject:result.ImgUrl];
+        }];
+        [self.sectionFooterView show:resultArray];
+    } failure:^(NSError *error) {
+        [self.sectionFooterView failure];
+    }];
 }
 
 - (void)setUpSectionHeaderView {
