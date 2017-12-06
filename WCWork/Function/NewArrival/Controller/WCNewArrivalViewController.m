@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 80.0f;
+    self.tableView.rowHeight = 60.0f;
     // 设置回调 (一旦进入刷新状态,就调用target的action,也就是调用self的headerRefreshing方法)
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshing)];
     // 马上进入刷新状态

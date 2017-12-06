@@ -70,7 +70,7 @@
     config.userContentController = wkUController;
     
     CGFloat wkWebViewY = CGRectGetMaxY(_timeLabel.frame);
-    WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, wkWebViewY, self.view.frame.size.width, self.view.frame.size.height - wkWebViewY) configuration:config];
+    WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, wkWebViewY, ScreenW, ScreenH - wkWebViewY) configuration:config];
     wkWebView.navigationDelegate = self;
     NSURL *url = [NSURL URLWithString:WCURL];
     [wkWebView loadHTMLString:_content baseURL:url];

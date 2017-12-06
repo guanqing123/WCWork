@@ -34,11 +34,7 @@
 
 - (void)setArrival:(WCNewArrival *)arrival {
     _arrival = arrival;
-//    
-//    NSURL *url = [NSURL URLWithString:arrival.img_url];
-//    [self.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"home_img_loading"]]; //加载
-//    
-//    self.nameLabel.text = arrival.title;
+    self.titleLabel.text = arrival.title;
     
     self.timeLabel.text = arrival.submit_date;
 }
