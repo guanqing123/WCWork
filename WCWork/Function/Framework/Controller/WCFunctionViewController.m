@@ -129,12 +129,17 @@ static NSString * const sectionHeaderIdentifier = @"functionViewControllerSectio
     WCItem *item = group.items[indexPath.item];
     
     UIViewController *desVc = nil;
-    WCLoginViewController *loginVc = [WCLoginViewController instance];
-    if (loginVc.logining) {
+    if ([item.load intValue]) {
+         WCLoginViewController *loginVc = [WCLoginViewController instance];
+        if (loginVc.logining) {
+            desVc = [[NSClassFromString(item.destVcClass) alloc] init];
+            desVc.title = item.title;
+        } else {
+            desVc = loginVc;
+        }
+    }else{
         desVc = [[NSClassFromString(item.destVcClass) alloc] init];
         desVc.title = item.title;
-    } else {
-        desVc = loginVc;
     }
     if (desVc == nil) return;
     [self.navigationController pushViewController:desVc animated:YES];

@@ -32,7 +32,7 @@
     [super viewDidLoad];
     
     UIView *statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, WCStatusBarH)];
-    statusBarView.backgroundColor = [UIColor blueColor];
+    statusBarView.backgroundColor = RGB(0, 122, 251);
     [self.view addSubview:statusBarView];
    
     //登录帐号

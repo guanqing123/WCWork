@@ -17,7 +17,7 @@
   "g" : "0",
   "b" : "18",
   "items" : [
-             {"title":"物产商城","image":"wcmall","destVcClass":"","order":"6","load":"0"}
+             {"title":"物产商城","image":"wcmall","destVcClass":"WCMarketViewController","order":"6","load":"0"}
              ]
   },{
   "header" : "服务",
@@ -27,7 +27,7 @@
   "items" : [
              {"title":"集团招聘","image":"recruit","destVcClass":"WCNewArrivalViewController","order":"7","load":"0"},
              {"title":"实用工具","image":"utilities","destVcClass":"WCCommonToolsViewController","order":"8","load":"0"},
-             {"title":"关于物产","image":"about","destVcClass":"","order":"9","load":"0"}
+             {"title":"关于物产","image":"about","destVcClass":"WCAboutCompanyViewController","order":"9","load":"0"}
              ]
   }
   ]

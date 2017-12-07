@@ -86,6 +86,11 @@
 //经典作品
 #define classicWorkUrl @"HYXK00020"
 
+//企业概况
+#define overViewCompany @"HYXK00002"
+//企业荣誉
+#define honourCompany @"HYXK00004"
+
 //自动登录
 #define WCAccountFile [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.data"]
 

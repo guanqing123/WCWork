@@ -35,7 +35,7 @@
     [mut appendString:@"/zjmibo/"];
     
     //时间戳，根据函数生成，服务端验证时判断与服务器的时间戳，绝对值相差不超过300秒
-    NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
+    NSTimeInterval time = [[NSDate date] timeIntervalSince1970] * 1000;
     NSInteger t = (NSInteger)time;
     NSString *timeStamp = [NSString stringWithFormat:@"%ld",t];
     [mut appendString:timeStamp];

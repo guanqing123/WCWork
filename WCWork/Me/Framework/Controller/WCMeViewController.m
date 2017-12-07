@@ -19,6 +19,8 @@
 #import "WCPersonInformationViewController.h"
 #import "WCSalaryInformationViewController.h"
 
+#import <CloudPushSDK/CloudPushSDK.h>
+
 @interface WCMeViewController () <WCMeTableFooterViewDelegate,WCLoginViewControllerDelegate>
 @property (nonatomic, strong)  WCMeTableHeaderView *tableHeaderView;
 @property (nonatomic, strong)  WCMeTableFooterView *tableFooterView;
@@ -109,6 +111,14 @@
             NSError *error;
             [fileManager removeItemAtPath:WCAccountFile error:&error];
         }
+        
+        [CloudPushSDK unbindAccount:^(CloudPushCallbackResult *res) {
+            if (res.success) {
+                WCLog(@"解绑成功");
+            }else{
+                WCLog(@"解绑失败 error : %@",res.error);
+            }
+        }];
         
     }else{
         loginVc.delegate = self;

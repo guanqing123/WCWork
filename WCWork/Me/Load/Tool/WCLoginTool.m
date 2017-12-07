@@ -36,7 +36,6 @@
 }
 
 + (void)saveLoginAccount:(WCLoginAccount *)loginAccount {
-    NSLog(@"WCAccountFile = %@",WCAccountFile);
     [NSKeyedArchiver archiveRootObject:loginAccount toFile:WCAccountFile];
 }
 

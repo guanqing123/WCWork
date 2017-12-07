@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>destVcClass</key>
+		<string>WCOverViewCompanyViewController</string>
+		<key>image</key>
+		<string>qiyegaikuang</string>
+		<key>title</key>
+		<string>企业概况</string>
+	</dict>
+	<dict>
+		<key>destVcClass</key>
+		<string>WCHonourCompanyViewController</string>
+		<key>image</key>
+		<string>qiyerongyu</string>
+		<key>title</key>
+		<string>企业荣誉</string>
+	</dict>
+	<dict>
+		<key>destVcClass</key>
+		<string>WCPresidentSpeechViewController</string>
+		<key>image</key>
+		<string>qiyezuzhi</string>
+		<key>title</key>
+		<string>董事长致辞</string>
+	</dict>
+</array>
+</plist>

@@ -9,6 +9,7 @@
 #import "WCLoginViewController.h"
 #import "WCLoginCell.h"
 #import "WCLoginSectionFooterView.h"
+#import <CloudPushSDK/CloudPushSDK.h>
 
 @interface WCLoginViewController () <UITableViewDataSource,UITableViewDelegate,WCLoginSectionFooterViewDelegate,WCLoginCellDelegate>
 @property (nonatomic, weak) UITableView  *tableView;
@@ -123,6 +124,14 @@ static WCLoginViewController *loginVc = nil;
             loginResult.entry.password = self.password;
             self.loginAccount = loginResult.entry;
             self.logining = YES;
+            
+            [CloudPushSDK bindAccount:param.gh withCallback:^(CloudPushCallbackResult *res) {
+                if (res.success) {
+                    WCLog(@"帐号%@绑定成功...",param.gh);
+                }else{
+                    WCLog(@"帐号 绑定 error = %@",res.error);
+                }
+            }];
             
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             BOOL autoLogin = [userDefaults boolForKey:@"自动登录"];
