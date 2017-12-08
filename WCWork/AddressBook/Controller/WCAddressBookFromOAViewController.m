@@ -30,17 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     UIView *statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, WCStatusBarH)];
     statusBarView.backgroundColor = RGB(0, 122, 251);
     [self.view addSubview:statusBarView];
    
-    //登录帐号
-    WCLoginViewController *loginVc = [WCLoginViewController instance];
-    NSString *userName = loginVc.loginAccount.userName;
-    
-    NSString *url = [NSString stringWithFormat:@"%@%@",ADDRESS_URL,userName];
-    
     WKWebView *webView = [[WKWebView alloc] init];
     webView.frame = CGRectMake(0, WCStatusBarH, ScreenW, ScreenH - WCBottomTabH - WCStatusBarH);
     webView.scrollView.showsVerticalScrollIndicator = NO;
@@ -56,8 +50,11 @@
         webView.scrollView.scrollIndicatorInsets = webView.scrollView.contentInset;
     }
     
+    //登录帐号
+    WCLoginViewController *loginVc = [WCLoginViewController instance];
+    NSString *userName = loginVc.loginAccount.userName;
+    NSString *url = [NSString stringWithFormat:@"%@%@",ADDRESS_URL,userName];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
-    
 }
 
 

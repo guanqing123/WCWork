@@ -80,7 +80,9 @@
 {
     // 1.设置控制器的属性
     childVc.title = title;
-    childVc.view.backgroundColor = [UIColor whiteColor];
+    if (![title isEqualToString:@"通讯录"]) {
+        childVc.view.backgroundColor = [UIColor whiteColor];
+    }
     // 设置图标
     childVc.tabBarItem.image = [UIImage imageNamed:imageName];
     // 设置选中的图标

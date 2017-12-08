@@ -28,6 +28,12 @@
 
 @implementation WCMeViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //判断登录情况
+    [self setupLoginMsg];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -35,8 +41,6 @@
     self.tableView.tableFooterView = self.tableFooterView;
     
     [self setupData];
-    
-    [self setupLoginMsg];
 }
 
 - (void)setupData {
