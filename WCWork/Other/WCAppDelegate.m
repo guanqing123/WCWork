@@ -12,6 +12,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import "WCNavigationController.h"
 #import "WCPushNoticeViewController.h"
+#import "ATAppUpdater.h"
 
 static NSString *const aliyunPushAppKey = @"24714654";
 static NSString *const aliyunPushAppSecret = @"e23a21f3e2474dc45626dd6932482ae4";
@@ -75,6 +76,7 @@ static NSString *const aliyunPushAppSecret = @"e23a21f3e2474dc45626dd6932482ae4"
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+     [[ATAppUpdater sharedUpdater] showUpdateWithConfirmation];
     // aliyun push
     // 向苹果APNs注册获取deviceToken并上报到阿里云推送服务器
     [self registerAPNs:application];

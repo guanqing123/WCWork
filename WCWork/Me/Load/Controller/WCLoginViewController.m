@@ -97,7 +97,7 @@ static WCLoginViewController *loginVc = nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 80.0f;
+    return 100.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
@@ -152,7 +152,7 @@ static WCLoginViewController *loginVc = nil;
 #pragma mark - loginArray
 - (NSArray *)loginArray {
     if (!_loginArray) {
-        _loginArray = @[@{@"titleLabel":@"用户名:",@"placeholder":@"工号",@"secret":@"NO",@"padding":@"0"},@{@"titleLabel":@"密码:",@"placeholder":@"请输入密码",@"secret":@"YES",@"padding":@"10"}];
+        _loginArray = @[@{@"titleLabel":@"用户名:",@"placeholder":@"OA账号",@"secret":@"NO",@"padding":@"0"},@{@"titleLabel":@"密    码:",@"placeholder":@"请输入密码",@"secret":@"YES",@"padding":@"10"}];
     }
     return _loginArray;
 }

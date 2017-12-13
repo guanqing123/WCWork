@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WCCheckInLog.h"
 
 @interface WCDidCheckAttendenceResult : NSObject
 
@@ -17,6 +18,8 @@
 @property (nonatomic, copy) NSString *errorMsg;
 
 @property (nonatomic, copy) NSString *signTime;
+
+@property (nonatomic, strong)  WCCheckInLog *checkInLog;
 
 - (instancetype)initWithErrorMsg:(NSString *)errorMsg;
 + (instancetype)errorMsg:(NSString *)errorMsg;

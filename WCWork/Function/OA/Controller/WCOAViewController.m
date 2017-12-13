@@ -99,6 +99,7 @@
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:fjVc];
         [self presentViewController:nav animated:YES completion:nil];
         decisionHandler(WKNavigationActionPolicyCancel);
+        return;
     }
     decisionHandler(WKNavigationActionPolicyAllow);
 }

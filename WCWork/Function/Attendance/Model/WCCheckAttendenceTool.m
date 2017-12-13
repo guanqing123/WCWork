@@ -49,7 +49,8 @@
             result.signTime = [[json objectForKey:@"header"] objectForKey:@"trdate"];
             success(result);
         }else{
-            WCDidCheckAttendenceResult *result = [WCDidCheckAttendenceResult errorMsg:[[json objectForKey:@"header"] objectForKey:@"errorcode"]];
+            WCDidCheckAttendenceResult *result = [WCDidCheckAttendenceResult mj_objectWithKeyValues:[json objectForKey:@"data"]];
+            result.errorMsg = [[json objectForKey:@"header"] objectForKey:@"errormsg"];
             success(result);
         }
     } failure:^(NSError *error) {

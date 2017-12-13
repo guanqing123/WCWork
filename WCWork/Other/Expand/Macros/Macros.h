@@ -60,7 +60,7 @@
 //智慧党建
 #define PARTYURL @"http://mobile.zjmi.com:8080/app/oauth?app=dangjian&loginid="
 //物产中大报
-#define NEWSPAPER @"http://weixin.zjmi.com/zjmimvc/Mobile/newspaper/index"
+#define NEWSPAPER @"https://mobile.zjmi.com/zjmiapp/Mobile/newspaper/index"
 
 //首页滚动条
 #define slider @"HYXK00019"

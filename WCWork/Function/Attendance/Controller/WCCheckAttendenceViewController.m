@@ -9,6 +9,7 @@
 #import "WCCheckAttendenceViewController.h"
 #import "WCCheckAttendenceMapViewCell.h"
 #import "WCCheckAttendenceBtnCell.h"
+#import "WCCheckAttendenceSignInOrOutCell.h"
 
 #import "WCCheckAttendenceTool.h"
 #import "SFHFKeychainUtils.h"
@@ -31,6 +32,8 @@
 @property (nonatomic, strong)  WCCheckAttendenceResult *result;
 
 @property (nonatomic, copy) NSString *uuid;
+
+@property (nonatomic, copy) NSString *signInTime;
 
 /**
  *  考勤按钮
@@ -179,8 +182,9 @@
                 }
                 _count = [result.checkInTimes intValue];
                 // 局部刷新
-                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                NSIndexPath *firstPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                NSIndexPath *fourthPath = [NSIndexPath indexPathForRow:3 inSection:0];
+                [self.tableView reloadRowsAtIndexPaths:@[firstPath,fourthPath] withRowAnimation:UITableViewRowAnimationFade];
                 [self setVisiableMapRect:coordinate];
             }
         } failure:^(NSError *error) {
@@ -223,7 +227,7 @@
             _outImgName = @"kqBtnO";
             _kqClick = YES;
             //局部刷新
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
             [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
         }
@@ -236,7 +240,7 @@
     _outImgName = @"kqBtnO";
     _kqClick = YES;
     //刷新按钮
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     [self refreshLocationWithLocationManager:manager];
 }
@@ -246,7 +250,7 @@
     _outImgName = @"kqBtnNO";
     _kqClick = NO;
     //刷新按钮
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     [self refreshLocationWithLocationManager:manager];
 }
@@ -372,7 +376,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -381,24 +385,21 @@
         UITableViewCell *cell = [[UITableViewCell alloc] init];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60, 60)];
-        imgView.image = [UIImage imageNamed:@"zaixiankaoqin"];
-        [cell.contentView addSubview:imgView];
-        
-        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 10, width - 100, 30)];
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, 100, 30)];
         nameLabel.text = [WCLoginViewController instance].loginAccount.trueName;
-        nameLabel.font = [UIFont systemFontOfSize:20];
-        nameLabel.textAlignment = NSTextAlignmentLeft;
+        nameLabel.font = [UIFont systemFontOfSize:15];
+        nameLabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:nameLabel];
         
-        UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 40, width - 110, 25)];
-        descLabel.text = [NSString stringWithFormat:@"今日您已完成签到 %zi 次", _count];
+        UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 5, width - 120, 30)];
+        descLabel.text = [NSString stringWithFormat:@"今日您已考勤 %zi 次", _count];
+        descLabel.font = [UIFont systemFontOfSize:15];
         descLabel.textAlignment = NSTextAlignmentLeft;
-        descLabel.textColor = [UIColor colorWithRed:150.0f/255.0f green:150.0f/255.0f blue:150.0f/255.0f alpha:0.8];
+        descLabel.textColor = RGBA(150, 150, 150, 0.8);
         [cell.contentView addSubview:descLabel];
         
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(15, 79, self.view.frame.size.width - 30, 1)];
-        view.backgroundColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:0.8];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(15, 43, ScreenW - 30, 1)];
+        view.backgroundColor = RGBA(238, 238, 238, 0.8);
         [cell.contentView addSubview:view];
         return cell;
     }
@@ -440,6 +441,11 @@
         return mapViewCell;
     }
     else if (indexPath.row == 3) {
+        WCCheckAttendenceSignInOrOutCell *signInOrOutCell = [WCCheckAttendenceSignInOrOutCell cellWithTableView:tableView];
+        signInOrOutCell.checkInLog = _result.checkInLog;
+        return signInOrOutCell;
+    }
+    else if (indexPath.row == 4) {
         WCCheckAttendenceBtnCell *btnCell = [WCCheckAttendenceBtnCell cellWithTableView:tableView];
         btnCell.delegate = self;
         btnCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -543,12 +549,25 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (result.errorMsg) {
             [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg] toView:self.view];
+            self.result.devices = result.devices;
         } else {
             self.result.devices = result.devices;
+            self.result.checkInLog = result.checkInLog;
             self.count = [result.checkInTimes intValue];
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            NSIndexPath *firstPath = [NSIndexPath indexPathForRow:0 inSection:0];
+            NSIndexPath *fourthPath = [NSIndexPath indexPathForRow:3 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:@[firstPath,fourthPath] withRowAnimation:UITableViewRowAnimationFade];
             [MBProgressHUD showSuccess:[NSString stringWithFormat:@"考勤时间:%@",result.signTime] toView:self.view];
+            if ([inOrOut isEqualToString:@"0"]) {
+                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                [userDefaults setObject:result.signTime forKey:@"signInTime"];
+                [userDefaults synchronize];
+            }
+            if ([inOrOut isEqualToString:@"1"]) {
+                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                [userDefaults setObject:result.signTime forKey:@"signOutTime"];
+                [userDefaults synchronize];
+            }
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -560,13 +579,15 @@
 #pragma mark tableView delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return 80.0f;
+        return 44.0f;
     }else if (indexPath.row == 1) {
         return 60.0f;
     }else if (indexPath.row == 2) {
         return 230.0f;
+    }else if (indexPath.row == 3) {
+        return 60.0f;
     }else{
-        return self.view.frame.size.height - 370.0f - 64.0f;
+        return self.view.frame.size.height - 394.0f - WCTopNavH;
     }
 }
 

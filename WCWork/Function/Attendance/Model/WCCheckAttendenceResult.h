@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "WCCheckAttendenceFence.h"
+#import "WCCheckInLog.h"
 
 @interface WCCheckAttendenceResult : NSObject
 
+@property (nonatomic, strong)  WCCheckInLog *checkInLog;
 @property (nonatomic, assign) NSNumber *checkInTimes;
 @property (nonatomic, strong)  NSArray *devices;
 @property (nonatomic, strong)  NSArray *fence;

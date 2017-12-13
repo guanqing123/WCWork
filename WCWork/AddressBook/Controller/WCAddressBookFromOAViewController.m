@@ -9,11 +9,13 @@
 #import "WCAddressBookFromOAViewController.h"
 #import <WebKit/WebKit.h>
 #import "NSString+GQExtension.h"
+#import <MessageUI/MessageUI.h>
 
 #define ADDRESS_URL @"http://mobile.zjmi.com:8080/app/oauth?app=book&loginid="
 
-@interface WCAddressBookFromOAViewController ()<WKNavigationDelegate,WKUIDelegate>
+@interface WCAddressBookFromOAViewController ()<WKNavigationDelegate,WKUIDelegate,MFMessageComposeViewControllerDelegate>
 @property (nonatomic, weak)  WKWebView *webView;
+@property (nonatomic, strong)  UIWebView *telWebView;
 @end
 
 @implementation WCAddressBookFromOAViewController
@@ -22,6 +24,11 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 //- (BOOL)prefersStatusBarHidden {
@@ -84,6 +91,55 @@
     [self presentViewController:alertVc animated:YES completion:^{}];
 }
 
+
+#pragma mark - WKNavigationDelegate
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSURL *URL = navigationAction.request.URL;
+    NSString *scheme = [URL scheme];
+    if ([scheme isEqualToString:@"tel"]) {
+        [self.telWebView loadRequest:[NSURLRequest requestWithURL:URL]];
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
+    if ([scheme isEqualToString:@"sms"]) {
+        //显示发短信的控制器
+        MFMessageComposeViewController *messageVc = [[MFMessageComposeViewController alloc] init];
+        //设置短信内容
+        messageVc.body = @"";
+        //设置收件人列表
+        NSString *tel = [[URL absoluteString] substringFromIndex:[[URL absoluteString] rangeOfString:@":"].location + 1];
+        messageVc.recipients = @[tel];
+        //设置代理
+        messageVc.messageComposeDelegate = self;
+        //显示控制器
+        [self presentViewController:messageVc animated:YES completion:nil];
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (UIWebView *)telWebView {
+    if (_telWebView == nil) {
+        _telWebView = [[UIWebView alloc] init];
+    }
+    return _telWebView;
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    //关闭短信界面
+    [controller dismissViewControllerAnimated:YES completion:^{
+        if (result == MessageComposeResultCancelled) {
+            [MBProgressHUD showError:@"取消发送"];
+        }else if (result == MessageComposeResultSent) {
+            [MBProgressHUD showSuccess:@"已发送"];
+        }else{
+            [MBProgressHUD showError:@"发送失败"];
+        }
+    }];
+}
+
+#pragma mark - dealloc
 - (void)dealloc {
     self.webView.navigationDelegate = nil;
     self.webView.UIDelegate = nil;

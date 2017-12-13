@@ -62,6 +62,7 @@
     }
 }
 
+#pragma mark - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
@@ -76,6 +77,21 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    if ([navigationAction.request.URL.absoluteString hasPrefix:@"alipay://alipayclient"]) {
+        decisionHandler(WKNavigationActionPolicyCancel);
+        
+        if ([[UIApplication sharedApplication] canOpenURL:navigationAction.request.URL]) {
+            [[UIApplication sharedApplication] openURL:navigationAction.request.URL options:@{UIApplicationOpenURLOptionUniversalLinksOnly:@NO} completionHandler:^(BOOL success) {
+                
+            }];
+        }
+    }else{
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+}
+
+#pragma mark - WKUIDelegate
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler {
     UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:webView.title message:message preferredStyle:UIAlertControllerStyleAlert];
     alertVc.view.backgroundColor = [UIColor whiteColor];
@@ -88,6 +104,7 @@
     [self presentViewController:alertVc animated:YES completion:^{}];
 }
 
+#pragma mark - dealloc/memoryWarning
 - (void)dealloc {
     self.webView.navigationDelegate = nil;
     self.webView.UIDelegate = nil;

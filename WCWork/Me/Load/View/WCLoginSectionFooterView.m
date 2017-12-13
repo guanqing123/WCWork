@@ -11,6 +11,7 @@
 @interface WCLoginSectionFooterView()
 @property (nonatomic, weak) UIView  *lineView;
 @property (nonatomic, weak) UIButton  *loginBtn;
+@property (nonatomic, weak) UILabel  *commentLabel;
 @end
 
 @implementation WCLoginSectionFooterView
@@ -31,6 +32,14 @@
         _lineView = lineView;
         [self.contentView addSubview:lineView];
         
+        UILabel *commentLabel = [[UILabel alloc] init];
+        commentLabel.text = @"注:请用OA账号登录,如有问题请致电0571-88001234.";
+        commentLabel.numberOfLines = 0;
+        commentLabel.font = [UIFont systemFontOfSize:15.0f];
+        commentLabel.textColor = [UIColor orangeColor];
+        _commentLabel = commentLabel;
+        [self.contentView addSubview:commentLabel];
+        
         UIButton *loginBtn = [[UIButton alloc] init];
         [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
         [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -50,8 +59,14 @@
     CGFloat parentW = self.frame.size.width;
     self.lineView.frame = CGRectMake(0, 0, parentW, 1);
     
+    CGFloat commentLabelX = 20;
+    CGFloat commentLabelY = 10;
+    CGFloat commentLabelW = ScreenW - 2 * commentLabelX;
+    CGFloat commentLabelH = 36;
+    self.commentLabel.frame = CGRectMake(commentLabelX, commentLabelY, commentLabelW, commentLabelH);
+    
     CGFloat loginBtnX = 20;
-    CGFloat loginBtnY = 40;
+    CGFloat loginBtnY = 60;
     CGFloat loginBtnW = parentW - 2 * loginBtnX;
     CGFloat loginBtnH = 40;
     self.loginBtn.frame = CGRectMake(loginBtnX, loginBtnY, loginBtnW, loginBtnH);

@@ -58,7 +58,7 @@
         UILabel *summaryLabel = [[UILabel alloc] init];
         summaryLabel.font = summaryFont;
         summaryLabel.textColor = [UIColor lightGrayColor];
-        summaryLabel.numberOfLines = 3;
+        summaryLabel.numberOfLines = 2;
         [self.contentView addSubview:summaryLabel];
         self.summaryLabel = summaryLabel;
         
@@ -89,7 +89,7 @@
     [super layoutSubviews];
     
     CGFloat paddingX = 10;
-    CGFloat paddingY = 0;
+    CGFloat paddingY = 10;
     CGFloat parentW = self.frame.size.width;
     CGFloat parentH = self.frame.size.height;
     
@@ -108,15 +108,17 @@
     CGFloat imgViewW = 0;
     CGFloat imgViewH = 0;
     if (_wcDynamic.IsImg) {
-        imgViewW = 90;
-        imgViewH = 70;
+        imgViewW = 72;
+        imgViewH = 56;
     }
     CGFloat imgViewX = parentW - paddingX - imgViewW;
-    CGFloat imgViewY = parentH - imgViewH - 4.0f;
+//    CGFloat imgViewY = parentH - imgViewH - 4.0f;
+    CGFloat imgViewY = ceil(CGRectGetMaxY(_titleLabel.frame));//CGRectGetMaxY(_titleLabel.frame);
     self.imgView.frame = CGRectMake(imgViewX, imgViewY, imgViewW, imgViewH);
     
     CGFloat summaryLabelX = paddingX;
-    CGFloat summaryLabelY = CGRectGetMaxY(_titleLabel.frame);
+//    CGFloat summaryLabelY = CGRectGetMaxY(_titleLabel.frame);
+    CGFloat summaryLabelY = ceil(CGRectGetMaxY(_titleLabel.frame)) + 5;
     CGFloat summaryLabelW = imgViewX - paddingX;
     CGFloat summaryLabelH = parentH - summaryLabelY - 4.0f;
     self.summaryLabel.frame = CGRectMake(summaryLabelX, summaryLabelY, summaryLabelW, summaryLabelH);

@@ -26,11 +26,19 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
-    _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-    _webView.scrollView.showsVerticalScrollIndicator = NO;
-    _webView.navigationDelegate = self;
-    _webView.UIDelegate = self;
+    WKWebView *webView = [[WKWebView alloc] init];
+    webView.frame = CGRectMake(0, WCTopNavH, ScreenW, ScreenH - WCTopNavH);
+    webView.scrollView.showsVerticalScrollIndicator = NO;
+    webView.navigationDelegate = self;
+    webView.UIDelegate = self;
+    _webView = webView;
     [self.view addSubview:_webView];
+    
+    if (@available(iOS 11.0,*)) {
+        webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        webView.scrollView.scrollIndicatorInsets = webView.scrollView.contentInset;
+    }
     
     //_web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     //[self.view addSubview:_web];

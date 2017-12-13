@@ -72,8 +72,12 @@
 		D612F11E1FD8D5B200F67491 /* ItemList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D612F11D1FD8D5B200F67491 /* ItemList.plist */; };
 		D612F1241FD8D7AF00F67491 /* WCAboutCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D612F1231FD8D7AF00F67491 /* WCAboutCollectionViewCell.m */; };
 		D612F1261FD8E31000F67491 /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61968821F98826700919CEA /* WCItem.m */; };
-		D614F03B1FA02941000EC8AE /* sz.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03A1FA02941000EC8AE /* sz.jpeg */; };
-		D614F03F1FA02D16000EC8AE /* wczd.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03C1FA02D16000EC8AE /* wczd.jpeg */; };
+		D613D3121FDA84CF0001C5C0 /* allow.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D613D3111FDA84CE0001C5C0 /* allow.jpeg */; };
+		D613D3181FDA86C10001C5C0 /* notice.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D613D3171FDA86C10001C5C0 /* notice.jpeg */; };
+		D613D31A1FDA87440001C5C0 /* allownotice.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D613D3191FDA87440001C5C0 /* allownotice.jpeg */; };
+		D613D31C1FDA89440001C5C0 /* sz.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D613D31B1FDA89430001C5C0 /* sz.jpeg */; };
+		D613D3241FDA9EA40001C5C0 /* wczdNot.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D613D3231FDA9EA40001C5C0 /* wczdNot.jpeg */; };
+		D614F03F1FA02D16000EC8AE /* wczdLoc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03C1FA02D16000EC8AE /* wczdLoc.jpeg */; };
 		D614F0411FA02D16000EC8AE /* ys.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F03E1FA02D16000EC8AE /* ys.jpeg */; };
 		D614F0431FA02DF4000EC8AE /* dw.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D614F0421FA02DF4000EC8AE /* dw.jpeg */; };
 		D615212F1F8E59560066A82A /* DotActivityIndicatorParms.m in Sources */ = {isa = PBXBuildFile; fileRef = D615212C1F8E59560066A82A /* DotActivityIndicatorParms.m */; };
@@ -138,7 +142,6 @@
 		D64D2BB11F99DFC60076F1B8 /* WCLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D64D2BB01F99DFC60076F1B8 /* WCLoginParam.m */; };
 		D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D619687D1F98821300919CEA /* WCFunctionViewController.m */; };
 		D6530FDB1F9F1EE800C00DA6 /* WCHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6530FDA1F9F1EE800C00DA6 /* WCHtmlViewController.m */; };
-		D6530FE11F9F248F00C00DA6 /* addressBook.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6530FE01F9F248F00C00DA6 /* addressBook.jpeg */; };
 		D65953961F7CBE6200705749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953941F7CBE6200705749 /* Main.storyboard */; };
 		D65953981F7CBE6200705749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65953971F7CBE6200705749 /* Images.xcassets */; };
 		D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65953991F7CBE6200705749 /* LaunchScreen.storyboard */; };
@@ -146,6 +149,10 @@
 		D65953AE1F7CD52400705749 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953AC1F7CD52400705749 /* WCAppDelegate.m */; };
 		D65953B31F7CD6F000705749 /* WCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B21F7CD6F000705749 /* WCTabBarViewController.m */; };
 		D65953B61F7CEA0900705749 /* WCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65953B51F7CEA0900705749 /* WCNavigationController.m */; };
+		D65CABA51FDC044500EED62A /* ATAppUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = D65CABA41FDC044500EED62A /* ATAppUpdater.m */; };
+		D68CCF211FDB8CE900627A17 /* WCCheckInLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D68CCF201FDB8CE900627A17 /* WCCheckInLog.m */; };
+		D68CCF241FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68CCF231FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.m */; };
+		D68CCF2A1FDBA1D600627A17 /* WCCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D68CCF291FDBA1D600627A17 /* WCCustomButton.m */; };
 		D6AB01D81FB17BD400A6C23E /* WCSectionHeaderViewParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB01D71FB17BD400A6C23E /* WCSectionHeaderViewParam.m */; };
 		D6AB01DB1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB01DA1FB17FCC00A6C23E /* WCSectionHeaderViewResult.m */; };
 		D6AB01DE1FB194AF00A6C23E /* WCSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AB01DD1FB194AF00A6C23E /* WCSectionHeaderView.m */; };
@@ -284,8 +291,12 @@
 		D612F11D1FD8D5B200F67491 /* ItemList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ItemList.plist; sourceTree = "<group>"; };
 		D612F1221FD8D7AF00F67491 /* WCAboutCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCAboutCollectionViewCell.h; sourceTree = "<group>"; };
 		D612F1231FD8D7AF00F67491 /* WCAboutCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCAboutCollectionViewCell.m; sourceTree = "<group>"; };
-		D614F03A1FA02941000EC8AE /* sz.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sz.jpeg; sourceTree = "<group>"; };
-		D614F03C1FA02D16000EC8AE /* wczd.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wczd.jpeg; sourceTree = "<group>"; };
+		D613D3111FDA84CE0001C5C0 /* allow.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = allow.jpeg; sourceTree = "<group>"; };
+		D613D3171FDA86C10001C5C0 /* notice.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notice.jpeg; sourceTree = "<group>"; };
+		D613D3191FDA87440001C5C0 /* allownotice.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = allownotice.jpeg; sourceTree = "<group>"; };
+		D613D31B1FDA89430001C5C0 /* sz.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sz.jpeg; sourceTree = "<group>"; };
+		D613D3231FDA9EA40001C5C0 /* wczdNot.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wczdNot.jpeg; sourceTree = "<group>"; };
+		D614F03C1FA02D16000EC8AE /* wczdLoc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wczdLoc.jpeg; sourceTree = "<group>"; };
 		D614F03E1FA02D16000EC8AE /* ys.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ys.jpeg; sourceTree = "<group>"; };
 		D614F0421FA02DF4000EC8AE /* dw.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dw.jpeg; sourceTree = "<group>"; };
 		D615212B1F8E59560066A82A /* DotActivityIndicatorParms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotActivityIndicatorParms.h; sourceTree = "<group>"; };
@@ -418,7 +429,6 @@
 		D64D2BB01F99DFC60076F1B8 /* WCLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginParam.m; sourceTree = "<group>"; };
 		D6530FD91F9F1EE800C00DA6 /* WCHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHtmlViewController.h; sourceTree = "<group>"; };
 		D6530FDA1F9F1EE800C00DA6 /* WCHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHtmlViewController.m; sourceTree = "<group>"; };
-		D6530FE01F9F248F00C00DA6 /* addressBook.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addressBook.jpeg; sourceTree = "<group>"; };
 		D65953881F7CBE6200705749 /* WCWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65953951F7CBE6200705749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D65953971F7CBE6200705749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -431,6 +441,14 @@
 		D65953B21F7CD6F000705749 /* WCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTabBarViewController.m; sourceTree = "<group>"; };
 		D65953B41F7CEA0900705749 /* WCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNavigationController.h; sourceTree = "<group>"; };
 		D65953B51F7CEA0900705749 /* WCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNavigationController.m; sourceTree = "<group>"; };
+		D65CABA31FDC044500EED62A /* ATAppUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAppUpdater.h; sourceTree = "<group>"; };
+		D65CABA41FDC044500EED62A /* ATAppUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAppUpdater.m; sourceTree = "<group>"; };
+		D68CCF1F1FDB8CE900627A17 /* WCCheckInLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCCheckInLog.h; sourceTree = "<group>"; };
+		D68CCF201FDB8CE900627A17 /* WCCheckInLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCCheckInLog.m; sourceTree = "<group>"; };
+		D68CCF221FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCCheckAttendenceSignInOrOutCell.h; sourceTree = "<group>"; };
+		D68CCF231FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCCheckAttendenceSignInOrOutCell.m; sourceTree = "<group>"; };
+		D68CCF281FDBA1D600627A17 /* WCCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCustomButton.h; sourceTree = "<group>"; };
+		D68CCF291FDBA1D600627A17 /* WCCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCustomButton.m; sourceTree = "<group>"; };
 		D6AB01D61FB17BD400A6C23E /* WCSectionHeaderViewParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionHeaderViewParam.h; sourceTree = "<group>"; };
 		D6AB01D71FB17BD400A6C23E /* WCSectionHeaderViewParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSectionHeaderViewParam.m; sourceTree = "<group>"; };
 		D6AB01D91FB17FCC00A6C23E /* WCSectionHeaderViewResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSectionHeaderViewResult.h; sourceTree = "<group>"; };
@@ -734,11 +752,14 @@
 		D6108C5B1F9E3B930087DF00 /* help */ = {
 			isa = PBXGroup;
 			children = (
-				D614F03C1FA02D16000EC8AE /* wczd.jpeg */,
-				D614F0421FA02DF4000EC8AE /* dw.jpeg */,
+				D613D3231FDA9EA40001C5C0 /* wczdNot.jpeg */,
+				D614F03C1FA02D16000EC8AE /* wczdLoc.jpeg */,
+				D613D31B1FDA89430001C5C0 /* sz.jpeg */,
 				D614F03E1FA02D16000EC8AE /* ys.jpeg */,
-				D614F03A1FA02941000EC8AE /* sz.jpeg */,
-				D6530FE01F9F248F00C00DA6 /* addressBook.jpeg */,
+				D614F0421FA02DF4000EC8AE /* dw.jpeg */,
+				D613D3171FDA86C10001C5C0 /* notice.jpeg */,
+				D613D3191FDA87440001C5C0 /* allownotice.jpeg */,
+				D613D3111FDA84CE0001C5C0 /* allow.jpeg */,
 				D6108C6A1F9E3E570087DF00 /* help.html */,
 				D6108C6B1F9E3E570087DF00 /* rule.css */,
 				D6108C5C1F9E3BB20087DF00 /* help.json */,
@@ -907,6 +928,7 @@
 		D61521291F8E58FB0066A82A /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				D65CABA21FDC043400EED62A /* ATAppUpdater */,
 				D6120C781F9D910100A4AD4E /* MBProgressHUD */,
 				D615212A1F8E59340066A82A /* DotsLoaderActivityIndicator */,
 			);
@@ -1126,6 +1148,8 @@
 			children = (
 				D6120C841F9D949D00A4AD4E /* WCCheckAttendenceParam.h */,
 				D6120C851F9D949D00A4AD4E /* WCCheckAttendenceParam.m */,
+				D68CCF1F1FDB8CE900627A17 /* WCCheckInLog.h */,
+				D68CCF201FDB8CE900627A17 /* WCCheckInLog.m */,
 				D6120C871F9DAEEC00A4AD4E /* WCCheckAttendenceResult.h */,
 				D6120C881F9DAEEC00A4AD4E /* WCCheckAttendenceResult.m */,
 				D6120C8A1F9DAF9600A4AD4E /* WCCheckAttendenceFence.h */,
@@ -1145,6 +1169,10 @@
 				D618A4261F9CE33500E53BAC /* WCCheckAttendenceBtnCell.m */,
 				D618A4271F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.h */,
 				D618A4281F9CE33500E53BAC /* WCCheckAttendenceMapViewCell.m */,
+				D68CCF221FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.h */,
+				D68CCF231FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.m */,
+				D68CCF281FDBA1D600627A17 /* WCCustomButton.h */,
+				D68CCF291FDBA1D600627A17 /* WCCustomButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1505,6 +1533,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D65CABA21FDC043400EED62A /* ATAppUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				D65CABA31FDC044500EED62A /* ATAppUpdater.h */,
+				D65CABA41FDC044500EED62A /* ATAppUpdater.m */,
+			);
+			path = ATAppUpdater;
+			sourceTree = "<group>";
+		};
 		D6AEB1AC1FD8EFD900DFF8AE /* CpAbout */ = {
 			isa = PBXGroup;
 			children = (
@@ -1675,11 +1712,11 @@
 				TargetAttributes = {
 					D65953871F7CBE6200705749 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8Y6S2469TB;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 2SH7QWT3DP;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1710,22 +1747,25 @@
 			files = (
 				D614F0431FA02DF4000EC8AE /* dw.jpeg in Resources */,
 				D61097A01FA1BE06006E0F66 /* WCAboutFooterView.xib in Resources */,
-				D614F03B1FA02941000EC8AE /* sz.jpeg in Resources */,
 				D659539B1F7CBE6200705749 /* LaunchScreen.storyboard in Resources */,
 				D6108C6D1F9E3E570087DF00 /* rule.css in Resources */,
 				D610979B1FA1A890006E0F66 /* WCAboutHeaderView.xib in Resources */,
+				D613D3181FDA86C10001C5C0 /* notice.jpeg in Resources */,
 				D6108C6C1F9E3E570087DF00 /* help.html in Resources */,
 				D6108C3D1F9E18C60087DF00 /* WCNewArrivalCell.xib in Resources */,
 				D61097951FA1A81B006E0F66 /* WCAboutViewController.storyboard in Resources */,
 				D6108C5D1F9E3BB20087DF00 /* help.json in Resources */,
+				D613D3241FDA9EA40001C5C0 /* wczdNot.jpeg in Resources */,
+				D613D3121FDA84CF0001C5C0 /* allow.jpeg in Resources */,
 				D612F11E1FD8D5B200F67491 /* ItemList.plist in Resources */,
 				D65953981F7CBE6200705749 /* Images.xcassets in Resources */,
-				D6530FE11F9F248F00C00DA6 /* addressBook.jpeg in Resources */,
 				D65953961F7CBE6200705749 /* Main.storyboard in Resources */,
+				D613D31C1FDA89440001C5C0 /* sz.jpeg in Resources */,
 				D614F0411FA02D16000EC8AE /* ys.jpeg in Resources */,
-				D614F03F1FA02D16000EC8AE /* wczd.jpeg in Resources */,
+				D614F03F1FA02D16000EC8AE /* wczdLoc.jpeg in Resources */,
 				D6AEB1D71FD918F000DFF8AE /* WCHonourCompanyCell.xib in Resources */,
 				D618A4171F9CD08700E53BAC /* WCCommonProblemCell.xib in Resources */,
+				D613D31A1FDA87440001C5C0 /* allownotice.jpeg in Resources */,
 				D60D74B91F8F560600FDB286 /* function.json in Resources */,
 				D6120C7F1F9D910100A4AD4E /* MBProgressHUD.bundle in Resources */,
 			);
@@ -1804,6 +1844,7 @@
 				D6108C2B1F9E0B550087DF00 /* WCNewArrivalViewController.m in Sources */,
 				D618A40D1F9CCCDD00E53BAC /* WCCommonProblemTool.m in Sources */,
 				D6108C481F9E28410087DF00 /* WCClassicWorkViewController.m in Sources */,
+				D68CCF2A1FDBA1D600627A17 /* WCCustomButton.m in Sources */,
 				D6120C7E1F9D910100A4AD4E /* MBProgressHUD+MJ.m in Sources */,
 				D64313DB1F99E95D00729DF6 /* WCLoginAccount.m in Sources */,
 				D61A64091F94736B000FE435 /* WCDynamicResult.m in Sources */,
@@ -1844,6 +1885,7 @@
 				D61D424F1F7DDC8400B73FF1 /* SettingSwitchItem.m in Sources */,
 				D6AEB1BB1FD8FF6400DFF8AE /* WCPresidentSpeechViewController.m in Sources */,
 				D64313D81F99E86000729DF6 /* WCLoginResult.m in Sources */,
+				D68CCF211FDB8CE900627A17 /* WCCheckInLog.m in Sources */,
 				D6AEB1DA1FD92C5700DFF8AE /* WCHonourCompanyDetailViewController.m in Sources */,
 				D6060E071FD7C716001EDE42 /* WCPersonInformationViewController.m in Sources */,
 				D61A64061F9471E9000FE435 /* WCDynamicCell.m in Sources */,
@@ -1862,6 +1904,7 @@
 				D60A4AF01F8E191400990D01 /* WCHomeTool.m in Sources */,
 				D64D2BA61F99983D0076F1B8 /* WCLoginCell.m in Sources */,
 				D61A640C1F94A6A5000FE435 /* WCAddCommonController.m in Sources */,
+				D68CCF241FDB91F100627A17 /* WCCheckAttendenceSignInOrOutCell.m in Sources */,
 				D648E7F51F97373D006A9C88 /* WCAddressBookSectionHeaderView.m in Sources */,
 				D618A4241F9CE30700E53BAC /* WCCheckAttendenceViewController.m in Sources */,
 				D6AEB1C31FD900E700DFF8AE /* WCOverViewCompanyParam.m in Sources */,
@@ -1889,6 +1932,7 @@
 				D61968751F98467000919CEA /* WCAddressBookSearchTitleView.m in Sources */,
 				D6AB01D81FB17BD400A6C23E /* WCSectionHeaderViewParam.m in Sources */,
 				D6AEB1CE1FD90ECC00DFF8AE /* WCHonourCompanyResult.m in Sources */,
+				D65CABA51FDC044500EED62A /* ATAppUpdater.m in Sources */,
 				D612F11B1FD8D18900F67491 /* WCAboutCompanyViewController.m in Sources */,
 				D618A4181F9CD08700E53BAC /* WCCommonProblemHeaderView.m in Sources */,
 				D615DBDE1FB2A7580041BFA9 /* NSString+GQExtension.m in Sources */,
@@ -2041,17 +2085,19 @@
 			baseConfigurationReference = 51B73C151B2304AC2F99BE5C /* Pods-WCWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WCWork/WCWork.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Y6S2469TB;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2SH7QWT3DP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
 				INFOPLIST_FILE = WCWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wczd.WCWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "cede1ca3-a48a-482e-a98e-c096d7b074d4";
+				PROVISIONING_PROFILE_SPECIFIER = WCWorkDev;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2060,17 +2106,19 @@
 			baseConfigurationReference = 382143C0E028C08B15B2EBC2 /* Pods-WCWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WCWork/WCWork.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Y6S2469TB;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2SH7QWT3DP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
 				INFOPLIST_FILE = WCWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wuchan.WCWork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wczd.WCWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "cede1ca3-a48a-482e-a98e-c096d7b074d4";
+				PROVISIONING_PROFILE_SPECIFIER = WCWorkDev;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
