@@ -22,6 +22,7 @@
 #import "WCCommonUseCell.h"
 #import "WCMoreDynamicCell.h"
 #import "WCDynamicCell.h"
+#import "WCTechnologySupportCell.h"
 
 #import "WCGroup.h"
 #import "WCItem.h"
@@ -37,6 +38,7 @@
 
 @property (nonatomic, strong)  WCSectionHeaderView *sectionHeaderView;
 @property (nonatomic, strong)  WCMoreDynamicCell *moreDynamicCell;
+@property (nonatomic, strong)  WCTechnologySupportCell *technologySupportCell;
 
 @property (nonatomic, strong)  WCSectionFooterView *sectionFooterView;
 
@@ -138,16 +140,16 @@
     }else{
         switch (_currentSelectedSegment) {
             case 0:
-                return self.coalMarketQuotationsArray.count + 1;
+                return self.coalMarketQuotationsArray.count + 2;
                 break;
             case 1:
-                return self.coalMarketInformationArray.count + 1;
+                return self.coalMarketInformationArray.count + 2;
                 break;
             case 2:
-                return self.logisticsStorageArray.count + 1;
+                return self.logisticsStorageArray.count + 2;
                 break;
             case 3:
-                return self.indexPriceArray.count + 1;
+                return self.indexPriceArray.count + 2;
                 break;
             default:
                 return 0;
@@ -171,8 +173,10 @@
                     WCDynamic *wcDynamic = self.coalMarketQuotationsArray[indexPath.row];
                     dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
-                }else{
+                }else if(indexPath.row == self.coalMarketQuotationsArray.count){
                     return self.moreDynamicCell;
+                }else{
+                    return self.technologySupportCell;
                 }
                 break;
             case 1:
@@ -181,8 +185,10 @@
                     WCDynamic *wcDynamic = self.coalMarketInformationArray[indexPath.row];
                     dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
-                }else{
+                }else if(indexPath.row == self.coalMarketInformationArray.count){
                     return self.moreDynamicCell;
+                }else{
+                    return self.technologySupportCell;
                 }
                 break;
             case 2:
@@ -191,8 +197,10 @@
                     WCDynamic *wcDynamic = self.logisticsStorageArray[indexPath.row];
                     dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
-                }else{
+                }else if(indexPath.row == self.logisticsStorageArray.count){
                     return self.moreDynamicCell;
+                }else{
+                    return self.technologySupportCell;
                 }
                 break;
             case 3:
@@ -201,8 +209,10 @@
                     WCDynamic *wcDynamic = self.indexPriceArray[indexPath.row];
                     dynamicCell.wcDynamic = wcDynamic;
                     return dynamicCell;
-                }else{
+                }else if(indexPath.row == self.indexPriceArray.count){
                     return self.moreDynamicCell;
+                }else{
+                    return self.technologySupportCell;
                 }
                 break;
             default:
@@ -274,6 +284,14 @@
 
 - (void)moreDynamicCellDidRefreshBtn:(WCMoreDynamicCell *)moreDynamicCell {
     [self changeSwipeViewIndex];
+}
+
+#pragma mark - WCTechnologySupportCell
+- (WCTechnologySupportCell *)technologySupportCell {
+    if (!_technologySupportCell) {
+        _technologySupportCell = [WCTechnologySupportCell cellWithTableView:self.tableView];
+    }
+    return _technologySupportCell;
 }
 
 #pragma mark - tableView delegate
@@ -358,29 +376,37 @@
             case 0:
                 if (indexPath.row < _coalMarketQuotationsArray.count) {
                     return 110.0f;
-                }else{
+                }else if(indexPath.row == _coalMarketQuotationsArray.count){
                     return 44.0f;
+                }else{
+                    return 20.0f;
                 }
                 break;
             case 1:
                 if (indexPath.row < _coalMarketInformationArray.count) {
                     return 110.0f;
-                }else{
+                }else if(indexPath.row == _coalMarketInformationArray.count){
                     return 44.0f;
+                }else{
+                    return 20.0f;
                 }
                 break;
             case 2:
                 if (indexPath.row < _logisticsStorageArray.count) {
                     return 110.0f;
-                }else{
+                }else if(indexPath.row == _logisticsStorageArray.count){
                     return 44.0f;
+                }else{
+                    return 20.0f;
                 }
                 break;
             case 3:
                 if (indexPath.row < _indexPriceArray.count) {
                     return 110.0f;
-                }else{
+                }else if(indexPath.row == _indexPriceArray.count){
                     return 44.0f;
+                }else{
+                    return 20.0f;
                 }
                 break;
             default:
@@ -514,8 +540,11 @@
     if (![userDefault boolForKey:@"firstLaunch"]) {
         [userDefault setBool:YES forKey:@"firstLaunch"];
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        WCGroup *group = [self.functions lastObject];
+        /*WCGroup *group = [self.functions lastObject];
         for (WCItem *item in group.items) {
+            [dict setObject:item forKey:item.title];
+        }*/
+        for (WCItem *item in self.functions) {
             [dict setObject:item forKey:item.title];
         }
         NSData *new_data = [NSKeyedArchiver archivedDataWithRootObject:dict];
@@ -557,9 +586,11 @@
         // 将字典转成模型
         NSMutableArray *itemArray = [NSMutableArray array];
         for (NSDictionary *dict in dictArray) {
-            if ([[dict objectForKey:@"header"] isEqualToString:@"办公"]) {
-                WCGroup *group = [WCGroup groupWithDict:dict];
-                [itemArray addObject:group];
+            WCGroup *group = [WCGroup groupWithDict:dict];
+            for (WCItem *item in group.items) {
+                if ([item.firstShow isEqualToString:@"1"]) {
+                    [itemArray addObject:item];
+                }
             }
         }
         _functions = itemArray;

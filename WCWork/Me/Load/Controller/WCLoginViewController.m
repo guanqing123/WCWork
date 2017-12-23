@@ -109,17 +109,17 @@ static WCLoginViewController *loginVc = nil;
 #pragma mark - WCLoginSectionFooterViewDelegate
 - (void)loginSectionFooterViewDidClickLoginBtn:(WCLoginSectionFooterView *)footerView {
     if (![self.username length] || ![self.password length]) {
-        [MBProgressHUD showError:@"信息必须填写完整"];
+        [MBProgressHUD showError:@"信息必须填写完整" toView:self.view];
         return;
     }
-    [MBProgressHUD showMessage:@"登录验证中..."];
+    [MBProgressHUD showMessage:@"登录验证中..." toView:self.view];
     WCLoginParam *param = [WCLoginParam param:login];
     param.gh = self.username;
     param.mm = self.password;
     [WCLoginTool loginWithParam:param success:^(WCLoginResult *loginResult) {
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideHUDForView:self.view];
         if (loginResult.error) {
-            [MBProgressHUD showError:loginResult.errorMsg];
+            [MBProgressHUD showError:@"用户名或密码错误"];
         }else{
             loginResult.entry.password = self.password;
             self.loginAccount = loginResult.entry;
@@ -143,9 +143,12 @@ static WCLoginViewController *loginVc = nil;
             if ([self.delegate respondsToSelector:@selector(loginViewControllerDidFinishLogin:)]) {
                 [self.delegate loginViewControllerDidFinishLogin:self];
             }
+            self.password = @"";
+            self.username = @"";
         }
     } failure:^(NSError *error) {
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"网络请求超时"];
     }];
 }
 

@@ -13,10 +13,12 @@
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *image;
 @property (nonatomic,copy) NSString *destVcClass;
-@property (nonatomic, copy) NSString *order;
+@property (nonatomic, assign) NSNumber *order;
 @property (nonatomic, copy) NSString *load;
+@property (nonatomic, copy) NSString *firstShow;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)itemWithDict:(NSDictionary *)dict;
+
 
 @end

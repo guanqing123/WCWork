@@ -16,6 +16,7 @@
     [coder encodeObject:self.destVcClass forKey:@"destVcClass"];
     [coder encodeObject:self.order forKey:@"order"];
     [coder encodeObject:self.load forKey:@"load"];
+    [coder encodeObject:self.firstShow forKey:@"firstShow"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
@@ -25,6 +26,7 @@
         self.destVcClass = [aDecoder decodeObjectForKey:@"destVcClass"];
         self.order = [aDecoder decodeObjectForKey:@"order"];
         self.load = [aDecoder decodeObjectForKey:@"load"];
+        self.firstShow = [aDecoder decodeObjectForKey:@"firstShow"];
     }
     return self;
 }
@@ -39,5 +41,6 @@
 + (instancetype)itemWithDict:(NSDictionary *)dict {
     return [[self alloc] initWithDict:dict];
 }
+
 
 @end

@@ -13,6 +13,7 @@
 @property (nonatomic, strong)  DotActivityIndicatorView *indicatorView;
 @property (nonatomic, strong)  UIView *moreDynamic;
 @property (nonatomic, strong)  UIView *refreshView;
+@property (nonatomic, strong)  UIView *bottomLineView;
 @end
 
 @implementation WCMoreDynamicCell
@@ -35,7 +36,9 @@ static WCMoreDynamicCell *moreDynamicCell = nil;
         // 2.添加滚动页
         [self.contentView addSubview:self.moreDynamic];
         // 3.添加刷新按钮
-        [self addSubview:self.refreshView];
+        [self.contentView addSubview:self.refreshView];
+        // 4.添加下划线
+        [self.contentView addSubview:self.bottomLineView];
     }
     return self;
 }
@@ -112,6 +115,15 @@ static WCMoreDynamicCell *moreDynamicCell = nil;
         [_refreshView addSubview:refreshBtn];
     }
     return _refreshView;
+}
+
+- (UIView *)bottomLineView {
+    if (!_bottomLineView) {
+        _bottomLineView = [[UIView alloc] init];
+        _bottomLineView.frame = CGRectMake(0, 43, ScreenH, 1);
+        _bottomLineView.backgroundColor = cellLineColor;
+    }
+    return _bottomLineView;
 }
 
 - (void)loading {

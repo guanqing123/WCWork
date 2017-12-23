@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "NSString+GQExtension.h"
 
-#define JCFX_URL @"http://biportal.zjmi.com:8080/xplatform/login.action?appSSO=true"
+#define JCFX_URL @"http://biportal.zjmi.com:8080/xplatform/login.action?appSSO=true&rtype=other"
 
 @interface WCDecisionAnalysisViewController ()<WKNavigationDelegate,WKUIDelegate>
 @property (nonatomic, weak)  WKWebView *webView;

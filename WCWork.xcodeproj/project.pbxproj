@@ -18,6 +18,8 @@
 		D60A4AF41F8E1C9900990D01 /* WCBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF31F8E1C9900990D01 /* WCBaseParam.m */; };
 		D60A4AF71F8E1CF200990D01 /* WCSliderParam.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF61F8E1CF200990D01 /* WCSliderParam.m */; };
 		D60A4AFA1F8E1D4300990D01 /* WCSliderResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A4AF91F8E1D4300990D01 /* WCSliderResult.m */; };
+		D60A66891FECDEC300F694C3 /* WCHRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A66871FECDEC200F694C3 /* WCHRViewController.m */; };
+		D60A668C1FECE88C00F694C3 /* WCTechnologySupportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60A668B1FECE88C00F694C3 /* WCTechnologySupportCell.m */; };
 		D60C28B91F94E86C00327C01 /* WCDynamicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C28B81F94E86C00327C01 /* WCDynamicListController.m */; };
 		D60C528A1F958B7800DA2DD3 /* WCNoWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C52891F958B7800DA2DD3 /* WCNoWifiView.m */; };
 		D60C528D1F95A6A900DA2DD3 /* WCDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C528C1F95A6A900DA2DD3 /* WCDynamic.m */; };
@@ -195,6 +197,10 @@
 		D60A4AF61F8E1CF200990D01 /* WCSliderParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSliderParam.m; sourceTree = "<group>"; };
 		D60A4AF81F8E1D4300990D01 /* WCSliderResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSliderResult.h; sourceTree = "<group>"; };
 		D60A4AF91F8E1D4300990D01 /* WCSliderResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSliderResult.m; sourceTree = "<group>"; };
+		D60A66871FECDEC200F694C3 /* WCHRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHRViewController.m; sourceTree = "<group>"; };
+		D60A66881FECDEC300F694C3 /* WCHRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHRViewController.h; sourceTree = "<group>"; };
+		D60A668A1FECE88C00F694C3 /* WCTechnologySupportCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCTechnologySupportCell.h; sourceTree = "<group>"; };
+		D60A668B1FECE88C00F694C3 /* WCTechnologySupportCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCTechnologySupportCell.m; sourceTree = "<group>"; };
 		D60C28B71F94E86C00327C01 /* WCDynamicListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDynamicListController.h; sourceTree = "<group>"; };
 		D60C28B81F94E86C00327C01 /* WCDynamicListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDynamicListController.m; sourceTree = "<group>"; };
 		D60C52881F958B7800DA2DD3 /* WCNoWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNoWifiView.h; sourceTree = "<group>"; };
@@ -630,6 +636,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D60A66821FECDD6E00F694C3 /* HR */ = {
+			isa = PBXGroup;
+			children = (
+				D60A66831FECDE8200F694C3 /* Controller */,
+			);
+			path = HR;
+			sourceTree = "<group>";
+		};
+		D60A66831FECDE8200F694C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D60A66881FECDEC300F694C3 /* WCHRViewController.h */,
+				D60A66871FECDEC200F694C3 /* WCHRViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D6108C241F9E0ABA0087DF00 /* NewArrival */ = {
 			isa = PBXGroup;
 			children = (
@@ -976,6 +999,8 @@
 				D6AB01DD1FB194AF00A6C23E /* WCSectionHeaderView.m */,
 				D61100471FD689520010A505 /* WCSectionFooterView.h */,
 				D61100481FD689520010A505 /* WCSectionFooterView.m */,
+				D60A668A1FECE88C00F694C3 /* WCTechnologySupportCell.h */,
+				D60A668B1FECE88C00F694C3 /* WCTechnologySupportCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1458,6 +1483,7 @@
 			isa = PBXGroup;
 			children = (
 				D618A3EE1F9CA9EA00E53BAC /* OA */,
+				D60A66821FECDD6E00F694C3 /* HR */,
 				D6179F5F1FB5951700D77C48 /* DecisionAnalysis */,
 				D6B933E81FA6F6A10041D9BF /* PartyConstruct */,
 				D6179F601FB5963300D77C48 /* NewsPaper */,
@@ -1826,6 +1852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60A668C1FECE88C00F694C3 /* WCTechnologySupportCell.m in Sources */,
 				D612F1261FD8E31000F67491 /* WCItem.m in Sources */,
 				D612F1161FD8CE6E00F67491 /* WCMarketViewController.m in Sources */,
 				D6530FD81F9EEBDF00C00DA6 /* WCFunctionViewController.m in Sources */,
@@ -1950,6 +1977,7 @@
 				D6120C8F1F9DC54000A4AD4E /* WCDidCheckAttendenceParam.m in Sources */,
 				D616C42F1F963BAC0075E30C /* WCAddressBookSearchHeaderView.m in Sources */,
 				D65953AD1F7CD52400705749 /* main.m in Sources */,
+				D60A66891FECDEC300F694C3 /* WCHRViewController.m in Sources */,
 				D6128E5E1F98E6B700FA63E3 /* WCMeViewController.m in Sources */,
 				D61097991FA1A863006E0F66 /* WCAboutHeaderView.m in Sources */,
 				D61097941FA1A81B006E0F66 /* WCAboutViewController.m in Sources */,
@@ -2086,7 +2114,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WCWork/WCWork.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2SH7QWT3DP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
@@ -2095,9 +2123,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wczd.WCWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cede1ca3-a48a-482e-a98e-c096d7b074d4";
-				PROVISIONING_PROFILE_SPECIFIER = WCWorkDev;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "e767fa67-d1ae-4971-a8d9-ba63adfa393c";
+				PROVISIONING_PROFILE_SPECIFIER = WCWorkDis;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2107,7 +2135,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WCWork/WCWork.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2SH7QWT3DP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WCWork/WCWork.pch";
@@ -2116,9 +2144,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wczd.WCWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cede1ca3-a48a-482e-a98e-c096d7b074d4";
-				PROVISIONING_PROFILE_SPECIFIER = WCWorkDev;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "e767fa67-d1ae-4971-a8d9-ba63adfa393c";
+				PROVISIONING_PROFILE_SPECIFIER = WCWorkDis;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

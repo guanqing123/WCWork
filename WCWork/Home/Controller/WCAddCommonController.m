@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"flushBuffer"] style:UIBarButtonItemStyleDone target:self action:@selector(flushBuffer)];
+    self.navigationItem.rightBarButtonItem = right;
     // Do any additional setup after loading the view.
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -27,6 +29,14 @@
     tableView.delegate = self;
     _tableView = tableView;
     [self.view addSubview:tableView];
+}
+
+- (void)flushBuffer {
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"dict"];
+    [self.tableView reloadData];
+    if ([self.delegate respondsToSelector:@selector(addCommonControllerDidChooseBtn:)]) {
+        [self.delegate addCommonControllerDidChooseBtn:self];
+    }
 }
 
 #pragma mark - functions 懒加载

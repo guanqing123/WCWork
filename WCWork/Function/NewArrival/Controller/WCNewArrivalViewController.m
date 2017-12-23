@@ -52,7 +52,7 @@
     [WCNewArrivalTool newArrivalWithParam:newArrivalParam success:^(WCNewArrivalResult *result) {
         [self.tableView.mj_header endRefreshing];
         if (result.errorMsg) {
-            [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg]];
+            [MBProgressHUD showError:result.errorMsg];
         } else {
             [self.dataArray removeAllObjects];
             [self.dataArray addObjectsFromArray:result.list];
@@ -87,7 +87,7 @@
     [WCNewArrivalTool newArrivalWithParam:newArrivalParam success:^(WCNewArrivalResult *result) {
         [self.tableView.mj_footer endRefreshing];
         if (result.errorMsg) {
-            [MBProgressHUD showError:[NSString stringWithFormat:@"errorcode:%@",result.errorMsg]];
+            [MBProgressHUD showError:result.errorMsg];
         } else {
             [self.dataArray addObjectsFromArray:result.list];
             [self.tableView reloadData];
